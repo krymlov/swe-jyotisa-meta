@@ -18,22 +18,16 @@ public class MetaObject extends MetaTheme {
 
     protected String deg;
     protected String degr;
+    protected Float vdegr;
     protected String lttd;
     protected String lgtd;
-    protected Float vdegr;
-
     protected String npada;
-    protected Integer nstra;
 
+    protected Integer naksatra;
     protected Integer pada;
-    protected Integer krka;
-    protected Integer dgnt;
-    protected Integer nvms;
-
-    protected String nrate;
-    protected String prate;
-    protected String rrate;
-    protected String mrtbg;
+    protected Integer dignity;
+    protected Integer navamsa;
+    protected Integer karaka;
 
     public Integer rasi() {
         return rasi;
@@ -107,12 +101,12 @@ public class MetaObject extends MetaTheme {
         this.npada = npada;
     }
 
-    public Integer nstra() {
-        return nstra;
+    public Integer naksatra() {
+        return naksatra;
     }
 
-    public void nstra(Integer nstra) {
-        this.nstra = nstra;
+    public void naksatra(Integer naksatra) {
+        this.naksatra = naksatra;
     }
 
     public Integer pada() {
@@ -123,59 +117,27 @@ public class MetaObject extends MetaTheme {
         this.pada = pada;
     }
 
-    public Integer krka() {
-        return krka;
+    public Integer karaka() {
+        return karaka;
     }
 
-    public void krka(Integer krka) {
-        this.krka = krka;
+    public void karaka(Integer karaka) {
+        this.karaka = karaka;
     }
 
-    public Integer dgnt() {
-        return dgnt;
+    public Integer dignity() {
+        return dignity;
     }
 
-    public void dgnt(Integer dgnt) {
-        this.dgnt = dgnt;
+    public void dignity(Integer dignity) {
+        this.dignity = dignity;
     }
 
-    public Integer nvms() {
-        return nvms;
+    public Integer navamsa() {
+        return navamsa;
     }
 
-    public void nvms(Integer nvms) {
-        this.nvms = nvms;
-    }
-
-    public String nrate() {
-        return nrate;
-    }
-
-    public void nrate(String nrate) {
-        this.nrate = nrate;
-    }
-
-    public String prate() {
-        return prate;
-    }
-
-    public void prate(String prate) {
-        this.prate = prate;
-    }
-
-    public String rrate() {
-        return rrate;
-    }
-
-    public void rrate(String rrate) {
-        this.rrate = rrate;
-    }
-
-    public String mrtbg() {
-        return mrtbg;
-    }
-
-    public void mrtbg(String mrtbg) {
-        this.mrtbg = mrtbg;
+    public void navamsa(Integer navamsa) {
+        this.navamsa = navamsa;
     }
 }
