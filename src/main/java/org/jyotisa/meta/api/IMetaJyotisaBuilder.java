@@ -8,10 +8,13 @@ package org.jyotisa.meta.api;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.bhava.IBhavaEnum;
 import org.jyotisa.api.dignity.IDignityEnum;
+import org.jyotisa.api.graha.IGraha;
 import org.jyotisa.api.graha.IGrahaEntity;
 import org.jyotisa.api.karaka.ICharaKaraka;
 import org.jyotisa.api.naksatra.INaksatraEnum;
+import org.jyotisa.api.naksatra.INaksatraPada;
 import org.jyotisa.api.rasi.IRasiEnum;
+import org.jyotisa.api.upagraha.IUpagraha;
 import org.jyotisa.api.upagraha.IUpagrahaEntity;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
@@ -23,25 +26,34 @@ import org.jyotisa.meta.app.MetaNorthCalc;
 import org.jyotisa.meta.base.MetaTheme;
 import org.jyotisa.meta.kundali.*;
 import org.jyotisa.meta.objects.MetaObject;
+import org.jyotisa.meta.objects.MetaObjects;
 import org.jyotisa.meta.options.MetaOption;
 import org.jyotisa.meta.options.MetaOptionView;
 import org.jyotisa.naksatra.ENaksatra;
 import org.jyotisa.rasi.ERasi;
+import org.jyotisa.upagraha.EUpagraha;
 import org.jyotisa.varga.EVarga;
+import org.swisseph.api.ISweEnumEntity;
 import org.swisseph.api.ISweEnumIterator;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import static java.lang.Character.toLowerCase;
+import static java.util.Comparator.comparingDouble;
+import static org.jyotisa.api.graha.IGraha.KE_CD;
+import static org.jyotisa.api.graha.IGraha.RA_CD;
+import static org.jyotisa.api.rasi.IRasi.rasiDegree;
 import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.meta.api.MetaViewStyle.south;
 import static org.jyotisa.meta.kundali.MetaBhava.NIL_BHAVA;
 import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
 import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
+import static org.jyotisa.varga.EVarga.HORA;
 import static org.jyotisa.varga.EVarga.RASI;
+import static org.swisseph.api.ISweConstants.RASI_LENGTH;
+import static org.swisseph.utils.IDegreeUtils.toDMS;
+import static swisseph.SweConst.ODEGREE_CHAR;
 
 /**
  * @author Yura Krymlov
@@ -141,7 +153,7 @@ public interface IMetaJyotisaBuilder {
         int x = rasiSquareSize, y = 0;
 
         for (int i = 0; i < 12; i++) {
-            viewBox.add(buildMetaRasiSeq(x,y,w,h,rasiEnum));
+            viewBox.add(buildMetaRasiSeq(x, y, w, h, rasiEnum));
             rasiEnum = rasiEnum.following();
             if (i < 2) x += w;
             if (i >= 2 && i < 5) y += h;
@@ -326,12 +338,175 @@ public interface IMetaJyotisaBuilder {
 
     void addEventInfo(IMetaJyotisa jyotisa, IKundali kundali);
 
-    void addRasiGrahas(IMetaJyotisa jyotisa, IKundali kundali);
-    MetaObject buildRasiGraha(IGrahaEntity entity);
+    default void addRasiGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
+        final int[] sweObjects = kundali.sweObjects().sweSequence().objects();
+        final IGrahaEntity[] grahas = kundali.grahas().all();
 
-    void addRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali);
-    MetaObject buildRasiUpagraha(IUpagrahaEntity entity);
+        final MetaObjects objects = new MetaObjects();
+        final List<MetaObject> metaGrahas = objects.grahas();
+        jyotisa.objects().put(EVarga.RASI.varga().name(), objects);
 
-    void addVargaGrahas(IMetaJyotisa jyotisa, IKundali kundali);
-    MetaObject buildVargaGraha(IVarga varga, int lagnaRasiFid, IGrahaEntity entity);
+        for (int i = 0; i < sweObjects.length && i < grahas.length; i++) {
+            metaGrahas.add(buildRasiGraha(grahas[sweObjects[i]]));
+        }
+    }
+
+    default MetaObject buildRasiGraha(IGrahaEntity grahaEntity) {
+        final String degr = toDMS(rasiDegree(grahaEntity.longitude())).toString();
+        final INaksatraPada pada = grahaEntity.pada();
+        final IGraha graha = grahaEntity.entityEnum();
+        final MetaObject obj = new MetaObject();
+
+        obj.name(buildGrahaName(graha, grahaEntity.vakri()));
+        obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
+        obj.lgtd(toDMS(grahaEntity.longitude()).toString());
+        obj.npada(buildNaksatraPadaName(grahaEntity));
+        if (grahaEntity.vakri()) obj.vakri(1);
+        obj.bhava(grahaEntity.bhava().fid());
+        obj.nstra(pada.naksatra().fid());
+        obj.text(buildGrahaText(graha));
+        obj.nvms(pada.navamsa().fid());
+        obj.rasi(pada.rasi().fid());
+        obj.pada(pada.pada());
+        obj.code(graha.code());
+        obj.degr(degr);
+
+        return obj;
+    }
+
+    default String buildGrahaName(IGraha graha, boolean vakri) {
+        final String name = graha.all()[1].name();
+        final StringBuilder builder = new StringBuilder(name.length());
+
+        final boolean printVakri = vakri &&
+                !name.equalsIgnoreCase(RA_CD) &&
+                !name.equalsIgnoreCase(KE_CD);
+
+        if (printVakri) builder.append('(');
+        builder.append(name.charAt(0));
+
+        for (int i = 1; i < name.length(); i++) {
+            builder.append(toLowerCase(name.charAt(i)));
+        }
+
+        if (printVakri) builder.append(')');
+        return builder.toString();
+    }
+
+    default String buildGrahaText(IGraha graha) {
+        final String text = graha.all()[2].name();
+        final StringBuilder builder = new StringBuilder(text.length());
+        builder.append(text.charAt(0));
+
+        for (int i = 1; i < text.length(); i++) {
+            builder.append(toLowerCase(text.charAt(i)));
+        }
+
+        return builder.toString();
+    }
+
+    default String buildNaksatraPadaName(IGrahaEntity grahaEntity) {
+        return grahaEntity.pada().naksatra().following().name() + grahaEntity.pada().pada();
+    }
+
+    default void addRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
+        final MetaObjects objects = jyotisa.objects().get(EVarga.RASI.varga().name());
+        if (null == objects) return;
+
+        final List<MetaObject> metaUpagrahas = objects.upagrahas();
+        final ArrayList<IUpagrahaEntity> upagrahas = new ArrayList<>(
+                Arrays.asList(kundali.upagrahas().all()));
+
+        upagrahas.remove(0);
+        upagrahas.sort(comparingDouble(ISweEnumEntity::longitude));
+
+        for (final IUpagrahaEntity upagrahaEntity : upagrahas) {
+            metaUpagrahas.add(buildRasiUpagraha(upagrahaEntity));
+        }
+    }
+
+    default MetaObject buildRasiUpagraha(IUpagrahaEntity upagrahaEntity) {
+        final String degr = toDMS(rasiDegree(upagrahaEntity.longitude())).toString();
+        final IUpagraha upagraha = upagrahaEntity.entityEnum();
+        final INaksatraPada pada = upagrahaEntity.pada();
+        final MetaObject obj = new MetaObject();
+
+        obj.lgtd(toDMS(upagrahaEntity.longitude()).toString());
+        obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
+        obj.bhava(upagrahaEntity.bhava().fid());
+        obj.name(buildUpagrahaName(upagraha));
+        obj.text(buildUpagrahaText(upagraha));
+        obj.nstra(pada.naksatra().fid());
+        obj.nvms(pada.navamsa().fid());
+        obj.rasi(pada.rasi().fid());
+        obj.code(upagraha.code());
+        obj.pada(pada.pada());
+        obj.degr(degr);
+
+        return obj;
+    }
+
+    default String buildUpagrahaName(IUpagraha upagraha) {
+        final String name = upagraha.name();
+        final StringBuilder builder = new StringBuilder(name.length());
+
+        builder.append(name.charAt(0));
+        for (int i = 1; i < name.length(); i++) {
+            builder.append(toLowerCase(name.charAt(i)));
+        }
+
+        return builder.toString();
+    }
+
+    default String buildUpagrahaText(IUpagraha upagraha) {
+        final String text = EUpagraha.values()[upagraha.fid()].name();
+        final StringBuilder builder = new StringBuilder(text.length());
+        builder.append(text.charAt(0));
+
+        for (int i = 1; i < text.length(); i++) {
+            builder.append(toLowerCase(text.charAt(i)));
+        }
+
+        return builder.toString();
+    }
+
+    default void addVargaGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
+        final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(HORA);
+        final IGrahaEntity[] grahas = kundali.grahas().all();
+        final IGrahaEntity lagna = kundali.grahas().lagna();
+
+        while (iterator.hasNext()) {
+            final IVarga varga = iterator.next().varga();
+            final MetaObjects objects = new MetaObjects();
+            final List<MetaObject> metaGrahas = objects.grahas();
+            final int lagnaRasiFid = varga.rasi(lagna.longitude()).fid();
+            jyotisa.objects().put(varga.code(), objects);
+
+            for (IGrahaEntity graha : grahas) {
+                metaGrahas.add(buildVargaGraha(varga, lagnaRasiFid, graha));
+            }
+
+            if (!metaGrahas.isEmpty()) metaGrahas.sort(comparingDouble(MetaObject::vdegr));
+            if (!objects.upagrahas().isEmpty()) objects.upagrahas().sort(comparingDouble(MetaObject::vdegr));
+        }
+    }
+
+    default MetaObject buildVargaGraha(IVarga varga, int lagnaRasiFid, IGrahaEntity entity) {
+        final IGraha graha = entity.entityEnum();
+        final MetaObject obj = new MetaObject();
+        final double vargaRasiLongitude = varga.rasiLongitude(entity.longitude());
+        final String degr = toDMS(vargaRasiLongitude).toString();
+
+        obj.rasi(varga.rasi(entity.longitude()).fid());
+        obj.vdegr((float) (((obj.rasi() - 1) * RASI_LENGTH) + vargaRasiLongitude));
+        obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
+        obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
+        obj.name(buildGrahaName(graha, entity.vakri()));
+        if (entity.vakri()) obj.vakri(1);
+        obj.text(buildGrahaText(graha));
+        obj.code(graha.code());
+        obj.degr(degr);
+
+        return obj;
+    }
 }
