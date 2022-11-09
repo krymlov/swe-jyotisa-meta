@@ -27,7 +27,7 @@ import java.util.Map;
  * @version 1.0, 2022-11
  */
 public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
-    protected String metaVersion = "2.10.03";
+    protected String metaVersion = "2.10.03i";
     protected String appVersion = "2.10.03i";
     protected String appName = "swe-jyotisa";
 

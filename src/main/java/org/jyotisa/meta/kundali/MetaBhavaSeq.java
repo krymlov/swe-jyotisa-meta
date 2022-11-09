@@ -15,9 +15,9 @@ public class MetaBhavaSeq implements IMetaJyotisaPojo {
     protected Integer bhava;
     protected Integer rasi;
 
-    protected Object bhavaShape;
-    protected Object rasiShape;
-    protected Object grahaShape;
+    protected int[][] bhavaShape;
+    protected int[] rasiShape;
+    protected int[] grahaShape;
 
     public Integer bhava() {
         return bhava;
@@ -35,27 +35,27 @@ public class MetaBhavaSeq implements IMetaJyotisaPojo {
         this.rasi = rasi;
     }
 
-    public Object bhavaShape() {
+    public int[][] bhavaShape() {
         return bhavaShape;
     }
 
-    public void bhavaShape(Object bhavaShape) {
+    public void bhavaShape(int[][] bhavaShape) {
         this.bhavaShape = bhavaShape;
     }
 
-    public Object rasiShape() {
+    public int[] rasiShape() {
         return rasiShape;
     }
 
-    public void rasiShape(Object rasiShape) {
+    public void rasiShape(int[] rasiShape) {
         this.rasiShape = rasiShape;
     }
 
-    public Object grahaShape() {
+    public int[] grahaShape() {
         return grahaShape;
     }
 
-    public void grahaShape(Object grahaShape) {
+    public void grahaShape(int[] grahaShape) {
         this.grahaShape = grahaShape;
     }
 }
