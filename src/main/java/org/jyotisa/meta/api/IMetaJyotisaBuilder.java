@@ -41,6 +41,7 @@ import java.util.*;
 
 import static java.lang.Character.toLowerCase;
 import static java.util.Comparator.comparingDouble;
+import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
 import static org.jyotisa.api.graha.IGraha.KE_CD;
 import static org.jyotisa.api.graha.IGraha.RA_CD;
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
@@ -398,15 +399,7 @@ public interface IMetaJyotisaBuilder {
     }
 
     default String buildGrahaText(IGraha graha) {
-        final String text = graha.all()[2].name();
-        final StringBuilder builder = new StringBuilder(text.length());
-        builder.append(text.charAt(0));
-
-        for (int i = 1; i < text.length(); i++) {
-            builder.append(toLowerCase(text.charAt(i)));
-        }
-
-        return builder.toString();
+        return capitalizeFully(graha.all()[2].name());
     }
 
     default String buildNaksatraPadaName(IGrahaEntity grahaEntity) {
@@ -451,27 +444,11 @@ public interface IMetaJyotisaBuilder {
     }
 
     default String buildUpagrahaName(IUpagraha upagraha) {
-        final String name = upagraha.name();
-        final StringBuilder builder = new StringBuilder(name.length());
-
-        builder.append(name.charAt(0));
-        for (int i = 1; i < name.length(); i++) {
-            builder.append(toLowerCase(name.charAt(i)));
-        }
-
-        return builder.toString();
+        return capitalizeFully(upagraha.name());
     }
 
     default String buildUpagrahaText(IUpagraha upagraha) {
-        final String text = EUpagraha.values()[upagraha.fid()].name();
-        final StringBuilder builder = new StringBuilder(text.length());
-        builder.append(text.charAt(0));
-
-        for (int i = 1; i < text.length(); i++) {
-            builder.append(toLowerCase(text.charAt(i)));
-        }
-
-        return builder.toString();
+        return capitalizeFully(EUpagraha.values()[upagraha.fid()].name());
     }
 
     default void addVargaGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
