@@ -7,7 +7,6 @@ package org.jyotisa.meta.kundali;
 
 import org.jyotisa.meta.api.IMetaJyotisaPojo;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,8 +16,7 @@ import java.util.List;
 public class MetaRasiSeq implements IMetaJyotisaPojo {
     protected Integer rasi;
     protected Integer bhava;
-
-    protected final List<Integer> shape = new ArrayList<>(4);
+    protected List<Integer> shape;
 
     public Integer rasi() {
         return rasi;
@@ -38,5 +36,9 @@ public class MetaRasiSeq implements IMetaJyotisaPojo {
 
     public List<Integer> shape() {
         return shape;
+    }
+
+    public void shape(List<Integer> shape) {
+        this.shape = shape;
     }
 }

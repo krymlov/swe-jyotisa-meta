@@ -1026,6 +1026,7 @@
       }
     },
     "northStyle" : {
+      "infoBox" : [ ],
       "viewBox" : [ {
         "bhava" : 1,
         "bhavaShape" : [ [ 500, 750, 0, 100 ], [ 750, 500, 100, 200 ], [ 500, 250, 200, 100 ], [ 250, 500, 100, 0 ] ],
@@ -2126,6 +2127,7 @@
         "dignity" : 2,
         "navamsa" : 5
       } ],
+      "arudhas" : [ ],
       "upagrahas" : [ {
         "code" : "UG1",
         "name" : "Dhu",
@@ -2319,7 +2321,9 @@
         "degr" : "20°15'19\"",
         "vdegr" : 140.2553,
         "dignity" : 6
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D3" : {
       "grahas" : [ {
@@ -2451,7 +2455,9 @@
         "deg" : "14°",
         "degr" : "14°40'31\"",
         "vdegr" : 344.67517
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D4" : {
       "grahas" : [ {
@@ -2583,7 +2589,9 @@
         "deg" : "04°",
         "degr" : "04°30'52\"",
         "vdegr" : 304.51437
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D5" : {
       "grahas" : [ {
@@ -2715,7 +2723,9 @@
         "degr" : "27°30'34\"",
         "vdegr" : 297.50946,
         "dignity" : 5
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D6" : {
       "grahas" : [ {
@@ -2848,7 +2858,9 @@
         "degr" : "00°45'57\"",
         "vdegr" : 330.7659,
         "dignity" : 8
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D7" : {
       "grahas" : [ {
@@ -2982,7 +2994,9 @@
         "deg" : "21°",
         "degr" : "21°05'55\"",
         "vdegr" : 321.09872
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D8" : {
       "grahas" : [ {
@@ -3114,7 +3128,9 @@
         "deg" : "16°",
         "degr" : "16°07'48\"",
         "vdegr" : 286.13
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D9" : {
       "grahas" : [ {
@@ -3247,7 +3263,9 @@
         "degr" : "16°09'10\"",
         "vdegr" : 346.1527,
         "dignity" : 6
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D10" : {
       "grahas" : [ {
@@ -3379,7 +3397,9 @@
         "deg" : "14°",
         "degr" : "14°31'59\"",
         "vdegr" : 344.53296
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D11" : {
       "grahas" : [ {
@@ -3511,7 +3531,9 @@
         "degr" : "29°46'55\"",
         "vdegr" : 359.7819,
         "dignity" : 2
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D12" : {
       "grahas" : [ {
@@ -3643,7 +3665,9 @@
         "deg" : "13°",
         "degr" : "13°32'35\"",
         "vdegr" : 313.5431
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D16" : {
       "grahas" : [ {
@@ -3775,7 +3799,9 @@
         "degr" : "15°55'48\"",
         "vdegr" : 345.92993,
         "dignity" : 6
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D20" : {
       "grahas" : [ {
@@ -3907,7 +3933,9 @@
         "deg" : "25°",
         "degr" : "25°19'30\"",
         "vdegr" : 355.32504
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D24" : {
       "grahas" : [ {
@@ -4040,7 +4068,9 @@
         "degr" : "18°01'40\"",
         "vdegr" : 348.02777,
         "dignity" : 5
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D27" : {
       "grahas" : [ {
@@ -4172,7 +4202,9 @@
         "degr" : "18°27'29\"",
         "vdegr" : 318.4581,
         "dignity" : 5
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D30" : {
       "grahas" : [ {
@@ -4304,7 +4336,9 @@
         "deg" : "13°",
         "degr" : "13°35'56\"",
         "vdegr" : 343.59885
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D40" : {
       "grahas" : [ {
@@ -4436,7 +4470,9 @@
         "degr" : "24°49'29\"",
         "vdegr" : 324.8248,
         "dignity" : 4
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D45" : {
       "grahas" : [ {
@@ -4568,7 +4604,9 @@
         "degr" : "07°35'07\"",
         "vdegr" : 337.58527,
         "dignity" : 11
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D60" : {
       "grahas" : [ {
@@ -4700,7 +4738,9 @@
         "deg" : "27°",
         "degr" : "27°11'52\"",
         "vdegr" : 357.19772
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D81" : {
       "grahas" : [ {
@@ -4833,7 +4873,9 @@
         "degr" : "06°13'46\"",
         "vdegr" : 306.2293,
         "dignity" : 8
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D108" : {
       "grahas" : [ {
@@ -4965,7 +5007,9 @@
         "degr" : "13°47'10\"",
         "vdegr" : 313.7862,
         "dignity" : 5
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     },
     "D144" : {
       "grahas" : [ {
@@ -5097,7 +5141,9 @@
         "deg" : "14°",
         "degr" : "14°24'28\"",
         "vdegr" : 344.40768
-      } ]
+      } ],
+      "arudhas" : [ ],
+      "upagrahas" : [ ]
     }
   },
   "dignity" : [ { }, {

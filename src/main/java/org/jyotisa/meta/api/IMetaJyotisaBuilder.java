@@ -166,6 +166,7 @@ public interface IMetaJyotisaBuilder {
 
     default MetaRasiSeq buildMetaRasiSeq(int x, int y, int w, int h, IRasiEnum rasiEnum) {
         final MetaRasiSeq sequence = new MetaRasiSeq();
+        sequence.shape(new ArrayList<>(4));
         sequence.rasi(rasiEnum.fid());
         sequence.shape().add(x);
         sequence.shape().add(y);
