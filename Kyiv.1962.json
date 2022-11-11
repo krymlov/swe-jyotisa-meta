@@ -23,104 +23,101 @@
   },
   "options" : {
     "groups" : [ {
-      "code" : "GRAHA",
-      "name" : "Graha"
-    }, {
-      "code" : "VARGA",
+      "code" : "EVarga",
       "name" : "Varga"
     } ],
     "items" : [ {
       "code" : "D1",
-      "name" : "D1 RASI",
-      "group" : "VARGA"
+      "name" : "D1 Rasi",
+      "group" : "EVarga"
     }, {
       "code" : "D2",
-      "name" : "D2 HORA",
-      "group" : "VARGA"
+      "name" : "D2 Hora",
+      "group" : "EVarga"
     }, {
       "code" : "D3",
-      "name" : "D3 DREKKANA",
-      "group" : "VARGA"
+      "name" : "D3 Drekkana",
+      "group" : "EVarga"
     }, {
       "code" : "D4",
-      "name" : "D4 CHATURTHAMSA",
-      "group" : "VARGA"
+      "name" : "D4 Chaturthamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D5",
-      "name" : "D5 PANCHAMSA",
-      "group" : "VARGA"
+      "name" : "D5 Panchamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D6",
-      "name" : "D6 SHASHTHAMSA",
-      "group" : "VARGA"
+      "name" : "D6 Shashthamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D7",
-      "name" : "D7 SAPTAMSA",
-      "group" : "VARGA"
+      "name" : "D7 Saptamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D8",
-      "name" : "D8 ASHTAMSA",
-      "group" : "VARGA"
+      "name" : "D8 Ashtamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D9",
-      "name" : "D9 NAVAMSA",
-      "group" : "VARGA"
+      "name" : "D9 Navamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D10",
-      "name" : "D10 DASAMSA",
-      "group" : "VARGA"
+      "name" : "D10 Dasamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D11",
-      "name" : "D11 RUDRAMSA",
-      "group" : "VARGA"
+      "name" : "D11 Rudramsa",
+      "group" : "EVarga"
     }, {
       "code" : "D12",
-      "name" : "D12 DWADASAMSA",
-      "group" : "VARGA"
+      "name" : "D12 Dwadasamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D16",
-      "name" : "D16 SHODASAMSA",
-      "group" : "VARGA"
+      "name" : "D16 Shodasamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D20",
-      "name" : "D20 VIMSAMSA",
-      "group" : "VARGA"
+      "name" : "D20 Vimsamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D24",
-      "name" : "D24 CHATURVIMSAMSA",
-      "group" : "VARGA"
+      "name" : "D24 Chaturvimsamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D27",
-      "name" : "D27 NAKSHATRAMSA",
-      "group" : "VARGA"
+      "name" : "D27 Nakshatramsa",
+      "group" : "EVarga"
     }, {
       "code" : "D30",
-      "name" : "D30 TRIMSAMSA",
-      "group" : "VARGA"
+      "name" : "D30 Trimsamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D40",
-      "name" : "D40 KHAVEDAMSA",
-      "group" : "VARGA"
+      "name" : "D40 Khavedamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D45",
-      "name" : "D45 AKSHAVEDAMSA",
-      "group" : "VARGA"
+      "name" : "D45 Akshavedamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D60",
-      "name" : "D60 SHASHTYAMSA",
-      "group" : "VARGA"
+      "name" : "D60 Shashtyamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D81",
-      "name" : "D81 NAVANAVAMSA",
-      "group" : "VARGA"
+      "name" : "D81 Navanavamsa",
+      "group" : "EVarga"
     }, {
       "code" : "D108",
-      "name" : "D108 ASHTOTTARAMSA",
-      "group" : "VARGA"
+      "name" : "D108 Ashtottaramsa",
+      "group" : "EVarga"
     }, {
       "code" : "D144",
-      "name" : "D144 DVADASDVADASAMSA",
-      "group" : "VARGA"
+      "name" : "D144 Dvadasdvadasamsa",
+      "group" : "EVarga"
     } ],
     "views" : [ {
       "view" : "D1",
@@ -131,45 +128,45 @@
     } ]
   },
   "kundali" : {
-    "mainBox" : [ 0, 0, 1000, 400 ],
+    "mainBox" : [ 0, 0, 400, 400 ],
     "southStyle" : {
-      "infoBox" : [ 250, 100, 500, 200 ],
+      "infoBox" : [ 100, 100, 200, 200 ],
       "viewBox" : [ {
         "rasi" : 1,
-        "shape" : [ 250, 0, 250, 100 ]
+        "shape" : [ 100, 0, 100, 100 ]
       }, {
         "rasi" : 2,
-        "shape" : [ 500, 0, 250, 100 ]
+        "shape" : [ 200, 0, 100, 100 ]
       }, {
         "rasi" : 3,
-        "shape" : [ 750, 0, 250, 100 ]
+        "shape" : [ 300, 0, 100, 100 ]
       }, {
         "rasi" : 4,
-        "shape" : [ 750, 100, 250, 100 ]
+        "shape" : [ 300, 100, 100, 100 ]
       }, {
         "rasi" : 5,
-        "shape" : [ 750, 200, 250, 100 ]
+        "shape" : [ 300, 200, 100, 100 ]
       }, {
         "rasi" : 6,
-        "shape" : [ 750, 300, 250, 100 ]
+        "shape" : [ 300, 300, 100, 100 ]
       }, {
         "rasi" : 7,
-        "shape" : [ 500, 300, 250, 100 ]
+        "shape" : [ 200, 300, 100, 100 ]
       }, {
         "rasi" : 8,
-        "shape" : [ 250, 300, 250, 100 ]
+        "shape" : [ 100, 300, 100, 100 ]
       }, {
         "rasi" : 9,
-        "shape" : [ 0, 300, 250, 100 ]
+        "shape" : [ 0, 300, 100, 100 ]
       }, {
         "rasi" : 10,
-        "shape" : [ 0, 200, 250, 100 ]
+        "shape" : [ 0, 200, 100, 100 ]
       }, {
         "rasi" : 11,
-        "shape" : [ 0, 100, 250, 100 ]
+        "shape" : [ 0, 100, 100, 100 ]
       }, {
         "rasi" : 12,
-        "shape" : [ 0, 0, 250, 100 ]
+        "shape" : [ 0, 0, 100, 100 ]
       } ],
       "objects" : {
         "D1" : [ {
@@ -1029,64 +1026,64 @@
       "infoBox" : [ ],
       "viewBox" : [ {
         "bhava" : 1,
-        "bhavaShape" : [ [ 500, 750, 0, 100 ], [ 750, 500, 100, 200 ], [ 500, 250, 200, 100 ], [ 250, 500, 100, 0 ] ],
-        "rasiShape" : [ 475, 170 ],
-        "grahaShape" : [ 325, 60, 350, 80 ]
+        "bhavaShape" : [ [ 200, 300, 0, 100 ], [ 300, 200, 100, 200 ], [ 200, 100, 200, 100 ], [ 100, 200, 100, 0 ] ],
+        "rasiShape" : [ 190, 170 ],
+        "grahaShape" : [ 130, 60, 140, 80 ]
       }, {
         "bhava" : 2,
-        "bhavaShape" : [ [ 0, 250, 0, 100 ], [ 250, 500, 100, 0 ] ],
-        "rasiShape" : [ 225, 70 ],
-        "grahaShape" : [ 50, 0, 400, 60 ]
+        "bhavaShape" : [ [ 0, 100, 0, 100 ], [ 100, 200, 100, 0 ] ],
+        "rasiShape" : [ 90, 70 ],
+        "grahaShape" : [ 20, 0, 160, 60 ]
       }, {
         "bhava" : 3,
-        "bhavaShape" : [ [ 0, 250, 0, 100 ], [ 250, 0, 100, 200 ] ],
-        "rasiShape" : [ 175, 90 ],
-        "grahaShape" : [ 0, 35, 200, 130 ]
+        "bhavaShape" : [ [ 0, 100, 0, 100 ], [ 100, 0, 100, 200 ] ],
+        "rasiShape" : [ 70, 90 ],
+        "grahaShape" : [ 0, 35, 80, 130 ]
       }, {
         "bhava" : 4,
-        "bhavaShape" : [ [ 250, 500, 100, 200 ], [ 500, 250, 200, 300 ], [ 250, 0, 300, 200 ], [ 0, 250, 200, 100 ] ],
-        "rasiShape" : [ 425, 190 ],
-        "grahaShape" : [ 75, 160, 350, 80 ]
+        "bhavaShape" : [ [ 100, 200, 100, 200 ], [ 200, 100, 200, 300 ], [ 100, 0, 300, 200 ], [ 0, 100, 200, 100 ] ],
+        "rasiShape" : [ 170, 190 ],
+        "grahaShape" : [ 30, 160, 140, 80 ]
       }, {
         "bhava" : 5,
-        "bhavaShape" : [ [ 0, 250, 200, 300 ], [ 250, 0, 300, 400 ] ],
-        "rasiShape" : [ 175, 290 ],
-        "grahaShape" : [ 0, 235, 200, 130 ]
+        "bhavaShape" : [ [ 0, 100, 200, 300 ], [ 100, 0, 300, 400 ] ],
+        "rasiShape" : [ 70, 290 ],
+        "grahaShape" : [ 0, 235, 80, 130 ]
       }, {
         "bhava" : 6,
-        "bhavaShape" : [ [ 0, 250, 400, 300 ], [ 250, 500, 300, 400 ] ],
-        "rasiShape" : [ 225, 310 ],
-        "grahaShape" : [ 50, 340, 400, 150 ]
+        "bhavaShape" : [ [ 0, 100, 400, 300 ], [ 100, 200, 300, 400 ] ],
+        "rasiShape" : [ 90, 310 ],
+        "grahaShape" : [ 20, 340, 160, 60 ]
       }, {
         "bhava" : 7,
-        "bhavaShape" : [ [ 250, 500, 300, 200 ], [ 500, 750, 200, 300 ], [ 750, 500, 300, 400 ], [ 500, 250, 400, 300 ] ],
-        "rasiShape" : [ 475, 210 ],
-        "grahaShape" : [ 325, 260, 350, 80 ]
+        "bhavaShape" : [ [ 100, 200, 300, 200 ], [ 200, 300, 200, 300 ], [ 300, 200, 300, 400 ], [ 200, 100, 400, 300 ] ],
+        "rasiShape" : [ 190, 210 ],
+        "grahaShape" : [ 130, 260, 140, 80 ]
       }, {
         "bhava" : 8,
-        "bhavaShape" : [ [ 500, 750, 400, 300 ], [ 750, 1000, 300, 400 ] ],
-        "rasiShape" : [ 725, 310 ],
-        "grahaShape" : [ 550, 340, 400, 60 ]
+        "bhavaShape" : [ [ 200, 300, 400, 300 ], [ 300, 400, 300, 400 ] ],
+        "rasiShape" : [ 290, 310 ],
+        "grahaShape" : [ 220, 340, 160, 60 ]
       }, {
         "bhava" : 9,
-        "bhavaShape" : [ [ 1000, 750, 400, 300 ], [ 750, 1000, 300, 200 ] ],
-        "rasiShape" : [ 775, 290 ],
-        "grahaShape" : [ 800, 235, 200, 130 ]
+        "bhavaShape" : [ [ 400, 300, 400, 300 ], [ 300, 400, 300, 200 ] ],
+        "rasiShape" : [ 310, 290 ],
+        "grahaShape" : [ 320, 235, 80, 130 ]
       }, {
         "bhava" : 10,
-        "bhavaShape" : [ [ 500, 750, 200, 100 ], [ 750, 1000, 100, 200 ], [ 1000, 750, 200, 300 ], [ 750, 500, 300, 200 ] ],
-        "rasiShape" : [ 525, 190 ],
-        "grahaShape" : [ 575, 160, 350, 80 ]
+        "bhavaShape" : [ [ 200, 300, 200, 100 ], [ 300, 400, 100, 200 ], [ 400, 300, 200, 300 ], [ 300, 200, 300, 200 ] ],
+        "rasiShape" : [ 210, 190 ],
+        "grahaShape" : [ 230, 160, 140, 80 ]
       }, {
         "bhava" : 11,
-        "bhavaShape" : [ [ 1000, 750, 200, 100 ], [ 750, 1000, 100, 0 ] ],
-        "rasiShape" : [ 775, 90 ],
-        "grahaShape" : [ 800, 35, 200, 130 ]
+        "bhavaShape" : [ [ 400, 300, 200, 100 ], [ 300, 400, 100, 0 ] ],
+        "rasiShape" : [ 310, 90 ],
+        "grahaShape" : [ 320, 35, 80, 130 ]
       }, {
         "bhava" : 12,
-        "bhavaShape" : [ [ 1000, 750, 0, 100 ], [ 750, 500, 100, 0 ] ],
-        "rasiShape" : [ 725, 70 ],
-        "grahaShape" : [ 550, 0, 400, 60 ]
+        "bhavaShape" : [ [ 400, 300, 0, 100 ], [ 300, 200, 100, 0 ] ],
+        "rasiShape" : [ 290, 70 ],
+        "grahaShape" : [ 220, 0, 160, 60 ]
       } ],
       "objects" : {
         "D1" : [ {
@@ -5149,460 +5146,402 @@
   "dignity" : [ { }, {
     "fid" : 1,
     "code" : "DG1",
-    "name" : "NEE",
-    "text" : "NEECHA",
-    "desc" : "NEECHA"
+    "name" : "Nee",
+    "text" : "Neecha"
   }, {
     "fid" : 2,
     "code" : "DG2",
-    "name" : "DET",
-    "text" : "DEFICIENT",
-    "desc" : "DEFICIENT"
+    "name" : "Det",
+    "text" : "Deficient"
   }, {
     "fid" : 3,
     "code" : "DG3",
-    "name" : "ADS",
-    "text" : "ADHISATRU",
-    "desc" : "ADHISATRU"
+    "name" : "Ads",
+    "text" : "Adhisatru"
   }, {
     "fid" : 4,
     "code" : "DG4",
-    "name" : "SRU",
-    "text" : "SATRU",
-    "desc" : "SATRU"
+    "name" : "Sru",
+    "text" : "Satru"
   }, {
     "fid" : 5,
     "code" : "DG5",
-    "name" : "SAM",
-    "text" : "SAMA",
-    "desc" : "SAMA"
+    "name" : "Sam",
+    "text" : "Sama"
   }, {
     "fid" : 6,
     "code" : "DG6",
-    "name" : "MIR",
-    "text" : "MITRA",
-    "desc" : "MITRA"
+    "name" : "Mir",
+    "text" : "Mitra"
   }, {
     "fid" : 7,
     "code" : "DG7",
-    "name" : "ADM",
-    "text" : "ADHIMITRA",
-    "desc" : "ADHIMITRA"
+    "name" : "Adm",
+    "text" : "Adhimitra"
   }, {
     "fid" : 8,
     "code" : "DG8",
-    "name" : "SWT",
-    "text" : "SWAKSHETRA",
-    "desc" : "SWAKSHETRA"
+    "name" : "Swt",
+    "text" : "Swakshetra"
   }, {
     "fid" : 9,
     "code" : "DG9",
-    "name" : "MLT",
-    "text" : "MULATRIKONA",
-    "desc" : "MULATRIKONA"
+    "name" : "Mlt",
+    "text" : "Mulatrikona"
   }, {
     "fid" : 10,
     "code" : "DG10",
-    "name" : "EXT",
-    "text" : "EXCELLENT",
-    "desc" : "EXCELLENT"
+    "name" : "Ext",
+    "text" : "Excellent"
   }, {
     "fid" : 11,
     "code" : "DG11",
-    "name" : "UCC",
-    "text" : "UCCHA",
-    "desc" : "UCCHA"
+    "name" : "Ucc",
+    "text" : "Uccha"
   } ],
   "naksatra" : [ { }, {
     "fid" : 1,
     "code" : "N1",
-    "name" : "ASH",
-    "text" : "ASHWINI",
-    "desc" : "ASHWINI"
+    "name" : "Ash",
+    "text" : "Ashwini"
   }, {
     "fid" : 2,
     "code" : "N2",
-    "name" : "BHA",
-    "text" : "BHARANI",
-    "desc" : "BHARANI"
+    "name" : "Bha",
+    "text" : "Bharani"
   }, {
     "fid" : 3,
     "code" : "N3",
-    "name" : "KRI",
-    "text" : "KRITTIKA",
-    "desc" : "KRITTIKA"
+    "name" : "Kri",
+    "text" : "Krittika"
   }, {
     "fid" : 4,
     "code" : "N4",
-    "name" : "ROH",
-    "text" : "ROHINI",
-    "desc" : "ROHINI"
+    "name" : "Roh",
+    "text" : "Rohini"
   }, {
     "fid" : 5,
     "code" : "N5",
-    "name" : "MRG",
-    "text" : "MRIGASHIRA",
-    "desc" : "MRIGASHIRA"
+    "name" : "Mrg",
+    "text" : "Mrigashira"
   }, {
     "fid" : 6,
     "code" : "N6",
-    "name" : "ARD",
-    "text" : "ARDRA",
-    "desc" : "ARDRA"
+    "name" : "Ard",
+    "text" : "Ardra"
   }, {
     "fid" : 7,
     "code" : "N7",
-    "name" : "PUN",
-    "text" : "PUNARVASU",
-    "desc" : "PUNARVASU"
+    "name" : "Pun",
+    "text" : "Punarvasu"
   }, {
     "fid" : 8,
     "code" : "N8",
-    "name" : "PUS",
-    "text" : "PUSHYA",
-    "desc" : "PUSHYA"
+    "name" : "Pus",
+    "text" : "Pushya"
   }, {
     "fid" : 9,
     "code" : "N9",
-    "name" : "ASL",
-    "text" : "ASHLESHA",
-    "desc" : "ASHLESHA"
+    "name" : "Asl",
+    "text" : "Ashlesha"
   }, {
     "fid" : 10,
     "code" : "N10",
-    "name" : "MAG",
-    "text" : "MAGHA",
-    "desc" : "MAGHA"
+    "name" : "Mag",
+    "text" : "Magha"
   }, {
     "fid" : 11,
     "code" : "N11",
-    "name" : "PPH",
-    "text" : "PURVA_PHALGUNI",
-    "desc" : "PURVA_PHALGUNI"
+    "name" : "Pph",
+    "text" : "Purva-phalguni"
   }, {
     "fid" : 12,
     "code" : "N12",
-    "name" : "UPH",
-    "text" : "UTTARA_PHALGUNI",
-    "desc" : "UTTARA_PHALGUNI"
+    "name" : "Uph",
+    "text" : "Uttara-phalguni"
   }, {
     "fid" : 13,
     "code" : "N13",
-    "name" : "HAS",
-    "text" : "HASTA",
-    "desc" : "HASTA"
+    "name" : "Has",
+    "text" : "Hasta"
   }, {
     "fid" : 14,
     "code" : "N14",
-    "name" : "CHT",
-    "text" : "CHITRA",
-    "desc" : "CHITRA"
+    "name" : "Cht",
+    "text" : "Chitra"
   }, {
     "fid" : 15,
     "code" : "N15",
-    "name" : "SWA",
-    "text" : "SWATI",
-    "desc" : "SWATI"
+    "name" : "Swa",
+    "text" : "Swati"
   }, {
     "fid" : 16,
     "code" : "N16",
-    "name" : "VIS",
-    "text" : "VISHAKHA",
-    "desc" : "VISHAKHA"
+    "name" : "Vis",
+    "text" : "Vishakha"
   }, {
     "fid" : 17,
     "code" : "N17",
-    "name" : "ANU",
-    "text" : "ANURADHA",
-    "desc" : "ANURADHA"
+    "name" : "Anu",
+    "text" : "Anuradha"
   }, {
     "fid" : 18,
     "code" : "N18",
-    "name" : "JYE",
-    "text" : "JYESHTHA",
-    "desc" : "JYESHTHA"
+    "name" : "Jye",
+    "text" : "Jyeshtha"
   }, {
     "fid" : 19,
     "code" : "N19",
-    "name" : "MUL",
-    "text" : "MULA",
-    "desc" : "MULA"
+    "name" : "Mul",
+    "text" : "Mula"
   }, {
     "fid" : 20,
     "code" : "N20",
-    "name" : "PSH",
-    "text" : "PURVA_ASHADHA",
-    "desc" : "PURVA_ASHADHA"
+    "name" : "Psh",
+    "text" : "Purva-ashadha"
   }, {
     "fid" : 21,
     "code" : "N21",
-    "name" : "USH",
-    "text" : "UTTARA_ASHADHA",
-    "desc" : "UTTARA_ASHADHA"
+    "name" : "Ush",
+    "text" : "Uttara-ashadha"
   }, {
     "fid" : 22,
     "code" : "N22",
-    "name" : "SHR",
-    "text" : "SHRAVANA",
-    "desc" : "SHRAVANA"
+    "name" : "Shr",
+    "text" : "Shravana"
   }, {
     "fid" : 23,
     "code" : "N23",
-    "name" : "DHA",
-    "text" : "DHANISHTA",
-    "desc" : "DHANISHTA"
+    "name" : "Dha",
+    "text" : "Dhanishta"
   }, {
     "fid" : 24,
     "code" : "N24",
-    "name" : "SAT",
-    "text" : "SHATABHISHA",
-    "desc" : "SHATABHISHA"
+    "name" : "Sat",
+    "text" : "Shatabhisha"
   }, {
     "fid" : 25,
     "code" : "N25",
-    "name" : "PBH",
-    "text" : "PURVA_BHADRAPADA",
-    "desc" : "PURVA_BHADRAPADA"
+    "name" : "Pbh",
+    "text" : "Purva-bhadrapada"
   }, {
     "fid" : 26,
     "code" : "N26",
-    "name" : "UBH",
-    "text" : "UTTARA_BHADRAPADA",
-    "desc" : "UTTARA_BHADRAPADA"
+    "name" : "Ubh",
+    "text" : "Uttara-bhadrapada"
   }, {
     "fid" : 27,
     "code" : "N27",
-    "name" : "REV",
-    "text" : "REVATI",
-    "desc" : "REVATI"
+    "name" : "Rev",
+    "text" : "Revati"
   } ],
   "karaka" : [ { }, {
     "fid" : 1,
     "code" : "AK",
     "name" : "AK",
-    "text" : "ATMA_KARAKA",
-    "desc" : "ATMA_KARAKA"
+    "text" : "Atma"
   }, {
     "fid" : 2,
     "code" : "AmK",
     "name" : "AmK",
-    "text" : "AMATYA_KARAKA",
-    "desc" : "AMATYA_KARAKA"
+    "text" : "Amatya"
   }, {
     "fid" : 3,
     "code" : "BK",
     "name" : "BK",
-    "text" : "BHRATRI_KARAKA",
-    "desc" : "BHRATRI_KARAKA"
+    "text" : "Bhratri"
   }, {
     "fid" : 4,
     "code" : "MK",
     "name" : "MK",
-    "text" : "MATRI_KARAKA",
-    "desc" : "MATRI_KARAKA"
+    "text" : "Matri"
   }, {
     "fid" : 5,
     "code" : "PiK",
     "name" : "PiK",
-    "text" : "PITRI_KARAKA",
-    "desc" : "PITRI_KARAKA"
+    "text" : "Pitri"
   }, {
     "fid" : 6,
     "code" : "PK",
     "name" : "PK",
-    "text" : "PUTRA_KARAKA",
-    "desc" : "PUTRA_KARAKA"
+    "text" : "Putra"
   }, {
     "fid" : 7,
     "code" : "GK",
     "name" : "GK",
-    "text" : "GNATI_KARAKA",
-    "desc" : "GNATI_KARAKA"
+    "text" : "Gnati"
   }, {
     "fid" : 8,
     "code" : "DK",
     "name" : "DK",
-    "text" : "DARA_KARAKA",
-    "desc" : "DARA_KARAKA"
+    "text" : "Dara"
   } ],
   "bhava" : [ { }, {
     "fid" : 1,
     "code" : "B1",
     "name" : "1",
-    "text" : "TAN",
-    "desc" : "TANU"
+    "text" : "Tan",
+    "desc" : "Tanu"
   }, {
     "fid" : 2,
     "code" : "B2",
     "name" : "2",
-    "text" : "DAN",
-    "desc" : "DHANA"
+    "text" : "Dan",
+    "desc" : "Dhana"
   }, {
     "fid" : 3,
     "code" : "B3",
     "name" : "3",
-    "text" : "BRT",
-    "desc" : "BHRATRI"
+    "text" : "Brt",
+    "desc" : "Bhratri"
   }, {
     "fid" : 4,
     "code" : "B4",
     "name" : "4",
-    "text" : "MTR",
-    "desc" : "MATRI"
+    "text" : "Mtr",
+    "desc" : "Matri"
   }, {
     "fid" : 5,
     "code" : "B5",
     "name" : "5",
-    "text" : "PTR",
-    "desc" : "PUTRA"
+    "text" : "Ptr",
+    "desc" : "Putra"
   }, {
     "fid" : 6,
     "code" : "B6",
     "name" : "6",
-    "text" : "ARI",
-    "desc" : "ARI"
+    "text" : "Ari",
+    "desc" : "Ari"
   }, {
     "fid" : 7,
     "code" : "B7",
     "name" : "7",
-    "text" : "KAM",
-    "desc" : "KAMA"
+    "text" : "Kam",
+    "desc" : "Kama"
   }, {
     "fid" : 8,
     "code" : "B8",
     "name" : "8",
-    "text" : "AYR",
-    "desc" : "AYUR"
+    "text" : "Ayr",
+    "desc" : "Ayur"
   }, {
     "fid" : 9,
     "code" : "B9",
     "name" : "9",
-    "text" : "DRM",
-    "desc" : "DHARMA"
+    "text" : "Drm",
+    "desc" : "Dharma"
   }, {
     "fid" : 10,
     "code" : "B10",
     "name" : "10",
-    "text" : "KRM",
-    "desc" : "KARMA"
+    "text" : "Krm",
+    "desc" : "Karma"
   }, {
     "fid" : 11,
     "code" : "B11",
     "name" : "11",
-    "text" : "AYA",
-    "desc" : "LABHA"
+    "text" : "Aya",
+    "desc" : "Labha"
   }, {
     "fid" : 12,
     "code" : "B12",
     "name" : "12",
-    "text" : "VYY",
-    "desc" : "VYAYA"
+    "text" : "Vyy",
+    "desc" : "Vyaya"
   } ],
   "rasi" : [ { }, {
     "fid" : 1,
     "code" : "R1",
-    "name" : "MES",
-    "text" : "MESHA",
-    "desc" : "MESHA",
+    "name" : "Mes",
+    "text" : "Mesha",
     "lord" : 9,
     "start" : 0.0,
     "close" : 30.0
   }, {
     "fid" : 2,
     "code" : "R2",
-    "name" : "VRB",
-    "text" : "VRISHABHA",
-    "desc" : "VRISHABHA",
+    "name" : "Vrb",
+    "text" : "Vrishabha",
     "lord" : 6,
     "start" : 30.0,
     "close" : 60.0
   }, {
     "fid" : 3,
     "code" : "R3",
-    "name" : "MIT",
-    "text" : "MITHUNA",
-    "desc" : "MITHUNA",
+    "name" : "Mit",
+    "text" : "Mithuna",
     "lord" : 5,
     "start" : 60.0,
     "close" : 90.0
   }, {
     "fid" : 4,
     "code" : "R4",
-    "name" : "KAR",
-    "text" : "KARKATA",
-    "desc" : "KARKATA",
+    "name" : "Kar",
+    "text" : "Karkata",
     "lord" : 2,
     "start" : 90.0,
     "close" : 120.0
   }, {
     "fid" : 5,
     "code" : "R5",
-    "name" : "SIM",
-    "text" : "SIMHA",
-    "desc" : "SIMHA",
+    "name" : "Sim",
+    "text" : "Simha",
     "lord" : 1,
     "start" : 120.0,
     "close" : 150.0
   }, {
     "fid" : 6,
     "code" : "R6",
-    "name" : "KAN",
-    "text" : "KANYA",
-    "desc" : "KANYA",
+    "name" : "Kan",
+    "text" : "Kanya",
     "lord" : 5,
     "start" : 150.0,
     "close" : 180.0
   }, {
     "fid" : 7,
     "code" : "R7",
-    "name" : "TUL",
-    "text" : "TULA",
-    "desc" : "TULA",
+    "name" : "Tul",
+    "text" : "Tula",
     "lord" : 6,
     "start" : 180.0,
     "close" : 210.0
   }, {
     "fid" : 8,
     "code" : "R8",
-    "name" : "VRC",
-    "text" : "VRISCHIKA",
-    "desc" : "VRISCHIKA",
+    "name" : "Vrc",
+    "text" : "Vrischika",
     "lord" : 9,
     "start" : 210.0,
     "close" : 240.0
   }, {
     "fid" : 9,
     "code" : "R9",
-    "name" : "DHN",
-    "text" : "DHANUS",
-    "desc" : "DHANUS",
+    "name" : "Dhn",
+    "text" : "Dhanus",
     "lord" : 3,
     "start" : 240.0,
     "close" : 270.0
   }, {
     "fid" : 10,
     "code" : "R10",
-    "name" : "MAK",
-    "text" : "MAKARA",
-    "desc" : "MAKARA",
+    "name" : "Mak",
+    "text" : "Makara",
     "lord" : 8,
     "start" : 270.0,
     "close" : 300.0
   }, {
     "fid" : 11,
     "code" : "R11",
-    "name" : "KUM",
-    "text" : "KUMBHA",
-    "desc" : "KUMBHA",
+    "name" : "Kum",
+    "text" : "Kumbha",
     "lord" : 8,
     "start" : 300.0,
     "close" : 330.0
   }, {
     "fid" : 12,
     "code" : "R12",
-    "name" : "MEE",
-    "text" : "MEENA",
-    "desc" : "MEENA",
+    "name" : "Mee",
+    "text" : "Meena",
     "lord" : 3,
     "start" : 330.0,
     "close" : 360.0

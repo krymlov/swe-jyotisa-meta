@@ -5,6 +5,7 @@
  */
 package org.jyotisa.meta.api;
 
+import org.apache.commons.lang3.StringUtils;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.bhava.IBhavaEnum;
 import org.jyotisa.api.dignity.IDignity;
@@ -41,6 +42,7 @@ import java.util.*;
 
 import static java.lang.Character.toLowerCase;
 import static java.util.Comparator.comparingDouble;
+import static org.apache.commons.lang3.StringUtils.*;
 import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
 import static org.jyotisa.api.graha.IGraha.KE_CD;
 import static org.jyotisa.api.graha.IGraha.RA_CD;
@@ -62,8 +64,6 @@ import static swisseph.SweConst.ODEGREE_CHAR;
  * @version 1.0, 2022-11
  */
 public interface IMetaJyotisaBuilder {
-    String GROUP_GRAHA = "GRAHA";
-    String GROUP_VARGA = "VARGA";
 
     default IMetaJyotisa buildMetaJyotisa(IKundali kundali) {
         final MetaJyotisa jyotisa = new MetaJyotisa();
@@ -97,26 +97,24 @@ public interface IMetaJyotisaBuilder {
     }
 
     default void addOptionsGroups(IMetaJyotisa jyotisa) {
-        final MetaTheme grahaGroup = new MetaTheme();
-        jyotisa.options().groups().add(grahaGroup);
-        grahaGroup.code(GROUP_GRAHA);
-        grahaGroup.name("Graha");
-
         final MetaTheme vargaGroup = new MetaTheme();
+        vargaGroup.code(EVarga.class.getSimpleName());
         jyotisa.options().groups().add(vargaGroup);
-        vargaGroup.code(GROUP_VARGA);
         vargaGroup.name("Varga");
     }
 
     default void addOptionsItems(IMetaJyotisa jyotisa) {
-        ISweEnumIterator<IVargaEnum> iterator = EVarga.iterator();
+        final ISweEnumIterator<IVargaEnum> iterator = EVarga.iterator();
+        final List<MetaOption> items = jyotisa.options().items();
+
         while (iterator.hasNext()) {
-            IVargaEnum ee = iterator.next();
-            MetaOption option = new MetaOption();
-            jyotisa.options().items().add(option);
-            option.group(GROUP_VARGA);
-            option.code(ee.code());
-            option.name(ee.code() + " " + ee.name());
+            final IVargaEnum vargaEnum = iterator.next();
+            final MetaOption option = new MetaOption();
+            option.group(EVarga.class.getSimpleName());
+            option.code(vargaEnum.code());
+            option.name(vargaEnum.code() + SPACE
+                    + capitalizeFully(vargaEnum.name()));
+            items.add(option);
         }
     }
 
@@ -128,7 +126,7 @@ public interface IMetaJyotisaBuilder {
         List<Integer> mainBox = jyotisa.kundali().mainBox();
         mainBox.add(0);
         mainBox.add(0);
-        mainBox.add(1000);
+        mainBox.add(400);
         mainBox.add(400);
     }
 
@@ -262,9 +260,8 @@ public interface IMetaJyotisaBuilder {
         MetaRasi entity = new MetaRasi();
         entity.fid(rasiEnum.fid());
         entity.code(rasiEnum.code());
-        entity.name(rasiEnum.rasi().all()[1].name());
-        entity.text(rasiEnum.name());
-        entity.desc(rasiEnum.name());
+        entity.name(capitalizeFully(rasiEnum.rasi().all()[1].name()));
+        entity.text(capitalizeFully(rasiEnum.name()));
         entity.lord(rasiEnum.rasi().lord().fid());
         entity.start(rasiEnum.segment().start());
         entity.close(rasiEnum.segment().close());
@@ -282,8 +279,8 @@ public interface IMetaJyotisaBuilder {
         MetaBhava entity = new MetaBhava();
         entity.fid(bhavaEnum.fid());
         entity.code(bhavaEnum.code());
-        entity.text(bhavaEnum.bhava().all()[1].name());
-        entity.desc(bhavaEnum.name());
+        entity.text(capitalizeFully(bhavaEnum.bhava().all()[1].name()));
+        entity.desc(capitalizeFully(bhavaEnum.name()));
         entity.name(String.valueOf(bhavaEnum.fid()));
         return entity;
     }
@@ -300,8 +297,7 @@ public interface IMetaJyotisaBuilder {
         entity.fid(karaka.fid());
         entity.code(karaka.code());
         entity.name(karaka.code());
-        entity.text(karaka.name());
-        entity.desc(karaka.name());
+        entity.text(capitalizeFully(substringBefore(karaka.name(),"_")));
         return entity;
     }
 
@@ -316,9 +312,8 @@ public interface IMetaJyotisaBuilder {
         MetaDignity entity = new MetaDignity();
         entity.fid(dignityEnum.fid());
         entity.code(dignityEnum.code());
-        entity.text(dignityEnum.name());
-        entity.desc(dignityEnum.name());
-        entity.name(dignityEnum.dignity().all()[1].name());
+        entity.text(capitalizeFully(dignityEnum.name()));
+        entity.name(capitalizeFully(dignityEnum.dignity().all()[1].name()));
         return entity;
     }
 
@@ -333,9 +328,8 @@ public interface IMetaJyotisaBuilder {
         MetaNaksatra entity = new MetaNaksatra();
         entity.fid(naksatraEnum.fid());
         entity.code(naksatraEnum.code());
-        entity.text(naksatraEnum.name());
-        entity.desc(naksatraEnum.name());
-        entity.name(naksatraEnum.naksatra().all()[1].name());
+        entity.name(capitalizeFully(naksatraEnum.naksatra().all()[1].name()));
+        entity.text(capitalizeFully(replaceChars(naksatraEnum.name(), '_', '-')));
         return entity;
     }
 
