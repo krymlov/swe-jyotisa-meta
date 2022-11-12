@@ -1,5 +1,6 @@
 package org.jyotisa.meta.api;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.jyotisa.meta.options.MetaOptionView;
 
 import java.util.ArrayList;
@@ -14,6 +15,10 @@ public interface IMetaJyotisaConfig {
 
     default MetaViewStyle[] confMetaStyles() {
         return DEFAULT_STYLES;
+    }
+
+    default boolean confMetaStyle(final MetaViewStyle style) {
+        return ArrayUtils.contains(confMetaStyles(), style);
     }
 
     default Iterator<MetaOptionView> confMetaViews() {

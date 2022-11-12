@@ -122,18 +122,13 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaKundaliMainBox(IMetaJyotisa jyotisa) {
-        List<Integer> mainBox = jyotisa.kundali().mainBox();
-        mainBox.add(0);
-        mainBox.add(0);
-        mainBox.add(400);
-        mainBox.add(400);
     }
 
     default void addMetaSouthStyleInfoBox(IMetaJyotisa jyotisa) {
-        List<Integer> mainBox = jyotisa.kundali().mainBox();
-        final Integer width = mainBox.get(2);
-        final Integer height = mainBox.get(3);
+        if (!confMetaStyle(MetaViewStyle.south)) return;
 
+        List<Integer> mainBox = jyotisa.kundali().mainBox();
+        Integer width = mainBox.get(2), height = mainBox.get(3);
         List<Integer> infoBox = jyotisa.kundali().southStyle().infoBox();
         infoBox.add(width / 4);
         infoBox.add(height / 4);
@@ -142,6 +137,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
+        if (!confMetaStyle(MetaViewStyle.south)) return;
+
         final List<MetaRasiSeq> viewBox = jyotisa.kundali().southStyle().viewBox();
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
 
@@ -173,6 +170,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaSouthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
+        if (!confMetaStyle(MetaViewStyle.south)) return;
+
         final Map<String, List<MetaRasiSeq>> mapVargaRasiSeqs = jyotisa.kundali().southStyle().objects();
         final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(RASI);
         final IGrahaEntity lagna = kundali.grahas().lagna();
@@ -199,6 +198,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaNorthStyleViewBox(IMetaJyotisa jyotisa) {
+        if (!confMetaStyle(MetaViewStyle.north)) return;
+
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
         final List<MetaBhavaSeq> viewBox = jyotisa.kundali().northStyle().viewBox();
         final MetaNorthCalc coordsCalc = new MetaNorthCalc(mainBox.get(2), mainBox.get(3));
@@ -220,6 +221,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaNorthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
+        if (!confMetaStyle(MetaViewStyle.north)) return;
+
         final Map<String, List<MetaBhavaSeq>> mapVargaBhavaSeqs = jyotisa.kundali().northStyle().objects();
         final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(RASI);
         final IGrahaEntity lagna = kundali.grahas().lagna();
