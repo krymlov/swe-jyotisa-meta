@@ -18,6 +18,8 @@ import java.util.Map;
  * @version 1.0, 2022-11
  */
 public interface IMetaJyotisa extends IMetaJyotisaPojo {
+    IMetaJyotisaConf DEFAULT_CONF = new IMetaJyotisaConf() {};
+
     String appVersion();
     void appVersion(String appVersion);
 
@@ -26,6 +28,10 @@ public interface IMetaJyotisa extends IMetaJyotisaPojo {
 
     String metaVersion();
     void metaVersion(String metaVersion);
+
+    default IMetaJyotisaConf metaConf() {
+        return DEFAULT_CONF;
+    }
 
     MetaEvent event();
     MetaOptions options();

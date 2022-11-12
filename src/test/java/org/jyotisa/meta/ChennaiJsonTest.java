@@ -57,19 +57,6 @@ public class ChennaiJsonTest extends AbstractTest implements IMetaJyotisaBuilder
         jyotisa.event().datetime().zone("(" + tmzsign + date.timeZone() + ")");
     }
 
-    @Override
-    public void addOptionsViews(IMetaJyotisa jyotisa) {
-        MetaOptionView view = new MetaOptionView();
-        view.view(D01_CD);
-        view.style(MetaViewStyle.south);
-        jyotisa.options().views().add(view);
-
-        view = new MetaOptionView();
-        view.view(D09_CD);
-        view.style(MetaViewStyle.south);
-        jyotisa.options().views().add(view);
-    }
-
     @Test
     void testChennaiNow() throws IOException {
         IKundali kundali = newChennaiKundali(getSwephExp());

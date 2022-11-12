@@ -5,7 +5,6 @@
  */
 package org.jyotisa.meta.api;
 
-import org.apache.commons.lang3.StringUtils;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.api.bhava.IBhavaEnum;
 import org.jyotisa.api.dignity.IDignity;
@@ -47,8 +46,6 @@ import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
 import static org.jyotisa.api.graha.IGraha.KE_CD;
 import static org.jyotisa.api.graha.IGraha.RA_CD;
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
-import static org.jyotisa.api.varga.IVarga.D01_CD;
-import static org.jyotisa.meta.api.MetaViewStyle.south;
 import static org.jyotisa.meta.kundali.MetaBhava.NIL_BHAVA;
 import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
 import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
@@ -119,7 +116,9 @@ public interface IMetaJyotisaBuilder {
     }
 
     default void addOptionsViews(IMetaJyotisa jyotisa) {
-        jyotisa.options().views().add(new MetaOptionView(south, D01_CD));
+        final List<MetaOptionView> viewList = jyotisa.options().views();
+        Iterator<MetaOptionView> iterator = jyotisa.metaConf().optionsViews();
+        while (iterator.hasNext()) viewList.add(iterator.next());
     }
 
     default void addKundaliMainBox(IMetaJyotisa jyotisa) {
@@ -297,7 +296,7 @@ public interface IMetaJyotisaBuilder {
         entity.fid(karaka.fid());
         entity.code(karaka.code());
         entity.name(karaka.code());
-        entity.text(capitalizeFully(substringBefore(karaka.name(),"_")));
+        entity.text(capitalizeFully(substringBefore(karaka.name(), "_")));
         return entity;
     }
 
