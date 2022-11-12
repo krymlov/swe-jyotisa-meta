@@ -37,7 +37,7 @@ import static org.swisseph.utils.IDegreeUtils.toLON;
 public class ChennaiJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
 
     @Override
-    public void addEventInfo(IMetaJyotisa jyotisa, IKundali kundali) {
+    public void addMetaEventInfo(IMetaJyotisa jyotisa, IKundali kundali) {
         final ISweJulianDate date = kundali.sweJulianDate();
         final int year = date.year();
 

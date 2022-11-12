@@ -3,12 +3,8 @@ package org.jyotisa.meta;
 import org.junit.jupiter.api.Test;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.app.Kundali;
-import org.jyotisa.meta.api.IMetaJyotisa;
-import org.jyotisa.meta.api.IMetaJyotisaBuilder;
-import org.jyotisa.meta.api.MetaEventType;
-import org.jyotisa.meta.api.MetaViewStyle;
+import org.jyotisa.meta.api.*;
 import org.jyotisa.meta.app.MetaJyotisa;
-import org.jyotisa.meta.options.MetaOptionView;
 import org.swisseph.api.ISweJulianDate;
 import org.swisseph.app.SweJulianDate;
 import org.swisseph.app.SweObjects;
@@ -21,8 +17,6 @@ import java.util.Calendar;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.TimeZone.getTimeZone;
 import static org.apache.commons.io.FileUtils.writeStringToFile;
-import static org.jyotisa.api.varga.IVarga.D01_CD;
-import static org.jyotisa.api.varga.IVarga.D09_CD;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_8_KARAKAS;
 import static org.swisseph.app.SweObjectsOptions.LAHIRI_CITRAPAKSA;
 import static org.swisseph.utils.IDateUtils.F2H_2M_2S;
@@ -37,7 +31,12 @@ import static org.swisseph.utils.IDegreeUtils.toLON;
 public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
 
     @Override
-    public void addEventInfo(IMetaJyotisa jyotisa, IKundali kundali) {
+    public MetaViewStyle[] confMetaStyles() {
+        return new MetaViewStyle[]{MetaViewStyle.north};
+    }
+
+    @Override
+    public void addMetaEventInfo(IMetaJyotisa jyotisa, IKundali kundali) {
         final ISweJulianDate date = kundali.sweJulianDate();
         final int year = date.year();
 
@@ -55,19 +54,6 @@ public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
 
         String tmzsign = date.timeZone() >= 0 ? "+" : "-";
         jyotisa.event().datetime().zone("(" + tmzsign + date.timeZone() + ")");
-    }
-
-    @Override
-    public void addOptionsViews(IMetaJyotisa jyotisa) {
-        MetaOptionView view = new MetaOptionView();
-        view.view(D01_CD);
-        view.style(MetaViewStyle.north);
-        jyotisa.options().views().add(view);
-
-        view = new MetaOptionView();
-        view.view(D09_CD);
-        view.style(MetaViewStyle.north);
-        jyotisa.options().views().add(view);
     }
 
     @Test

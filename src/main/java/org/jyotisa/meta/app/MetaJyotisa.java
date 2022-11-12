@@ -9,7 +9,6 @@ import org.jyotisa.bhava.EBhava;
 import org.jyotisa.dignity.EDignity;
 import org.jyotisa.karaka.ECharaKaraka;
 import org.jyotisa.meta.api.IMetaJyotisa;
-import org.jyotisa.meta.api.IMetaJyotisaConf;
 import org.jyotisa.meta.base.MetaTheme;
 import org.jyotisa.meta.event.MetaEvent;
 import org.jyotisa.meta.kundali.*;

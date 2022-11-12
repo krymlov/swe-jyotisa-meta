@@ -60,47 +60,47 @@ import static swisseph.SweConst.ODEGREE_CHAR;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public interface IMetaJyotisaBuilder {
+public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
 
     default IMetaJyotisa buildMetaJyotisa(IKundali kundali) {
         final MetaJyotisa jyotisa = new MetaJyotisa();
 
-        addOptionsGroups(jyotisa);
-        addOptionsItems(jyotisa);
-        addOptionsViews(jyotisa);
+        addMetaOptionsGroups(jyotisa);
+        addMetaOptionsItems(jyotisa);
+        addMetaOptionsViews(jyotisa);
 
-        addKundaliMainBox(jyotisa);
-        addSouthStyleInfoBox(jyotisa);
+        addMetaKundaliMainBox(jyotisa);
+        addMetaSouthStyleInfoBox(jyotisa);
 
-        addSouthStyleViewBox(jyotisa);
-        addNorthStyleViewBox(jyotisa);
+        addMetaSouthStyleViewBox(jyotisa);
+        addMetaNorthStyleViewBox(jyotisa);
 
-        addSouthStyleObjects(jyotisa, kundali);
-        addNorthStyleObjects(jyotisa, kundali);
+        addMetaSouthStyleObjects(jyotisa, kundali);
+        addMetaNorthStyleObjects(jyotisa, kundali);
 
-        addCharaKarakaEnum(jyotisa);
-        addNaksatraEnum(jyotisa);
-        addDignityEnum(jyotisa);
-        addBhavaEnums(jyotisa);
-        addRasiEnums(jyotisa);
+        addMetaCharaKarakaEnum(jyotisa);
+        addMetaNaksatraEnum(jyotisa);
+        addMetaDignityEnum(jyotisa);
+        addMetaBhavaEnums(jyotisa);
+        addMetaRasiEnums(jyotisa);
 
-        addEventInfo(jyotisa, kundali);
+        addMetaEventInfo(jyotisa, kundali);
 
-        addRasiGrahas(jyotisa, kundali);
-        addVargaGrahas(jyotisa, kundali);
-        addRasiUpagrahas(jyotisa, kundali);
+        addMetaRasiGrahas(jyotisa, kundali);
+        addMetaVargaGrahas(jyotisa, kundali);
+        addMetaRasiUpagrahas(jyotisa, kundali);
 
         return jyotisa;
     }
 
-    default void addOptionsGroups(IMetaJyotisa jyotisa) {
+    default void addMetaOptionsGroups(IMetaJyotisa jyotisa) {
         final MetaTheme vargaGroup = new MetaTheme();
         vargaGroup.code(EVarga.class.getSimpleName());
         jyotisa.options().groups().add(vargaGroup);
         vargaGroup.name("Varga");
     }
 
-    default void addOptionsItems(IMetaJyotisa jyotisa) {
+    default void addMetaOptionsItems(IMetaJyotisa jyotisa) {
         final ISweEnumIterator<IVargaEnum> iterator = EVarga.iterator();
         final List<MetaOption> items = jyotisa.options().items();
 
@@ -115,13 +115,13 @@ public interface IMetaJyotisaBuilder {
         }
     }
 
-    default void addOptionsViews(IMetaJyotisa jyotisa) {
-        final List<MetaOptionView> viewList = jyotisa.options().views();
-        Iterator<MetaOptionView> iterator = jyotisa.metaConf().optionsViews();
+    default void addMetaOptionsViews(IMetaJyotisa jyotisa) {
+        Iterator<MetaOptionView> iterator = confMetaViews();
+        List<MetaOptionView> viewList = jyotisa.options().views();
         while (iterator.hasNext()) viewList.add(iterator.next());
     }
 
-    default void addKundaliMainBox(IMetaJyotisa jyotisa) {
+    default void addMetaKundaliMainBox(IMetaJyotisa jyotisa) {
         List<Integer> mainBox = jyotisa.kundali().mainBox();
         mainBox.add(0);
         mainBox.add(0);
@@ -129,7 +129,7 @@ public interface IMetaJyotisaBuilder {
         mainBox.add(400);
     }
 
-    default void addSouthStyleInfoBox(IMetaJyotisa jyotisa) {
+    default void addMetaSouthStyleInfoBox(IMetaJyotisa jyotisa) {
         List<Integer> mainBox = jyotisa.kundali().mainBox();
         final Integer width = mainBox.get(2);
         final Integer height = mainBox.get(3);
@@ -141,7 +141,7 @@ public interface IMetaJyotisaBuilder {
         infoBox.add(height / 2);
     }
 
-    default void addSouthStyleViewBox(IMetaJyotisa jyotisa) {
+    default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
         final List<MetaRasiSeq> viewBox = jyotisa.kundali().southStyle().viewBox();
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
 
@@ -172,7 +172,7 @@ public interface IMetaJyotisaBuilder {
         return sequence;
     }
 
-    default void addSouthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
+    default void addMetaSouthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
         final Map<String, List<MetaRasiSeq>> mapVargaRasiSeqs = jyotisa.kundali().southStyle().objects();
         final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(RASI);
         final IGrahaEntity lagna = kundali.grahas().lagna();
@@ -198,7 +198,7 @@ public interface IMetaJyotisaBuilder {
         return sequence;
     }
 
-    default void addNorthStyleViewBox(IMetaJyotisa jyotisa) {
+    default void addMetaNorthStyleViewBox(IMetaJyotisa jyotisa) {
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
         final List<MetaBhavaSeq> viewBox = jyotisa.kundali().northStyle().viewBox();
         final MetaNorthCalc coordsCalc = new MetaNorthCalc(mainBox.get(2), mainBox.get(3));
@@ -219,7 +219,7 @@ public interface IMetaJyotisaBuilder {
         return sequence;
     }
 
-    default void addNorthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
+    default void addMetaNorthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
         final Map<String, List<MetaBhavaSeq>> mapVargaBhavaSeqs = jyotisa.kundali().northStyle().objects();
         final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(RASI);
         final IGrahaEntity lagna = kundali.grahas().lagna();
@@ -248,7 +248,7 @@ public interface IMetaJyotisaBuilder {
         return sequence;
     }
 
-    default void addRasiEnums(IMetaJyotisa jyotisa) {
+    default void addMetaRasiEnums(IMetaJyotisa jyotisa) {
         final List<MetaRasi> list = jyotisa.rasi();
         list.add(NIL_RASI); // #0
         ISweEnumIterator<IRasiEnum> iterator = ERasi.iterator();
@@ -267,7 +267,7 @@ public interface IMetaJyotisaBuilder {
         return entity;
     }
 
-    default void addBhavaEnums(IMetaJyotisa jyotisa) {
+    default void addMetaBhavaEnums(IMetaJyotisa jyotisa) {
         final List<MetaBhava> list = jyotisa.bhava();
         list.add(NIL_BHAVA); // #0
         ISweEnumIterator<IBhavaEnum> iterator = EBhava.iterator();
@@ -284,7 +284,7 @@ public interface IMetaJyotisaBuilder {
         return entity;
     }
 
-    default void addCharaKarakaEnum(IMetaJyotisa jyotisa) {
+    default void addMetaCharaKarakaEnum(IMetaJyotisa jyotisa) {
         final List<MetaKaraka> list = jyotisa.karaka();
         list.add(NIL_KARAKA); // #0
         ISweEnumIterator<ICharaKaraka> iterator = ECharaKaraka.iterator();
@@ -300,7 +300,7 @@ public interface IMetaJyotisaBuilder {
         return entity;
     }
 
-    default void addDignityEnum(IMetaJyotisa jyotisa) {
+    default void addMetaDignityEnum(IMetaJyotisa jyotisa) {
         final List<MetaDignity> list = jyotisa.dignity();
         list.add(NIL_DIGNITY); // #0
         ISweEnumIterator<IDignityEnum> iterator = EDignity.iterator();
@@ -316,7 +316,7 @@ public interface IMetaJyotisaBuilder {
         return entity;
     }
 
-    default void addNaksatraEnum(IMetaJyotisa jyotisa) {
+    default void addMetaNaksatraEnum(IMetaJyotisa jyotisa) {
         final List<MetaNaksatra> list = jyotisa.naksatra();
         list.add(new MetaNaksatra()); // #0
         ISweEnumIterator<INaksatraEnum> iterator = ENaksatra.iterator();
@@ -332,9 +332,9 @@ public interface IMetaJyotisaBuilder {
         return entity;
     }
 
-    void addEventInfo(IMetaJyotisa jyotisa, IKundali kundali);
+    void addMetaEventInfo(IMetaJyotisa jyotisa, IKundali kundali);
 
-    default void addRasiGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
+    default void addMetaRasiGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
         final int[] sweObjects = kundali.sweObjects().sweSequence().objects();
         final IGrahaEntity[] grahas = kundali.grahas().all();
 
@@ -343,11 +343,11 @@ public interface IMetaJyotisaBuilder {
         jyotisa.objects().put(EVarga.RASI.varga().name(), objects);
 
         for (int i = 0; i < sweObjects.length && i < grahas.length; i++) {
-            metaGrahas.add(buildRasiGraha(grahas[sweObjects[i]]));
+            metaGrahas.add(buildMetaRasiGraha(grahas[sweObjects[i]]));
         }
     }
 
-    default MetaObject buildRasiGraha(IGrahaEntity grahaEntity) {
+    default MetaObject buildMetaRasiGraha(IGrahaEntity grahaEntity) {
         final String degr = toDMS(rasiDegree(grahaEntity.longitude())).toString();
         final INaksatraPada pada = grahaEntity.pada();
         final IGraha graha = grahaEntity.entityEnum();
@@ -356,14 +356,14 @@ public interface IMetaJyotisaBuilder {
         IDignity dignity = grahaEntity.dignity();
         if (null != dignity) obj.dignity(dignity.fid());
 
-        obj.name(buildGrahaName(graha, grahaEntity.vakri()));
+        obj.name(buildMetaGrahaName(graha, grahaEntity.vakri()));
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.lgtd(toDMS(grahaEntity.longitude()).toString());
-        obj.npada(buildNaksatraPadaName(grahaEntity));
+        obj.npada(buildMetaNaksatraPadaName(grahaEntity));
         if (grahaEntity.vakri()) obj.vakri(1);
         obj.bhava(grahaEntity.bhava().fid());
         obj.naksatra(pada.naksatra().fid());
-        obj.text(buildGrahaText(graha));
+        obj.text(buildMetaGrahaText(graha));
         obj.navamsa(pada.navamsa().fid());
         obj.rasi(pada.rasi().fid());
         obj.pada(pada.pada());
@@ -373,7 +373,7 @@ public interface IMetaJyotisaBuilder {
         return obj;
     }
 
-    default String buildGrahaName(IGraha graha, boolean vakri) {
+    default String buildMetaGrahaName(IGraha graha, boolean vakri) {
         final String name = graha.all()[1].name();
         final StringBuilder builder = new StringBuilder(name.length());
 
@@ -392,15 +392,15 @@ public interface IMetaJyotisaBuilder {
         return builder.toString();
     }
 
-    default String buildGrahaText(IGraha graha) {
+    default String buildMetaGrahaText(IGraha graha) {
         return capitalizeFully(graha.all()[2].name());
     }
 
-    default String buildNaksatraPadaName(IGrahaEntity grahaEntity) {
+    default String buildMetaNaksatraPadaName(IGrahaEntity grahaEntity) {
         return grahaEntity.pada().naksatra().following().name() + grahaEntity.pada().pada();
     }
 
-    default void addRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
+    default void addMetaRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
         final MetaObjects objects = jyotisa.objects().get(EVarga.RASI.varga().name());
         if (null == objects) return;
 
@@ -412,11 +412,11 @@ public interface IMetaJyotisaBuilder {
         upagrahas.sort(comparingDouble(ISweEnumEntity::longitude));
 
         for (final IUpagrahaEntity upagrahaEntity : upagrahas) {
-            metaUpagrahas.add(buildRasiUpagraha(upagrahaEntity));
+            metaUpagrahas.add(buildMetaRasiUpagraha(upagrahaEntity));
         }
     }
 
-    default MetaObject buildRasiUpagraha(IUpagrahaEntity upagrahaEntity) {
+    default MetaObject buildMetaRasiUpagraha(IUpagrahaEntity upagrahaEntity) {
         final String degr = toDMS(rasiDegree(upagrahaEntity.longitude())).toString();
         final IUpagraha upagraha = upagrahaEntity.entityEnum();
         final INaksatraPada pada = upagrahaEntity.pada();
@@ -425,8 +425,8 @@ public interface IMetaJyotisaBuilder {
         obj.lgtd(toDMS(upagrahaEntity.longitude()).toString());
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.bhava(upagrahaEntity.bhava().fid());
-        obj.name(buildUpagrahaName(upagraha));
-        obj.text(buildUpagrahaText(upagraha));
+        obj.name(buildMetaUpagrahaName(upagraha));
+        obj.text(buildMetaUpagrahaText(upagraha));
         obj.naksatra(pada.naksatra().fid());
         obj.navamsa(pada.navamsa().fid());
         obj.rasi(pada.rasi().fid());
@@ -437,15 +437,15 @@ public interface IMetaJyotisaBuilder {
         return obj;
     }
 
-    default String buildUpagrahaName(IUpagraha upagraha) {
+    default String buildMetaUpagrahaName(IUpagraha upagraha) {
         return capitalizeFully(upagraha.name());
     }
 
-    default String buildUpagrahaText(IUpagraha upagraha) {
+    default String buildMetaUpagrahaText(IUpagraha upagraha) {
         return capitalizeFully(EUpagraha.values()[upagraha.fid()].name());
     }
 
-    default void addVargaGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
+    default void addMetaVargaGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
         final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(HORA);
         final IGrahaEntity[] grahas = kundali.grahas().all();
         final IGrahaEntity lagna = kundali.grahas().lagna();
@@ -458,7 +458,7 @@ public interface IMetaJyotisaBuilder {
             jyotisa.objects().put(varga.code(), objects);
 
             for (IGrahaEntity graha : grahas) {
-                metaGrahas.add(buildVargaGraha(varga, lagnaRasiFid, graha));
+                metaGrahas.add(buildMetaVargaGraha(varga, lagnaRasiFid, graha));
             }
 
             if (!metaGrahas.isEmpty()) metaGrahas.sort(comparingDouble(MetaObject::vdegr));
@@ -466,7 +466,7 @@ public interface IMetaJyotisaBuilder {
         }
     }
 
-    default MetaObject buildVargaGraha(IVarga varga, int lagnaRasiFid, IGrahaEntity grahaEntity) {
+    default MetaObject buildMetaVargaGraha(IVarga varga, int lagnaRasiFid, IGrahaEntity grahaEntity) {
         final IGraha graha = grahaEntity.entityEnum();
         final MetaObject obj = new MetaObject();
         final double vargaRasiLongitude = varga.rasiLongitude(grahaEntity.longitude());
@@ -479,9 +479,9 @@ public interface IMetaJyotisaBuilder {
         obj.vdegr((float) (((obj.rasi() - 1) * RASI_LENGTH) + vargaRasiLongitude));
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
-        obj.name(buildGrahaName(graha, grahaEntity.vakri()));
+        obj.name(buildMetaGrahaName(graha, grahaEntity.vakri()));
         if (grahaEntity.vakri()) obj.vakri(1);
-        obj.text(buildGrahaText(graha));
+        obj.text(buildMetaGrahaText(graha));
         obj.code(graha.code());
         obj.degr(degr);
 
