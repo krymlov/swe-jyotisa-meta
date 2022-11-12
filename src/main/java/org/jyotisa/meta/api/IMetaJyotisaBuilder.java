@@ -97,7 +97,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         final MetaTheme vargaGroup = new MetaTheme();
         vargaGroup.code(EVarga.class.getSimpleName());
         jyotisa.options().groups().add(vargaGroup);
-        vargaGroup.name("Varga");
+        vargaGroup.name("VARGA CHAKRA");
     }
 
     default void addMetaOptionsItems(IMetaJyotisa jyotisa) {
