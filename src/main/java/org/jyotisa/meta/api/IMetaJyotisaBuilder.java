@@ -49,6 +49,7 @@ import static org.jyotisa.api.rasi.IRasi.rasiDegree;
 import static org.jyotisa.meta.kundali.MetaBhava.NIL_BHAVA;
 import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
 import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
+import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
 import static org.jyotisa.varga.EVarga.HORA;
 import static org.jyotisa.varga.EVarga.RASI;
@@ -321,7 +322,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
 
     default void addMetaNaksatraEnum(IMetaJyotisa jyotisa) {
         final List<MetaNaksatra> list = jyotisa.naksatra();
-        list.add(new MetaNaksatra()); // #0
+        list.add(NIL_NAKSATRA); // #0
         ISweEnumIterator<INaksatraEnum> iterator = ENaksatra.iterator();
         while (iterator.hasNext()) list.add(buildMetaNaksatra(iterator.next()));
     }

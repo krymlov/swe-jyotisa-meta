@@ -6,6 +6,8 @@
 package org.jyotisa.meta.kundali;
 
 import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.rasi.ERasi;
+import org.jyotisa.varga.EVarga;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -18,8 +20,8 @@ import java.util.Map;
  */
 public class MetaNorthStyle implements IMetaJyotisaPojo {
     protected final List<Integer> infoBox = new ArrayList<>(4);
-    protected final List<MetaBhavaSeq> viewBox = new ArrayList<>(12);
-    protected final Map<String, List<MetaBhavaSeq>> objects = new LinkedHashMap<>();
+    protected final List<MetaBhavaSeq> viewBox = new ArrayList<>(ERasi.values().length);
+    protected final Map<String, List<MetaBhavaSeq>> objects = new LinkedHashMap<>(EVarga.values().length);
 
     public List<Integer> infoBox() {
         return infoBox;

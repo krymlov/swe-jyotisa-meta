@@ -12,6 +12,8 @@ import org.jyotisa.meta.base.MetaTheme;
  * @version 1.0, 2022-11
  */
 public class MetaNaksatra extends MetaTheme {
+    public static final MetaNaksatra NIL_NAKSATRA = new MetaNaksatra();
+
     protected Integer lord;
 
     public Integer lord() {

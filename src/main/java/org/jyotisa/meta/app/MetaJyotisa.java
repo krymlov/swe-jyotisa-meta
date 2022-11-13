@@ -16,6 +16,7 @@ import org.jyotisa.meta.objects.MetaObjects;
 import org.jyotisa.meta.options.MetaOptions;
 import org.jyotisa.naksatra.ENaksatra;
 import org.jyotisa.rasi.ERasi;
+import org.jyotisa.varga.EVarga;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -35,7 +36,7 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     protected final MetaOptions options = new MetaOptions();
     protected final MetaKundali kundali = new MetaKundali();
 
-    protected final Map<String, MetaObjects> objects = new LinkedHashMap<>();
+    protected final Map<String, MetaObjects> objects = new LinkedHashMap<>(EVarga.values().length);
 
     protected final List<MetaDignity> dignity = new ArrayList<>(EDignity.values().length);
     protected final List<MetaNaksatra> naksatra = new ArrayList<>(ENaksatra.values().length);
