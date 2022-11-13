@@ -20,8 +20,6 @@ import org.jyotisa.api.upagraha.IUpagrahaEntity;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.bhava.EBhava;
-import org.jyotisa.dignity.EDignity;
-import org.jyotisa.karaka.ECharaKaraka;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.jyotisa.meta.app.MetaNorthCalc;
 import org.jyotisa.meta.base.MetaTheme;
@@ -30,7 +28,6 @@ import org.jyotisa.meta.objects.MetaObject;
 import org.jyotisa.meta.objects.MetaObjects;
 import org.jyotisa.meta.options.MetaOption;
 import org.jyotisa.meta.options.MetaView;
-import org.jyotisa.naksatra.ENaksatra;
 import org.jyotisa.rasi.ERasi;
 import org.jyotisa.upagraha.EUpagraha;
 import org.jyotisa.varga.EVarga;
@@ -46,13 +43,14 @@ import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
 import static org.jyotisa.api.graha.IGraha.KE_CD;
 import static org.jyotisa.api.graha.IGraha.RA_CD;
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
+import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.meta.kundali.MetaBhava.NIL_BHAVA;
 import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
 import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
 import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
+import static org.jyotisa.rasi.ERasi.MESHA;
 import static org.jyotisa.varga.EVarga.HORA;
-import static org.jyotisa.varga.EVarga.RASI;
 import static org.swisseph.api.ISweConstants.RASI_LENGTH;
 import static org.swisseph.utils.IDegreeUtils.toDMS;
 import static swisseph.SweConst.ODEGREE_CHAR;
@@ -146,7 +144,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         final int rasiSquareSize = mainBox.get(2) / 4;
         final int w = rasiSquareSize, h = mainBox.get(3) / 4;
 
-        IRasiEnum rasiEnum = ERasi.MESHA;
+        IRasiEnum rasiEnum = MESHA;
         int x = rasiSquareSize, y = 0;
 
         for (int i = 0; i < 12; i++) {
@@ -174,19 +172,18 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         if (!confMetaStyle(MetaViewStyle.south)) return;
 
         final Map<String, List<MetaRasiSeq>> mapVargaRasiSeqs = jyotisa.kundali().southStyle().objects();
-        final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(RASI);
+        final Iterator<IVargaEnum> iterator = confMetaVargas();
         final IGrahaEntity lagna = kundali.grahas().lagna();
 
         while (iterator.hasNext()) {
             final IVarga varga = iterator.next().varga();
-            final List<MetaRasiSeq> rasiSeqs = new ArrayList<>(12);
+            final List<MetaRasiSeq> rasiSeqs = new ArrayList<>(ERasi.values().length);
+            final ISweEnumIterator<IRasiEnum> rasiIterator = confMetaRasis();
             final int lagnaRasiFid = varga.rasi(lagna.longitude()).fid();
             mapVargaRasiSeqs.put(varga.code(), rasiSeqs);
 
-            IRasiEnum rasiEnum = ERasi.MESHA;
-            for (int i = 0; i < 12; i++) {
-                rasiSeqs.add(buildMetaRasiSeq(rasiEnum, lagnaRasiFid));
-                rasiEnum = rasiEnum.following();
+            while (rasiIterator.hasNext()) {
+                rasiSeqs.add(buildMetaRasiSeq(rasiIterator.next(), lagnaRasiFid));
             }
         }
     }
@@ -204,11 +201,10 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
         final List<MetaBhavaSeq> viewBox = jyotisa.kundali().northStyle().viewBox();
         final MetaNorthCalc coordsCalc = new MetaNorthCalc(mainBox.get(2), mainBox.get(3));
-        IBhavaEnum bhavaEnum = EBhava.TANU;
+        final ISweEnumIterator<IBhavaEnum> bhavaIterator = confMetaBhavas();
 
-        for (int i = 0; i < 12; i++) {
-            viewBox.add(buildMetaRasiSeq(bhavaEnum, coordsCalc));
-            bhavaEnum = bhavaEnum.following();
+        while (bhavaIterator.hasNext()) {
+            viewBox.add(buildMetaRasiSeq(bhavaIterator.next(), coordsCalc));
         }
     }
 
@@ -225,21 +221,19 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         if (!confMetaStyle(MetaViewStyle.north)) return;
 
         final Map<String, List<MetaBhavaSeq>> mapVargaBhavaSeqs = jyotisa.kundali().northStyle().objects();
-        final Iterator<IVargaEnum> iterator = EVarga.iteratorFrom(RASI);
+        final Iterator<IVargaEnum> iterator = confMetaVargas();
         final IGrahaEntity lagna = kundali.grahas().lagna();
 
         while (iterator.hasNext()) {
             final IVarga varga = iterator.next().varga();
-            final List<MetaBhavaSeq> bhavaSeqs = new ArrayList<>(12);
+            final List<MetaBhavaSeq> bhavaSeqs = new ArrayList<>(EBhava.values().length);
+            final ISweEnumIterator<IBhavaEnum> bhavaIterator = confMetaBhavas();
             final int lagnaRasiFid = varga.rasi(lagna.longitude()).fid();
+            IRasiEnum rasiEnum = ERasi.values()[lagnaRasiFid];
             mapVargaBhavaSeqs.put(varga.code(), bhavaSeqs);
 
-            IRasiEnum rasiEnum = ERasi.values()[lagnaRasiFid];
-            IBhavaEnum bhavaEnum = EBhava.TANU;
-
-            for (int i = 0; i < 12; i++) {
-                bhavaSeqs.add(buildMetaRasiSeq(bhavaEnum, rasiEnum));
-                bhavaEnum = bhavaEnum.following();
+            while (bhavaIterator.hasNext()) {
+                bhavaSeqs.add(buildMetaRasiSeq(bhavaIterator.next(), rasiEnum));
                 rasiEnum = rasiEnum.following();
             }
         }
@@ -255,7 +249,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaRasiEnums(IMetaJyotisa jyotisa) {
         final List<MetaRasi> list = jyotisa.rasi();
         list.add(NIL_RASI); // #0
-        ISweEnumIterator<IRasiEnum> iterator = ERasi.iterator();
+        ISweEnumIterator<IRasiEnum> iterator = confMetaRasis();
         while (iterator.hasNext()) list.add(buildMetaRasi(iterator.next()));
     }
 
@@ -274,7 +268,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaBhavaEnums(IMetaJyotisa jyotisa) {
         final List<MetaBhava> list = jyotisa.bhava();
         list.add(NIL_BHAVA); // #0
-        ISweEnumIterator<IBhavaEnum> iterator = EBhava.iterator();
+        ISweEnumIterator<IBhavaEnum> iterator = confMetaBhavas();
         while (iterator.hasNext()) list.add(buildMetaBhava(iterator.next()));
     }
 
@@ -291,7 +285,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaCharaKarakaEnum(IMetaJyotisa jyotisa) {
         final List<MetaKaraka> list = jyotisa.karaka();
         list.add(NIL_KARAKA); // #0
-        ISweEnumIterator<ICharaKaraka> iterator = ECharaKaraka.iterator();
+        ISweEnumIterator<ICharaKaraka> iterator = confMetaCharaKarakas();
         while (iterator.hasNext()) list.add(buildMetaCharaKaraka(iterator.next()));
     }
 
@@ -307,7 +301,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaDignityEnum(IMetaJyotisa jyotisa) {
         final List<MetaDignity> list = jyotisa.dignity();
         list.add(NIL_DIGNITY); // #0
-        ISweEnumIterator<IDignityEnum> iterator = EDignity.iterator();
+        ISweEnumIterator<IDignityEnum> iterator = confMetaDignities();
         while (iterator.hasNext()) list.add(buildMetaDignity(iterator.next()));
     }
 
@@ -323,7 +317,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaNaksatraEnum(IMetaJyotisa jyotisa) {
         final List<MetaNaksatra> list = jyotisa.naksatra();
         list.add(NIL_NAKSATRA); // #0
-        ISweEnumIterator<INaksatraEnum> iterator = ENaksatra.iterator();
+        ISweEnumIterator<INaksatraEnum> iterator = confMetaNaksatras();
         while (iterator.hasNext()) list.add(buildMetaNaksatra(iterator.next()));
     }
 
@@ -346,35 +340,13 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         final List<MetaObject> metaGrahas = objects.grahas();
         jyotisa.objects().put(EVarga.RASI.varga().name(), objects);
 
+        IVarga varga = EVarga.RASI.varga();
+        final IGrahaEntity lagna = kundali.grahas().lagna();
+        final int lagnaRasiFid = varga.rasi(lagna.longitude()).fid();
+
         for (int i = 0; i < sweObjects.length && i < grahas.length; i++) {
-            metaGrahas.add(buildMetaRasiGraha(grahas[sweObjects[i]]));
+            metaGrahas.add(buildMetaVargaGraha(varga, lagnaRasiFid, grahas[sweObjects[i]]));
         }
-    }
-
-    default MetaObject buildMetaRasiGraha(IGrahaEntity grahaEntity) {
-        final String degr = toDMS(rasiDegree(grahaEntity.longitude())).toString();
-        final INaksatraPada pada = grahaEntity.pada();
-        final IGraha graha = grahaEntity.entityEnum();
-        final MetaObject obj = new MetaObject();
-
-        IDignity dignity = grahaEntity.dignity();
-        if (null != dignity) obj.dignity(dignity.fid());
-
-        obj.name(buildMetaGrahaName(graha, grahaEntity.vakri()));
-        obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
-        obj.lgtd(toDMS(grahaEntity.longitude()).toString());
-        obj.npada(buildMetaNaksatraPadaName(grahaEntity));
-        if (grahaEntity.vakri()) obj.vakri(1);
-        obj.bhava(grahaEntity.bhava().fid());
-        obj.naksatra(pada.naksatra().fid());
-        obj.text(buildMetaGrahaText(graha));
-        obj.navamsa(pada.navamsa().fid());
-        obj.rasi(pada.rasi().fid());
-        obj.pada(pada.pada());
-        obj.code(graha.code());
-        obj.degr(degr);
-
-        return obj;
     }
 
     default String buildMetaGrahaName(IGraha graha, boolean vakri) {
@@ -488,6 +460,15 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         obj.text(buildMetaGrahaText(graha));
         obj.code(graha.code());
         obj.degr(degr);
+
+        if (varga.code().equals(D01_CD)) {
+            final INaksatraPada pada = grahaEntity.pada();
+            obj.lgtd(toDMS(grahaEntity.longitude()).toString());
+            obj.npada(buildMetaNaksatraPadaName(grahaEntity));
+            obj.naksatra(pada.naksatra().fid());
+            obj.navamsa(pada.navamsa().fid());
+            obj.pada(pada.pada());
+        }
 
         return obj;
     }

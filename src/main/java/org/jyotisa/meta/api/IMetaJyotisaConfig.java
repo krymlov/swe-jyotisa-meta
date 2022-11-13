@@ -1,8 +1,18 @@
 package org.jyotisa.meta.api;
 
 import org.apache.commons.lang3.ArrayUtils;
+import org.jyotisa.api.bhava.IBhavaEnum;
+import org.jyotisa.api.dignity.IDignityEnum;
+import org.jyotisa.api.karaka.ICharaKaraka;
+import org.jyotisa.api.naksatra.INaksatraEnum;
+import org.jyotisa.api.rasi.IRasiEnum;
 import org.jyotisa.api.varga.IVargaEnum;
+import org.jyotisa.bhava.EBhava;
+import org.jyotisa.dignity.EDignity;
+import org.jyotisa.karaka.ECharaKaraka;
 import org.jyotisa.meta.options.MetaView;
+import org.jyotisa.naksatra.ENaksatra;
+import org.jyotisa.rasi.ERasi;
 import org.jyotisa.varga.EVarga;
 import org.swisseph.api.ISweEnumIterator;
 
@@ -38,7 +48,27 @@ public interface IMetaJyotisaConfig {
         return viewList.iterator();
     }
 
+    default ISweEnumIterator<ICharaKaraka> confMetaCharaKarakas() {
+        return ECharaKaraka.iterator();
+    }
+
+    default ISweEnumIterator<INaksatraEnum> confMetaNaksatras() {
+        return ENaksatra.iterator();
+    }
+
+    default ISweEnumIterator<IDignityEnum> confMetaDignities() {
+        return EDignity.iterator();
+    }
+
     default ISweEnumIterator<IVargaEnum> confMetaVargas() {
         return EVarga.iterator();
+    }
+
+    default ISweEnumIterator<IBhavaEnum> confMetaBhavas() {
+        return EBhava.iterator();
+    }
+
+    default ISweEnumIterator<IRasiEnum> confMetaRasis() {
+        return ERasi.iterator();
     }
 }
