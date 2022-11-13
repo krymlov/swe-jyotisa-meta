@@ -38,8 +38,8 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
 
     protected final Map<String, MetaObjects> objects = new LinkedHashMap<>(EVarga.values().length);
 
-    protected final List<MetaDignity> dignity = new ArrayList<>(EDignity.values().length);
     protected final List<MetaNaksatra> naksatra = new ArrayList<>(ENaksatra.values().length);
+    protected final List<MetaDignity> dignity = new ArrayList<>(EDignity.values().length);
     protected final List<MetaKaraka> karaka = new ArrayList<>(ECharaKaraka.values().length);
     protected final List<MetaBhava> bhava = new ArrayList<>(EBhava.values().length);
     protected final List<MetaRasi> rasi = new ArrayList<>(ERasi.values().length);

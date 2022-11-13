@@ -4276,62 +4276,6 @@
       "upagrahas" : [ ]
     }
   },
-  "dignity" : [ { }, {
-    "fid" : 1,
-    "code" : "DG1",
-    "name" : "Nee",
-    "text" : "Neecha"
-  }, {
-    "fid" : 2,
-    "code" : "DG2",
-    "name" : "Det",
-    "text" : "Deficient"
-  }, {
-    "fid" : 3,
-    "code" : "DG3",
-    "name" : "Ads",
-    "text" : "Adhisatru"
-  }, {
-    "fid" : 4,
-    "code" : "DG4",
-    "name" : "Sru",
-    "text" : "Satru"
-  }, {
-    "fid" : 5,
-    "code" : "DG5",
-    "name" : "Sam",
-    "text" : "Sama"
-  }, {
-    "fid" : 6,
-    "code" : "DG6",
-    "name" : "Mir",
-    "text" : "Mitra"
-  }, {
-    "fid" : 7,
-    "code" : "DG7",
-    "name" : "Adm",
-    "text" : "Adhimitra"
-  }, {
-    "fid" : 8,
-    "code" : "DG8",
-    "name" : "Swt",
-    "text" : "Swakshetra"
-  }, {
-    "fid" : 9,
-    "code" : "DG9",
-    "name" : "Mlt",
-    "text" : "Mulatrikona"
-  }, {
-    "fid" : 10,
-    "code" : "DG10",
-    "name" : "Ext",
-    "text" : "Excellent"
-  }, {
-    "fid" : 11,
-    "code" : "DG11",
-    "name" : "Ucc",
-    "text" : "Uccha"
-  } ],
   "naksatra" : [ { }, {
     "fid" : 1,
     "code" : "N1",
@@ -4467,6 +4411,62 @@
     "code" : "N27",
     "name" : "Rev",
     "text" : "Revati"
+  } ],
+  "dignity" : [ { }, {
+    "fid" : 1,
+    "code" : "DG1",
+    "name" : "Nee",
+    "text" : "Neecha"
+  }, {
+    "fid" : 2,
+    "code" : "DG2",
+    "name" : "Det",
+    "text" : "Deficient"
+  }, {
+    "fid" : 3,
+    "code" : "DG3",
+    "name" : "Ads",
+    "text" : "Adhisatru"
+  }, {
+    "fid" : 4,
+    "code" : "DG4",
+    "name" : "Sru",
+    "text" : "Satru"
+  }, {
+    "fid" : 5,
+    "code" : "DG5",
+    "name" : "Sam",
+    "text" : "Sama"
+  }, {
+    "fid" : 6,
+    "code" : "DG6",
+    "name" : "Mir",
+    "text" : "Mitra"
+  }, {
+    "fid" : 7,
+    "code" : "DG7",
+    "name" : "Adm",
+    "text" : "Adhimitra"
+  }, {
+    "fid" : 8,
+    "code" : "DG8",
+    "name" : "Swt",
+    "text" : "Swakshetra"
+  }, {
+    "fid" : 9,
+    "code" : "DG9",
+    "name" : "Mlt",
+    "text" : "Mulatrikona"
+  }, {
+    "fid" : 10,
+    "code" : "DG10",
+    "name" : "Ext",
+    "text" : "Excellent"
+  }, {
+    "fid" : 11,
+    "code" : "DG11",
+    "name" : "Ucc",
+    "text" : "Uccha"
   } ],
   "karaka" : [ { }, {
     "fid" : 1,
