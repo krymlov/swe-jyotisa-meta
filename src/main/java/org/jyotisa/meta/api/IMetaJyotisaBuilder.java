@@ -51,6 +51,7 @@ import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
 import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
 import static org.jyotisa.rasi.ERasi.MESHA;
+import static org.jyotisa.varga.EVarga.RASI;
 import static org.swisseph.api.ISweConstants.RASI_LENGTH;
 import static org.swisseph.utils.IDegreeUtils.toDMS;
 import static swisseph.SweConst.ODEGREE_CHAR;
@@ -407,7 +408,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
-        final MetaObjects objects = jyotisa.objects().get(EVarga.RASI.varga().name());
+        final MetaObjects objects = jyotisa.objects().get(RASI.varga().code());
         if (null == objects) return;
 
         final List<MetaObject> metaUpagrahas = objects.upagrahas();
