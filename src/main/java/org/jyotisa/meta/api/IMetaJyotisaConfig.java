@@ -1,7 +1,10 @@
 package org.jyotisa.meta.api;
 
 import org.apache.commons.lang3.ArrayUtils;
-import org.jyotisa.meta.options.MetaOptionView;
+import org.jyotisa.api.varga.IVargaEnum;
+import org.jyotisa.meta.options.MetaView;
+import org.jyotisa.varga.EVarga;
+import org.swisseph.api.ISweEnumIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -21,17 +24,21 @@ public interface IMetaJyotisaConfig {
         return ArrayUtils.contains(confMetaStyles(), style);
     }
 
-    default Iterator<MetaOptionView> confMetaViews() {
+    default Iterator<MetaView> confMetaViews() {
         final MetaViewStyle[] styles = confMetaStyles();
 
         if (null == styles || styles.length == 0) {
             throw new IllegalArgumentException("At least one style is required");
         }
 
-        final List<MetaOptionView> viewList = new ArrayList<>();
-        for (MetaViewStyle style : styles) viewList.add(new MetaOptionView(style, D01_CD));
-        if (styles.length == 1) viewList.add(new MetaOptionView(styles[0], D09_CD));
+        final List<MetaView> viewList = new ArrayList<>();
+        for (MetaViewStyle style : styles) viewList.add(new MetaView(style, D01_CD));
+        if (styles.length == 1) viewList.add(new MetaView(styles[0], D09_CD));
 
         return viewList.iterator();
+    }
+
+    default ISweEnumIterator<IVargaEnum> confMetaVargas() {
+        return EVarga.iterator();
     }
 }

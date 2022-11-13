@@ -29,7 +29,7 @@ import org.jyotisa.meta.kundali.*;
 import org.jyotisa.meta.objects.MetaObject;
 import org.jyotisa.meta.objects.MetaObjects;
 import org.jyotisa.meta.options.MetaOption;
-import org.jyotisa.meta.options.MetaOptionView;
+import org.jyotisa.meta.options.MetaView;
 import org.jyotisa.naksatra.ENaksatra;
 import org.jyotisa.rasi.ERasi;
 import org.jyotisa.upagraha.EUpagraha;
@@ -101,7 +101,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaOptionsItems(IMetaJyotisa jyotisa) {
-        final ISweEnumIterator<IVargaEnum> iterator = EVarga.iterator();
+        final ISweEnumIterator<IVargaEnum> iterator = confMetaVargas();
         final List<MetaOption> items = jyotisa.options().items();
 
         while (iterator.hasNext()) {
@@ -116,8 +116,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaOptionsViews(IMetaJyotisa jyotisa) {
-        Iterator<MetaOptionView> iterator = confMetaViews();
-        List<MetaOptionView> viewList = jyotisa.options().views();
+        Iterator<MetaView> iterator = confMetaViews();
+        List<MetaView> viewList = jyotisa.options().views();
         while (iterator.hasNext()) viewList.add(iterator.next());
     }
 

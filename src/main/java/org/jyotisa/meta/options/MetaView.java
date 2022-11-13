@@ -15,16 +15,16 @@ import static org.jyotisa.meta.api.MetaViewStyle.south;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaOptionView extends MetaCode {
+public class MetaView extends MetaCode {
     protected String view; // D1, D9, SY
     protected MetaViewStyle style;
 
-    public MetaOptionView() {
+    public MetaView() {
         this.view = D01_CD;
         this.style = south;
     }
 
-    public MetaOptionView(MetaViewStyle style, String view) {
+    public MetaView(MetaViewStyle style, String view) {
         this.style = style;
         this.view = view;
     }

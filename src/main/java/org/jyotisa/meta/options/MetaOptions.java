@@ -16,9 +16,9 @@ import java.util.List;
  * @version 1.0, 2022-11
  */
 public class MetaOptions implements IMetaJyotisaPojo {
-    protected final List<MetaTheme> groups = new ArrayList<>();
-    protected final List<MetaOption> items = new ArrayList<>();
-    protected final List<MetaOptionView> views = new ArrayList<>();
+    protected final List<MetaView> views = new ArrayList<>(2);
+    protected final List<MetaTheme> groups = new ArrayList<>(2);
+    protected final List<MetaOption> items = new ArrayList<>(24);
 
     public List<MetaTheme> groups() {
         return groups;
@@ -28,7 +28,7 @@ public class MetaOptions implements IMetaJyotisaPojo {
         return items;
     }
 
-    public List<MetaOptionView> views() {
+    public List<MetaView> views() {
         return views;
     }
 }
