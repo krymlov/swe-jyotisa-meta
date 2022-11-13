@@ -22,9 +22,10 @@ import org.swisseph.api.ISweEnumIterator;
 import org.swisseph.app.SweEnumIterator;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Stream;
+import java.util.stream.Collectors;
 
 import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.api.varga.IVarga.D09_CD;
@@ -84,9 +85,12 @@ public interface IMetaJyotisaConfig {
         return ERasi.iterator();
     }
 
-    default IGrahaEntity[] confMetaFilter(IGrahaEntity[] all) {
-        final List<IGraha> grahas = new ArrayList<>();
+    default List<IGrahaEntity> confMetaGrahasFilter(IGrahaEntity[] all) {
+        final List<IGraha> grahas = new ArrayList<>(all.length);
         confMetaGrahas().forEachRemaining(it -> grahas.add(it.graha()));
-        return Stream.of(all).filter(it -> grahas.contains(it.entityEnum())).toArray(IGrahaEntity[]::new);
+        return Arrays.stream(all)
+                .filter(it -> grahas.contains(it.entityEnum()))
+                .collect(Collectors.toList());
     }
+
 }

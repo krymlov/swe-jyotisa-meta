@@ -335,7 +335,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
         final IGrahas grahas = kundali.grahas();
         final IGrahaEntity lagna = grahas.lagna();
         final Iterator<IVargaEnum> iterator = confMetaVargas();
-        final IGrahaEntity[] all = confMetaFilter(grahas.all());
+        final List<IGrahaEntity> filteredGrahas = confMetaGrahasFilter(grahas.all());
 
         while (iterator.hasNext()) {
             final IVarga varga = iterator.next().varga();
@@ -345,7 +345,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
 
             jyotisa.objects().put(varga.code(), objects);
 
-            for (IGrahaEntity graha : all) {
+            for (IGrahaEntity graha : filteredGrahas) {
                 metaGrahas.add(buildMetaVargaGraha(varga, lgRasiFid, graha));
             }
 
