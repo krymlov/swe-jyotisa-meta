@@ -3,12 +3,13 @@ package org.jyotisa.meta.api;
 import org.apache.commons.lang3.ArrayUtils;
 import org.jyotisa.api.bhava.IBhavaEnum;
 import org.jyotisa.api.dignity.IDignityEnum;
-import org.jyotisa.api.graha.IGraha;
 import org.jyotisa.api.graha.IGrahaEntity;
 import org.jyotisa.api.graha.IGrahaEnum;
 import org.jyotisa.api.karaka.ICharaKaraka;
 import org.jyotisa.api.naksatra.INaksatraEnum;
 import org.jyotisa.api.rasi.IRasiEnum;
+import org.jyotisa.api.upagraha.IUpagrahaEntity;
+import org.jyotisa.api.upagraha.IUpagrahaEnum;
 import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.dignity.EDignity;
@@ -17,20 +18,20 @@ import org.jyotisa.karaka.ECharaKaraka;
 import org.jyotisa.meta.options.MetaView;
 import org.jyotisa.naksatra.ENaksatra;
 import org.jyotisa.rasi.ERasi;
+import org.jyotisa.upagraha.EUpagraha;
 import org.jyotisa.varga.EVarga;
 import org.swisseph.api.ISweEnumIterator;
-import org.swisseph.app.SweEnumIterator;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.api.varga.IVarga.D09_CD;
 import static org.jyotisa.graha.EGraha.KETU;
 import static org.jyotisa.graha.EGraha.LAGNA;
+import static org.jyotisa.upagraha.EUpagraha.DHUMA;
+import static org.jyotisa.upagraha.EUpagraha.UPAKETU;
 
 public interface IMetaJyotisaConfig {
     MetaViewStyle[] DEFAULT_STYLES = MetaViewStyle.values();
@@ -78,7 +79,7 @@ public interface IMetaJyotisaConfig {
     }
 
     default ISweEnumIterator<IGrahaEnum> confMetaGrahas() {
-        return new SweEnumIterator(EGraha.values(), LAGNA.uid(), KETU.uid());
+        return EGraha.iterator(LAGNA, KETU);
     }
 
     default ISweEnumIterator<IRasiEnum> confMetaRasis() {
@@ -86,11 +87,40 @@ public interface IMetaJyotisaConfig {
     }
 
     default List<IGrahaEntity> confMetaGrahasFilter(IGrahaEntity[] all) {
-        final List<IGraha> grahas = new ArrayList<>(all.length);
-        confMetaGrahas().forEachRemaining(it -> grahas.add(it.graha()));
-        return Arrays.stream(all)
-                .filter(it -> grahas.contains(it.entityEnum()))
-                .collect(Collectors.toList());
+        final ISweEnumIterator<IGrahaEnum> iterator = confMetaGrahas();
+        final List<IGrahaEntity> grahas = new ArrayList<>(all.length);
+
+        while (iterator.hasNext()) {
+            final int guid = iterator.next().graha().uid();
+            for (IGrahaEntity ge : all) {
+                if (ge != null && ge.entityEnum().uid() == guid) {
+                    grahas.add(ge);
+                    break;
+                }
+            }
+        }
+
+        return grahas;
     }
 
+    default ISweEnumIterator<IUpagrahaEnum> confMetaUpagrahas() {
+        return EUpagraha.iterator(DHUMA, UPAKETU);
+    }
+
+    default List<IUpagrahaEntity> confMetaUpagrahasFilter(IUpagrahaEntity[] all) {
+        final ISweEnumIterator<IUpagrahaEnum> iterator = confMetaUpagrahas();
+        final List<IUpagrahaEntity> upagrahas = new ArrayList<>(all.length);
+
+        while (iterator.hasNext()) {
+            final int uuid = iterator.next().upagraha().uid();
+            for (IUpagrahaEntity ue : all) {
+                if (ue != null && ue.entityEnum().uid() == uuid) {
+                    upagrahas.add(ue);
+                    break;
+                }
+            }
+        }
+
+        return upagrahas;
+    }
 }

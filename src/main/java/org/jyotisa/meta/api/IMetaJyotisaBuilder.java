@@ -35,7 +35,10 @@ import org.jyotisa.varga.EVarga;
 import org.swisseph.api.ISweEnumEntity;
 import org.swisseph.api.ISweEnumIterator;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 
 import static java.lang.Character.toLowerCase;
 import static java.util.Comparator.comparingDouble;
@@ -416,12 +419,9 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
         final MetaObjects objects = jyotisa.objects().get(RASI.varga().code());
         if (null == objects) return;
-
+        
+        final List<IUpagrahaEntity> upagrahas = confMetaUpagrahasFilter(kundali.upagrahas().all());
         final List<MetaObject> metaUpagrahas = objects.upagrahas();
-        final ArrayList<IUpagrahaEntity> upagrahas = new ArrayList<>(
-                Arrays.asList(kundali.upagrahas().all()));
-
-        upagrahas.remove(0);
         upagrahas.sort(comparingDouble(ISweEnumEntity::longitude));
 
         for (final IUpagrahaEntity upagrahaEntity : upagrahas) {
