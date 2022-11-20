@@ -5,13 +5,15 @@
  */
 package org.jyotisa.meta.event;
 
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaDateTime extends MetaTheme {
+public class MetaDateTime extends MetaStyle {
+    private static final long serialVersionUID = 1966754250274679445L;
+
     protected String date;
     protected String time;
     protected String zone;

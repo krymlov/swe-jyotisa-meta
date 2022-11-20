@@ -12,4 +12,5 @@ import org.jyotisa.meta.base.MetaGroup;
  * @version 1.0, 2022-11
  */
 public class MetaOption extends MetaGroup {
+    private static final long serialVersionUID = -3762925061210825072L;
 }

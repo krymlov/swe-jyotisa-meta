@@ -5,13 +5,15 @@
  */
 package org.jyotisa.meta.objects;
 
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaObject extends MetaTheme {
+public class MetaObject extends MetaStyle {
+    private static final long serialVersionUID = 834945199344749356L;
+
     protected Integer rasi;
     protected Integer bhava;
     protected Integer vakri;

@@ -14,6 +14,8 @@ import java.util.List;
  * @version 1.0, 2022-11
  */
 public class MetaRasiSeq implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = -5925589435747875223L;
+
     protected Integer rasi;
     protected Integer bhava;
     protected List<Integer> shape;

@@ -16,6 +16,8 @@ import static org.jyotisa.meta.api.MetaViewStyle.south;
  * @version 1.0, 2022-11
  */
 public class MetaView extends MetaCode {
+    private static final long serialVersionUID = -8415643060475155917L;
+
     protected String view; // D1, D9, SY
     protected MetaViewStyle style;
 

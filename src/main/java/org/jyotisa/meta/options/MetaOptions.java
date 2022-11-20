@@ -6,7 +6,7 @@
 package org.jyotisa.meta.options;
 
 import org.jyotisa.meta.api.IMetaJyotisaPojo;
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,11 +16,13 @@ import java.util.List;
  * @version 1.0, 2022-11
  */
 public class MetaOptions implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = 308967434572171691L;
+
     protected final List<MetaView> views = new ArrayList<>(2);
-    protected final List<MetaTheme> groups = new ArrayList<>(2);
+    protected final List<MetaStyle> groups = new ArrayList<>(2);
     protected final List<MetaOption> items = new ArrayList<>(24);
 
-    public List<MetaTheme> groups() {
+    public List<MetaStyle> groups() {
         return groups;
     }
 

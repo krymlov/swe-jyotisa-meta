@@ -9,7 +9,7 @@ import org.jyotisa.bhava.EBhava;
 import org.jyotisa.dignity.EDignity;
 import org.jyotisa.karaka.ECharaKaraka;
 import org.jyotisa.meta.api.IMetaJyotisa;
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 import org.jyotisa.meta.event.MetaEvent;
 import org.jyotisa.meta.kundali.*;
 import org.jyotisa.meta.objects.MetaObjects;
@@ -27,7 +27,9 @@ import java.util.Map;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
+public class MetaJyotisa extends MetaStyle implements IMetaJyotisa {
+    private static final long serialVersionUID = 217206238818222333L;
+
     protected String metaVersion = "2.10.03i";
     protected String appVersion = "2.10.03i";
     protected String appName = "swe-jyotisa";

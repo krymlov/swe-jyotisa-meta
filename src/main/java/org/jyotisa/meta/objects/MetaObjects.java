@@ -18,6 +18,8 @@ import static org.swisseph.api.ISweObjects.OBJECTS_COUNT;
  * @version 1.0, 2022-11
  */
 public class MetaObjects implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = 280858418715809866L;
+
     protected final List<MetaObject> grahas = new ArrayList<>(OBJECTS_COUNT);
     protected final List<MetaObject> arudhas = new ArrayList<>(0);
     protected final List<MetaObject> upagrahas = new ArrayList<>(EUpagraha.values().length);

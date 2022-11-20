@@ -12,6 +12,8 @@ import org.jyotisa.meta.api.IMetaJyotisaPojo;
  * @version 1.0, 2022-11
  */
 public class MetaBhavaSeq implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = 6220173863604847340L;
+
     protected Integer bhava;
     protected Integer rasi;
 

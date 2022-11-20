@@ -10,6 +10,8 @@ package org.jyotisa.meta.base;
  * @version 1.0, 2022-11
  */
 public class MetaName extends MetaCode {
+    private static final long serialVersionUID = 3623173551884813960L;
+
     protected String name;
 
     public String name() {

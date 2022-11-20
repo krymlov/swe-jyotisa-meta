@@ -13,6 +13,8 @@ import org.jyotisa.meta.api.MetaEventType;
  * @version 1.0, 2022-11
  */
 public class MetaEvent implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = 5686129421155291413L;
+
     protected MetaEventType type = MetaEventType.kundali;
 
     protected final MetaEntity entity = new MetaEntity();

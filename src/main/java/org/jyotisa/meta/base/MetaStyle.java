@@ -9,7 +9,9 @@ package org.jyotisa.meta.base;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaTheme extends MetaDesc {
+public class MetaStyle extends MetaDesc {
+    private static final long serialVersionUID = -1007977171019775813L;
+
     protected String weight;
     protected String style;
     protected String size;

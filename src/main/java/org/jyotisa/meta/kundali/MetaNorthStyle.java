@@ -19,6 +19,8 @@ import java.util.Map;
  * @version 1.0, 2022-11
  */
 public class MetaNorthStyle implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = -7513839883761888120L;
+
     protected final List<Integer> infoBox = new ArrayList<>(4);
     protected final List<MetaBhavaSeq> viewBox = new ArrayList<>(ERasi.values().length);
     protected final Map<String, List<MetaBhavaSeq>> objects = new LinkedHashMap<>(EVarga.values().length);

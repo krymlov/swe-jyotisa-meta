@@ -10,6 +10,8 @@ package org.jyotisa.meta.base;
  * @version 1.0, 2022-11
  */
 public class MetaDesc extends MetaText {
+    private static final long serialVersionUID = -5913350359920743273L;
+
     protected String desc;
 
     public String desc() {

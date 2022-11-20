@@ -12,6 +12,8 @@ import org.jyotisa.meta.api.IMetaJyotisaPojo;
  * @version 1.0, 2022-11
  */
 public class MetaCode implements IMetaJyotisaPojo {
+    private static final long serialVersionUID = -7421094986181581536L;
+
     protected Integer fid;
     protected String code;
 

@@ -5,12 +5,13 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaBhava extends MetaTheme {
+public class MetaBhava extends MetaStyle {
+    private static final long serialVersionUID = -7110497006135971668L;
     public static final MetaBhava NIL_BHAVA = new MetaBhava();
 }

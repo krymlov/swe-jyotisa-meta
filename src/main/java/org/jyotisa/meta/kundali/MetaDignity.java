@@ -5,12 +5,13 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaDignity extends MetaTheme {
+public class MetaDignity extends MetaStyle {
+    private static final long serialVersionUID = -8594052408605317656L;
     public static final MetaDignity NIL_DIGNITY = new MetaDignity();
 }

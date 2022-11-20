@@ -23,7 +23,7 @@ import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.jyotisa.meta.app.MetaNorthCalc;
-import org.jyotisa.meta.base.MetaTheme;
+import org.jyotisa.meta.base.MetaStyle;
 import org.jyotisa.meta.kundali.*;
 import org.jyotisa.meta.objects.MetaObject;
 import org.jyotisa.meta.objects.MetaObjects;
@@ -63,7 +63,7 @@ import static swisseph.SweConst.ODEGREE_CHAR;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
+public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaStyle {
 
     default IMetaJyotisa buildMetaJyotisa(IKundali kundali) {
         final MetaJyotisa jyotisa = new MetaJyotisa();
@@ -95,7 +95,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     }
 
     default void addMetaOptionsGroups(IMetaJyotisa jyotisa) {
-        final MetaTheme vargaGroup = new MetaTheme();
+        final MetaStyle vargaGroup = new MetaStyle();
         vargaGroup.code(EVarga.class.getSimpleName());
         jyotisa.options().groups().add(vargaGroup);
         vargaGroup.name("VARGA CHAKRA");
@@ -419,7 +419,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig {
     default void addMetaRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
         final MetaObjects objects = jyotisa.objects().get(RASI.varga().code());
         if (null == objects) return;
-        
+
         final List<IUpagrahaEntity> upagrahas = confMetaUpagrahasFilter(kundali.upagrahas().all());
         final List<MetaObject> metaUpagrahas = objects.upagrahas();
         upagrahas.sort(comparingDouble(ISweEnumEntity::longitude));
