@@ -34,6 +34,11 @@ import static org.swisseph.utils.IDegreeUtils.toLON;
 public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
 
     @Override
+    public boolean themeMetaGrahas() {
+        return true;
+    }
+
+    @Override
     public ViewStyle[] confMetaStyles() {
         return new ViewStyle[]{ViewStyle.north};
     }

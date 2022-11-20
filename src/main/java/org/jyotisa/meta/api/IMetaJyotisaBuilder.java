@@ -352,9 +352,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
                 metaGrahas.add(buildMetaVargaGraha(varga, lgRasiFid, graha));
             }
 
-            if (!metaGrahas.isEmpty()) {
-                metaGrahas.sort(comparingDouble(MetaObject::vdegr));
-            }
+            if (!metaGrahas.isEmpty()) metaGrahas.sort(comparingDouble(MetaObject::vdegr));
+            if (themeMetaGrahas()) themeMetaGrahas(metaGrahas);
         }
     }
 
