@@ -9,7 +9,7 @@ package org.jyotisa.meta.base;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaGroup extends MetaStyle {
+public class MetaGroup extends MetaTheme {
     private static final long serialVersionUID = 2432795365001929425L;
 
     protected String group;

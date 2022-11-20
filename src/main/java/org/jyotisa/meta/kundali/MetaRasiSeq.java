@@ -5,7 +5,7 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 
 import java.util.List;
 
@@ -13,7 +13,7 @@ import java.util.List;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaRasiSeq implements IMetaJyotisaPojo {
+public class MetaRasiSeq implements IMetaPojo {
     private static final long serialVersionUID = -5925589435747875223L;
 
     protected Integer rasi;

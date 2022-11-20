@@ -21,7 +21,7 @@ import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.jyotisa.api.IKundali;
 import org.jyotisa.app.Kundali;
 import org.jyotisa.meta.api.IMetaJyotisa;
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 import org.swisseph.ISwissEph;
 import org.swisseph.SwephNative;
 import org.swisseph.api.ISweGeoLocation;
@@ -138,7 +138,7 @@ public abstract class AbstractTest {
         return OBJECT_MAPPER.writerWithDefaultPrettyPrinter().writeValueAsString(jyotisa);
     }
 
-    protected void assertMetaDiff(IMetaJyotisaPojo pojo1, IMetaJyotisaPojo pojo2) {
+    protected void assertMetaDiff(IMetaPojo pojo1, IMetaPojo pojo2) {
         Javers javers = JaversBuilder.javers().build();
         Diff diff = javers.compare(pojo1, pojo2);
         Assertions.assertFalse(diff.hasChanges());

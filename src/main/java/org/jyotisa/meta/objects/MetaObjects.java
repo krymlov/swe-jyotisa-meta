@@ -5,7 +5,7 @@
  */
 package org.jyotisa.meta.objects;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 import org.jyotisa.upagraha.EUpagraha;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import static org.swisseph.api.ISweObjects.OBJECTS_COUNT;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaObjects implements IMetaJyotisaPojo {
+public class MetaObjects implements IMetaPojo {
     private static final long serialVersionUID = 280858418715809866L;
 
     protected final List<MetaObject> grahas = new ArrayList<>(OBJECTS_COUNT);

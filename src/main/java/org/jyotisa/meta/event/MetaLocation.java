@@ -5,13 +5,13 @@
  */
 package org.jyotisa.meta.event;
 
-import org.jyotisa.meta.base.MetaStyle;
+import org.jyotisa.meta.base.MetaTheme;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaLocation extends MetaStyle {
+public class MetaLocation extends MetaTheme {
     private static final long serialVersionUID = -3965816142560214082L;
 
     protected String lttd;

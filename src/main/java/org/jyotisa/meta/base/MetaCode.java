@@ -5,13 +5,13 @@
  */
 package org.jyotisa.meta.base;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaCode implements IMetaJyotisaPojo {
+public class MetaCode implements IMetaPojo {
     private static final long serialVersionUID = -7421094986181581536L;
 
     protected Integer fid;

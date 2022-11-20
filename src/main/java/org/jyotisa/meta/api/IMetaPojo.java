@@ -11,5 +11,5 @@ import java.io.Serializable;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public interface IMetaJyotisaPojo extends Serializable {
+public interface IMetaPojo extends Serializable {
 }

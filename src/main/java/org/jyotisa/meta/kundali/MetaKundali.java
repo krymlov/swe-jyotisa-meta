@@ -5,7 +5,7 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import static java.util.Arrays.asList;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaKundali implements IMetaJyotisaPojo {
+public class MetaKundali implements IMetaPojo {
     private static final long serialVersionUID = 522753150992452647L;
 
     protected final List<Integer> mainBox = new ArrayList<>(asList(0, 0, 640, 640));

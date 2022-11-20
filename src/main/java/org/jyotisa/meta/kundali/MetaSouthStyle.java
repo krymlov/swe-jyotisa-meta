@@ -5,7 +5,7 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 import org.jyotisa.rasi.ERasi;
 import org.jyotisa.varga.EVarga;
 
@@ -18,7 +18,7 @@ import java.util.Map;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaSouthStyle implements IMetaJyotisaPojo {
+public class MetaSouthStyle implements IMetaPojo {
     private static final long serialVersionUID = 4308740585966190238L;
 
     protected final List<Integer> infoBox = new ArrayList<>(4);

@@ -5,13 +5,13 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.base.MetaStyle;
+import org.jyotisa.meta.base.MetaTheme;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaKaraka extends MetaStyle {
+public class MetaKaraka extends MetaTheme {
     private static final long serialVersionUID = 7756582918029991011L;
     public static final MetaKaraka NIL_KARAKA = new MetaKaraka();
 }

@@ -34,25 +34,25 @@ import static org.jyotisa.upagraha.EUpagraha.DHUMA;
 import static org.jyotisa.upagraha.EUpagraha.UPAKETU;
 
 public interface IMetaJyotisaConfig {
-    MetaViewStyle[] DEFAULT_STYLES = MetaViewStyle.values();
+    ViewStyle[] DEFAULT_STYLES = ViewStyle.values();
 
-    default MetaViewStyle[] confMetaStyles() {
+    default ViewStyle[] confMetaStyles() {
         return DEFAULT_STYLES;
     }
 
-    default boolean confMetaStyle(final MetaViewStyle style) {
+    default boolean confMetaStyle(final ViewStyle style) {
         return ArrayUtils.contains(confMetaStyles(), style);
     }
 
     default Iterator<MetaView> confMetaViews() {
-        final MetaViewStyle[] styles = confMetaStyles();
+        final ViewStyle[] styles = confMetaStyles();
 
         if (null == styles || styles.length == 0) {
             throw new IllegalArgumentException("At least one style is required");
         }
 
         final List<MetaView> viewList = new ArrayList<>();
-        for (MetaViewStyle style : styles) viewList.add(new MetaView(style, D01_CD));
+        for (ViewStyle style : styles) viewList.add(new MetaView(style, D01_CD));
         if (styles.length == 1) viewList.add(new MetaView(styles[0], D09_CD));
 
         return viewList.iterator();

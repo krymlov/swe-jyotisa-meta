@@ -5,13 +5,13 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.base.MetaStyle;
+import org.jyotisa.meta.base.MetaTheme;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaRasi extends MetaStyle {
+public class MetaRasi extends MetaTheme {
     private static final long serialVersionUID = 5304229582983852084L;
     public static final MetaRasi NIL_RASI = new MetaRasi();
 

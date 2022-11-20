@@ -17,7 +17,7 @@ import java.util.Map;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public interface IMetaJyotisa extends IMetaJyotisaPojo {
+public interface IMetaJyotisa extends IMetaPojo {
     String appVersion();
     void appVersion(String appVersion);
 

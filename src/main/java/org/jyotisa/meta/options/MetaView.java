@@ -5,11 +5,11 @@
  */
 package org.jyotisa.meta.options;
 
-import org.jyotisa.meta.api.MetaViewStyle;
+import org.jyotisa.meta.api.ViewStyle;
 import org.jyotisa.meta.base.MetaCode;
 
 import static org.jyotisa.api.varga.IVarga.D01_CD;
-import static org.jyotisa.meta.api.MetaViewStyle.south;
+import static org.jyotisa.meta.api.ViewStyle.south;
 
 /**
  * @author Yura Krymlov
@@ -19,14 +19,14 @@ public class MetaView extends MetaCode {
     private static final long serialVersionUID = -8415643060475155917L;
 
     protected String view; // D1, D9, SY
-    protected MetaViewStyle style;
+    protected ViewStyle style;
 
     public MetaView() {
         this.view = D01_CD;
         this.style = south;
     }
 
-    public MetaView(MetaViewStyle style, String view) {
+    public MetaView(ViewStyle style, String view) {
         this.style = style;
         this.view = view;
     }
@@ -39,11 +39,11 @@ public class MetaView extends MetaCode {
         this.view = view;
     }
 
-    public MetaViewStyle style() {
+    public ViewStyle style() {
         return style;
     }
 
-    public void style(MetaViewStyle style) {
+    public void style(ViewStyle style) {
         this.style = style;
     }
 }

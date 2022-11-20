@@ -5,27 +5,27 @@
  */
 package org.jyotisa.meta.event;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
-import org.jyotisa.meta.api.MetaEventType;
+import org.jyotisa.meta.api.IMetaPojo;
+import org.jyotisa.meta.api.EventType;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaEvent implements IMetaJyotisaPojo {
+public class MetaEvent implements IMetaPojo {
     private static final long serialVersionUID = 5686129421155291413L;
 
-    protected MetaEventType type = MetaEventType.kundali;
+    protected EventType type = EventType.kundali;
 
     protected final MetaEntity entity = new MetaEntity();
     protected final MetaLocation location = new MetaLocation();
     protected final MetaDateTime datetime = new MetaDateTime();
 
-    public MetaEventType type() {
+    public EventType type() {
         return type;
     }
 
-    public void type(MetaEventType type) {
+    public void type(EventType type) {
         this.type = type;
     }
 

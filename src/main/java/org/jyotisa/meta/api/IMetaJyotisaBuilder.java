@@ -23,7 +23,7 @@ import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.jyotisa.meta.app.MetaNorthCalc;
-import org.jyotisa.meta.base.MetaStyle;
+import org.jyotisa.meta.base.MetaTheme;
 import org.jyotisa.meta.kundali.*;
 import org.jyotisa.meta.objects.MetaObject;
 import org.jyotisa.meta.objects.MetaObjects;
@@ -63,7 +63,7 @@ import static swisseph.SweConst.ODEGREE_CHAR;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaStyle {
+public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaTheme {
 
     default IMetaJyotisa buildMetaJyotisa(IKundali kundali) {
         final MetaJyotisa jyotisa = new MetaJyotisa();
@@ -95,7 +95,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaSty
     }
 
     default void addMetaOptionsGroups(IMetaJyotisa jyotisa) {
-        final MetaStyle vargaGroup = new MetaStyle();
+        final MetaTheme vargaGroup = new MetaTheme();
         vargaGroup.code(EVarga.class.getSimpleName());
         jyotisa.options().groups().add(vargaGroup);
         vargaGroup.name("VARGA CHAKRA");
@@ -126,7 +126,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaSty
     }
 
     default void addMetaSouthStyleInfoBox(IMetaJyotisa jyotisa) {
-        if (!confMetaStyle(MetaViewStyle.south)) return;
+        if (!confMetaStyle(ViewStyle.south)) return;
 
         List<Integer> mainBox = jyotisa.kundali().mainBox();
         Integer width = mainBox.get(2), height = mainBox.get(3);
@@ -138,7 +138,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaSty
     }
 
     default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
-        if (!confMetaStyle(MetaViewStyle.south)) return;
+        if (!confMetaStyle(ViewStyle.south)) return;
 
         final List<MetaRasiSeq> viewBox = jyotisa.kundali().southStyle().viewBox();
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
@@ -171,7 +171,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaSty
     }
 
     default void addMetaSouthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
-        if (!confMetaStyle(MetaViewStyle.south)) return;
+        if (!confMetaStyle(ViewStyle.south)) return;
 
         final Map<String, List<MetaRasiSeq>> mapVargaRasiSeqs = jyotisa.kundali().southStyle().objects();
         final Iterator<IVargaEnum> iterator = confMetaVargas();
@@ -198,7 +198,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaSty
     }
 
     default void addMetaNorthStyleViewBox(IMetaJyotisa jyotisa) {
-        if (!confMetaStyle(MetaViewStyle.north)) return;
+        if (!confMetaStyle(ViewStyle.north)) return;
 
         final List<Integer> mainBox = jyotisa.kundali().mainBox();
         final List<MetaBhavaSeq> viewBox = jyotisa.kundali().northStyle().viewBox();
@@ -220,7 +220,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaSty
     }
 
     default void addMetaNorthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
-        if (!confMetaStyle(MetaViewStyle.north)) return;
+        if (!confMetaStyle(ViewStyle.north)) return;
 
         final Map<String, List<MetaBhavaSeq>> mapVargaBhavaSeqs = jyotisa.kundali().northStyle().objects();
         final Iterator<IVargaEnum> iterator = confMetaVargas();

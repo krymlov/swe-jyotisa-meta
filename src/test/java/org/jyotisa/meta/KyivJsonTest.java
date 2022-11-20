@@ -5,8 +5,8 @@ import org.jyotisa.api.IKundali;
 import org.jyotisa.app.Kundali;
 import org.jyotisa.meta.api.IMetaJyotisa;
 import org.jyotisa.meta.api.IMetaJyotisaBuilder;
-import org.jyotisa.meta.api.MetaEventType;
-import org.jyotisa.meta.api.MetaViewStyle;
+import org.jyotisa.meta.api.EventType;
+import org.jyotisa.meta.api.ViewStyle;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.swisseph.api.ISweJulianDate;
 import org.swisseph.app.SweJulianDate;
@@ -34,8 +34,8 @@ import static org.swisseph.utils.IDegreeUtils.toLON;
 public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
 
     @Override
-    public MetaViewStyle[] confMetaStyles() {
-        return new MetaViewStyle[]{MetaViewStyle.north};
+    public ViewStyle[] confMetaStyles() {
+        return new ViewStyle[]{ViewStyle.north};
     }
 
     @Override
@@ -68,7 +68,7 @@ public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
         System.out.println(kundali);
 
         IMetaJyotisa metaJyotisa = buildMetaJyotisa(kundali);
-        metaJyotisa.event().type(MetaEventType.prasna);
+        metaJyotisa.event().type(EventType.prasna);
 
         File file = new File("Kyiv." + year + ".json");
         writeStringToFile(file, printPrettyJyotisa(metaJyotisa), UTF_8);

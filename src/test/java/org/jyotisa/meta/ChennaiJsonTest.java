@@ -5,7 +5,7 @@ import org.jyotisa.api.IKundali;
 import org.jyotisa.app.Kundali;
 import org.jyotisa.meta.api.IMetaJyotisa;
 import org.jyotisa.meta.api.IMetaJyotisaBuilder;
-import org.jyotisa.meta.api.MetaEventType;
+import org.jyotisa.meta.api.EventType;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.swisseph.api.ISweJulianDate;
 import org.swisseph.app.SweJulianDate;
@@ -62,7 +62,7 @@ public class ChennaiJsonTest extends AbstractTest implements IMetaJyotisaBuilder
         System.out.println(kundali);
 
         IMetaJyotisa metaJyotisa = buildMetaJyotisa(kundali);
-        metaJyotisa.event().type(MetaEventType.prasna);
+        metaJyotisa.event().type(EventType.prasna);
 
         File file = new File("Chennai." + year + ".json");
         writeStringToFile(file, printPrettyJyotisa(metaJyotisa), UTF_8);

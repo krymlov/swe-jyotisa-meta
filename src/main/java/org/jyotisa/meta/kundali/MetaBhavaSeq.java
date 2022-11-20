@@ -5,13 +5,13 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.api.IMetaJyotisaPojo;
+import org.jyotisa.meta.api.IMetaPojo;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaBhavaSeq implements IMetaJyotisaPojo {
+public class MetaBhavaSeq implements IMetaPojo {
     private static final long serialVersionUID = 6220173863604847340L;
 
     protected Integer bhava;

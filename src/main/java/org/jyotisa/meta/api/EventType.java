@@ -9,6 +9,6 @@ package org.jyotisa.meta.api;
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public enum MetaEventType {
+public enum EventType {
     prasna, kundali
 }

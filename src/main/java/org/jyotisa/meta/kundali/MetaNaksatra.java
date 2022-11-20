@@ -5,13 +5,13 @@
  */
 package org.jyotisa.meta.kundali;
 
-import org.jyotisa.meta.base.MetaStyle;
+import org.jyotisa.meta.base.MetaTheme;
 
 /**
  * @author Yura Krymlov
  * @version 1.0, 2022-11
  */
-public class MetaNaksatra extends MetaStyle {
+public class MetaNaksatra extends MetaTheme {
     private static final long serialVersionUID = -7945091701598889746L;
     public static final MetaNaksatra NIL_NAKSATRA = new MetaNaksatra();
 
