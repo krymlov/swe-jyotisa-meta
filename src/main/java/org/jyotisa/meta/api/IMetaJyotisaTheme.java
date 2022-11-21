@@ -20,16 +20,24 @@ public interface IMetaJyotisaTheme {
         return 44;
     }
 
+    default int themeMetaGrahasBaseSizeDecVal() {
+        return 2;
+    }
+
     default void themeMetaGrahas(List<MetaObject> grahas) {
         if (null == grahas || grahas.isEmpty()) return;
+
         final int[] sizes = new int[ERasi.values().length];
+        final int decVal = themeMetaGrahasBaseSizeDecVal();
+        final int decValForVakriGraha = decVal / 2;
+
         Arrays.fill(sizes, themeMetaGrahasBaseSize());
 
         grahas.forEach(it -> {
             final int idx = it.rasi() - 1;
-            sizes[idx] -= 2;
+            sizes[idx] -= decVal;
             if (null != it.vakri() && toBoolean(it.vakri(), VAKRI_TRUE, VAKRI_FALSE)) {
-                --sizes[idx];
+                sizes[idx] -= decValForVakriGraha;
             }
         });
 
