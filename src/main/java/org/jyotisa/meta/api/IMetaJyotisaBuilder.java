@@ -420,6 +420,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         if (null == objects) return;
 
         final List<IUpagrahaEntity> upagrahas = confMetaUpagrahasFilter(kundali.upagrahas().all());
+        if (null == upagrahas || upagrahas.isEmpty()) return;
+
         final List<MetaObject> metaUpagrahas = objects.upagrahas();
         upagrahas.sort(comparingDouble(ISweEnumEntity::longitude));
 
