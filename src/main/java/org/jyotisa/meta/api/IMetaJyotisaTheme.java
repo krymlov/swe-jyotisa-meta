@@ -17,27 +17,35 @@ public interface IMetaJyotisaTheme {
     }
 
     default int themeMetaGrahasBaseSize() {
-        return 44;
+        return 26;
+    }
+
+    default int themeMetaGrahasBaseSizeMinVal() {
+        return 14;
     }
 
     default int themeMetaGrahasBaseSizeDecVal() {
         return 2;
     }
 
+    default int themeMetaGrahasBaseSizeDecValVakri() {
+        return 1;
+    }
+
     default void themeMetaGrahas(List<MetaObject> grahas) {
         if (null == grahas || grahas.isEmpty()) return;
 
-        final int[] sizes = new int[ERasi.values().length];
+        final int decValVakri = themeMetaGrahasBaseSizeDecValVakri();
         final int decVal = themeMetaGrahasBaseSizeDecVal();
-        final int decValForVakriGraha = decVal / 2;
-
+        final int minVal = themeMetaGrahasBaseSizeMinVal();
+        final int[] sizes = new int[ERasi.values().length];
         Arrays.fill(sizes, themeMetaGrahasBaseSize());
 
         grahas.forEach(it -> {
             final int idx = it.rasi() - 1;
-            sizes[idx] -= decVal;
+            if (sizes[idx] > minVal) sizes[idx] -= decVal;
             if (null != it.vakri() && toBoolean(it.vakri(), VAKRI_TRUE, VAKRI_FALSE)) {
-                sizes[idx] -= decValForVakriGraha;
+                if (sizes[idx] > minVal) sizes[idx] -= decValVakri;
             }
         });
 
