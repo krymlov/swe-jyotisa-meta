@@ -2,14 +2,11 @@ package org.jyotisa.meta;
 
 import org.junit.jupiter.api.Test;
 import org.jyotisa.api.IKundali;
-import org.jyotisa.app.Kundali;
+import org.jyotisa.meta.api.EventType;
 import org.jyotisa.meta.api.IMetaJyotisa;
 import org.jyotisa.meta.api.IMetaJyotisaBuilder;
-import org.jyotisa.meta.api.EventType;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.swisseph.api.ISweJulianDate;
-import org.swisseph.app.SweJulianDate;
-import org.swisseph.app.SweObjects;
 import org.swisseph.utils.IDateUtils;
 
 import java.io.File;
@@ -19,8 +16,6 @@ import java.util.Calendar;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.TimeZone.getTimeZone;
 import static org.apache.commons.io.FileUtils.writeStringToFile;
-import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_TRADITIONAL;
 import static org.swisseph.utils.IDateUtils.F2H_2M_2S;
 import static org.swisseph.utils.IDateUtils.F4Y_2M_2D;
 import static org.swisseph.utils.IDegreeUtils.toLAT;
@@ -73,10 +68,8 @@ public class ChennaiJsonTest extends AbstractTest implements IMetaJyotisaBuilder
     @Test
     void testChennai1962() throws IOException {
         Calendar calendar = newCalendar(getTimeZone(ASIA_CALCUTTA));
-        calendar.set(1962, 1, 4, 8, 30, 0);
-
-        IKundali kundali = new Kundali(KUNDALI_7_KARAKAS, new SweObjects(getSwephExp(),
-                new SweJulianDate(calendar), GEO_CHENNAI, LAHIRI_TRADITIONAL).completeBuild());
+        calendar.set(1962, Calendar.FEBRUARY, 4, 8, 30, 0);
+        IKundali kundali = newChennaiKundali(getSwephExp(), calendar);
         ISweJulianDate date = kundali.sweJulianDate();
         int year = date.year();
 

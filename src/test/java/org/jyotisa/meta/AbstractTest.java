@@ -113,6 +113,16 @@ public abstract class AbstractTest {
                 newCalendar(getTimeZone(EUROPE_KIEV))), GEO_KYIV, LAHIRI_CITRAPAKSA).completeBuild());
     }
 
+    protected IKundali newChennaiKundali(ISwissEph swissEph, Calendar calendar) {
+        return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swissEph, new SweJulianDate(calendar),
+                GEO_CHENNAI, LAHIRI_TRADITIONAL).completeBuild());
+    }
+
+    protected IKundali newKyivKundali(ISwissEph swissEph, Calendar calendar) {
+        return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(calendar),
+                GEO_KYIV, LAHIRI_CITRAPAKSA).completeBuild());
+    }
+
     @BeforeAll
     protected void callBeforeAll() {
     }
