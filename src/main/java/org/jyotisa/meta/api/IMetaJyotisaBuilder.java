@@ -52,7 +52,6 @@ import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
 import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
 import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
-import static org.jyotisa.rasi.ERasi.MESHA;
 import static org.jyotisa.varga.EVarga.RASI;
 import static org.swisseph.api.ISweConstants.RASI_LENGTH;
 import static org.swisseph.utils.IDegreeUtils.toDMS;
@@ -137,36 +136,6 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     }
 
     default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
-        if (!confMetaStyle(ViewStyle.south)) return;
-
-        final List<MetaRasiSeq> viewBox = jyotisa.kundali().southStyle().viewBox();
-        final List<Integer> mainBox = jyotisa.kundali().mainBox();
-
-        final int rasiSquareSize = mainBox.get(2) / 4;
-        final int w = rasiSquareSize, h = mainBox.get(3) / 4;
-
-        IRasiEnum rasiEnum = MESHA;
-        int x = rasiSquareSize, y = 0;
-
-        for (int i = 0; i < 12; i++) {
-            viewBox.add(buildMetaRasiSeq(x, y, w, h, rasiEnum));
-            rasiEnum = rasiEnum.following();
-            if (i < 2) x += w;
-            if (i >= 2 && i < 5) y += h;
-            if (i >= 5 && i < 8) x -= w;
-            if (i >= 8) y -= h;
-        }
-    }
-
-    default MetaRasiSeq buildMetaRasiSeq(int x, int y, int w, int h, IRasiEnum rasiEnum) {
-        final MetaRasiSeq sequence = new MetaRasiSeq();
-        sequence.shape(new ArrayList<>(4));
-        sequence.rasi(rasiEnum.fid());
-        sequence.shape().add(x);
-        sequence.shape().add(y);
-        sequence.shape().add(w);
-        sequence.shape().add(h);
-        return sequence;
     }
 
     default void addMetaSouthStyleObjects(IMetaJyotisa jyotisa, IKundali kundali) {
