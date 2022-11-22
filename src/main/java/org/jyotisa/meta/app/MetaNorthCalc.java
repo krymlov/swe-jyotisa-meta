@@ -114,7 +114,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava1() {
-        int[][] cords = new int[4][4];
+        final int[][] cords = new int[4][4];
         //1st line
         cords[0][0] = width / 2;
         cords[0][1] = width / 2 + width / 4;
@@ -139,7 +139,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava2() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = startX;
         cords[0][1] = width / 4;
@@ -154,7 +154,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava3() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = startX;
         cords[0][1] = width / 4;
@@ -169,7 +169,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava4() {
-        int[][] cords = new int[4][4];
+        final int[][] cords = new int[4][4];
         //1st line
         cords[0][0] = width / 4;
         cords[0][1] = width / 2;
@@ -194,7 +194,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava5() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = startX;
         cords[0][1] = width / 4;
@@ -209,7 +209,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava6() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = startX;
         cords[0][1] = width / 4;
@@ -224,7 +224,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava7() {
-        int[][] cords = new int[4][4];
+        final int[][] cords = new int[4][4];
         //1st line
         cords[0][0] = width / 4;
         cords[0][1] = width / 2;
@@ -249,7 +249,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava8() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = width / 2;
         cords[0][1] = width / 2 + width / 4;
@@ -264,7 +264,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava9() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = width;
         cords[0][1] = width / 2 + width / 4;
@@ -279,7 +279,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava10() {
-        int[][] cords = new int[4][4];
+        final int[][] cords = new int[4][4];
         //1st line
         cords[0][0] = width / 2;
         cords[0][1] = width / 2 + width / 4;
@@ -304,7 +304,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava11() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = width;
         cords[0][1] = width / 2 + width / 4;
@@ -319,7 +319,7 @@ public class MetaNorthCalc {
     }
 
     protected int[][] bhava12() {
-        int[][] cords = new int[2][4];
+        final int[][] cords = new int[2][4];
         //1st line
         cords[0][0] = width;
         cords[0][1] = width / 2 + width / 4;
@@ -335,84 +335,84 @@ public class MetaNorthCalc {
 
     //x y
     protected int[] rasinum1() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = (width / 2) - (width / 40);
         cords[1] = (height / 2) - ((height / 40) * 3);
         return cords;
     }
 
     protected int[] rasinum2() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = (width / 4) - (width / 40);
         cords[1] = (height / 4) - ((height / 40) * 3);
         return cords;
     }
 
     protected int[] rasinum3() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = (width / 4) - ((width / 40) * 3);
         cords[1] = (height / 4) - (height / 40);
         return cords;
     }
 
     protected int[] rasinum4() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = (width / 2) - ((width / 40) * 3);
         cords[1] = (height / 2) - (height / 40);
         return cords;
     }
 
     protected int[] rasinum5() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = (width / 4) - ((width / 40) * 3);
         cords[1] = height / 2 + (height / 4 - height / 40);
         return cords;
     }
 
     protected int[] rasinum6() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = (width / 4) - (width / 40);
         cords[1] = height / 2 + (height / 4 + height / 40);
         return cords;
     }
 
     protected int[] rasinum7() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = width / 2 - width / 40;
         cords[1] = height / 2 + height / 40;
         return cords;
     }
 
     protected int[] rasinum8() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = width / 2 + (width / 4 - width / 40);
         cords[1] = height / 2 + height / 4 + height / 40;
         return cords;
     }
 
     protected int[] rasinum9() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = width / 2 + width / 4 + width / 40;
         cords[1] = height / 2 + (height / 4 - height / 40);
         return cords;
     }
 
     protected int[] rasinum10() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = width / 2 + width / 40;
         cords[1] = height / 2 - height / 40;
         return cords;
     }
 
     protected int[] rasinum11() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = width / 2 + width / 4 + width / 40;
         cords[1] = height / 4 - height / 40;
         return cords;
     }
 
     protected int[] rasinum12() {
-        int[] cords = new int[2];
+        final int[] cords = new int[2];
         cords[0] = width / 2 + width / 4 - width / 40;
         cords[1] = height / 4 - ((height / 40) * 3);
         return cords;
@@ -420,7 +420,7 @@ public class MetaNorthCalc {
 
     //x y width height
     protected int[] planetBlock1() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 4 + (width / 40 * 3);
         cords[1] = height / 10 + height / 20;
         cords[2] = width / 4 + width / 10;
@@ -429,7 +429,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock2() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 20;
         cords[1] = startY;
         cords[2] = width / 4 + width / 10 + width / 20;
@@ -438,7 +438,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock3() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = startX;
         cords[1] = height / 20 + height / 40 + height / 80;
         cords[2] = width / 5;
@@ -447,7 +447,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock4() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 20 + width / 40;
         cords[1] = height / 4 + height / 10 + height / 20;
         cords[2] = width / 4 + width / 10;
@@ -456,7 +456,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock5() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = startX;
         cords[1] = height / 2 + height / 20 + height / 40 + height / 80;
         cords[2] = width / 5;
@@ -465,7 +465,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock6() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 20;
         cords[1] = height - height / 4 + height / 10;
         cords[2] = width / 4 + (width / 20 * 3);
@@ -474,7 +474,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock7() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 4 + width / 20 + width / 40;
         cords[1] = height / 2 + (height / 20 * 3);
         cords[2] = width / 4 + width / 10;
@@ -483,7 +483,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock8() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 2 + width / 20;
         cords[1] = height - height / 4 + height / 10;
         cords[2] = width / 4 + (width / 20 * 3);
@@ -492,7 +492,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock9() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width - width / 4 + width / 20;
         cords[1] = height / 2 + height / 20 + height / 40 + height / 80;
         cords[2] = width / 5;
@@ -501,7 +501,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock10() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 2 + width / 20 + width / 40;
         cords[1] = height / 4 + height / 10 + height / 20;
         cords[2] = width / 4 + width / 10;
@@ -510,7 +510,7 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock11() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width - width / 4 + width / 20;
         cords[1] = height / 20 + height / 40 + height / 80;
         cords[2] = width / 5;
@@ -519,13 +519,11 @@ public class MetaNorthCalc {
     }
 
     protected int[] planetBlock12() {
-        int[] cords = new int[4];
+        final int[] cords = new int[4];
         cords[0] = width / 2 + width / 20;
         cords[1] = startY;
         cords[2] = width / 4 + width / 10 + width / 20;
         cords[3] = height / 10 + height / 20;
         return cords;
     }
-
-
 }
