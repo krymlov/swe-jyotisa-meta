@@ -22,7 +22,6 @@ import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.meta.app.MetaJyotisa;
-import org.jyotisa.meta.app.MetaNorthCalc;
 import org.jyotisa.meta.base.MetaTheme;
 import org.jyotisa.meta.kundali.*;
 import org.jyotisa.meta.objects.MetaObject;
@@ -200,22 +199,24 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     default void addMetaNorthStyleViewBox(IMetaJyotisa jyotisa) {
         if (!confMetaStyle(ViewStyle.north)) return;
 
-        final List<Integer> mainBox = jyotisa.kundali().mainBox();
-        final List<MetaBhavaSeq> viewBox = jyotisa.kundali().northStyle().viewBox();
-        final MetaNorthCalc coordsCalc = new MetaNorthCalc(mainBox.get(2), mainBox.get(3));
-        final ISweEnumIterator<IBhavaEnum> bhavaIterator = confMetaBhavas();
+        final IMetaNorthStyleCalc coordsCalc = confMetaStyleNorthCalc(jyotisa);
+        if (null == coordsCalc) return;
 
-        while (bhavaIterator.hasNext()) {
-            viewBox.add(buildMetaRasiSeq(bhavaIterator.next(), coordsCalc));
-        }
+        final ISweEnumIterator<IBhavaEnum> bhavaIterator = confMetaBhavas();
+        final List<MetaBhavaSeq> viewBox = jyotisa.kundali().northStyle().viewBox();
+        while (bhavaIterator.hasNext()) viewBox.add(buildMetaRasiSeq(bhavaIterator.next(), coordsCalc));
     }
 
-    default MetaBhavaSeq buildMetaRasiSeq(IBhavaEnum bhavaEnum, MetaNorthCalc coordsCalc) {
+    default MetaBhavaSeq buildMetaRasiSeq(IBhavaEnum bhavaEnum, IMetaNorthStyleCalc coordsCalc) {
         final MetaBhavaSeq sequence = new MetaBhavaSeq();
-        sequence.bhavaShape(coordsCalc.calc(bhavaEnum.fid()));
-        sequence.rasiShape(coordsCalc.calcRasiCords(bhavaEnum.fid()));
-        sequence.grahaShape(coordsCalc.calcPlanetBlockCords(bhavaEnum.fid()));
         sequence.bhava(bhavaEnum.fid());
+
+        if (null != coordsCalc) {
+            sequence.bhavaShape(coordsCalc.calc(bhavaEnum.fid()));
+            sequence.rasiShape(coordsCalc.calcRasiCords(bhavaEnum.fid()));
+            sequence.grahaShape(coordsCalc.calcPlanetBlockCords(bhavaEnum.fid()));
+        }
+
         return sequence;
     }
 

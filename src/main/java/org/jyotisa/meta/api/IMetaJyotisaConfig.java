@@ -123,4 +123,8 @@ public interface IMetaJyotisaConfig {
 
         return upagrahas;
     }
+
+    default IMetaNorthStyleCalc confMetaStyleNorthCalc(IMetaJyotisa jyotisa) {
+        return null;
+    }
 }
