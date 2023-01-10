@@ -36,8 +36,8 @@ import static java.util.TimeZone.getTimeZone;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_7_KARAKAS;
 import static org.jyotisa.app.KundaliOptions.KUNDALI_8_KARAKAS;
 import static org.swisseph.api.ISweConstants.EPHE_PATH;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_CITRAPAKSA;
-import static org.swisseph.app.SweObjectsOptions.LAHIRI_TRADITIONAL;
+import static org.swisseph.app.SweObjectsOptions.TRUECITRA_AYANAMSA;
+import static org.swisseph.app.SweObjectsOptions.LAHIRI_AYANAMSA;
 
 /**
  * @author Yura Krymlov
@@ -105,22 +105,22 @@ public abstract class AbstractTest {
 
     protected IKundali newChennaiKundali(ISwissEph swissEph) {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swissEph, new SweJulianDate(
-                newCalendar(getTimeZone(ASIA_CALCUTTA))), GEO_CHENNAI, LAHIRI_TRADITIONAL).completeBuild());
+                newCalendar(getTimeZone(ASIA_CALCUTTA))), GEO_CHENNAI, LAHIRI_AYANAMSA).completeBuild());
     }
 
     protected IKundali newKyivKundali(ISwissEph swissEph) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(
-                newCalendar(getTimeZone(EUROPE_KIEV))), GEO_KYIV, LAHIRI_CITRAPAKSA).completeBuild());
+                newCalendar(getTimeZone(EUROPE_KIEV))), GEO_KYIV, TRUECITRA_AYANAMSA).completeBuild());
     }
 
     protected IKundali newChennaiKundali(ISwissEph swissEph, Calendar calendar) {
         return new Kundali(KUNDALI_7_KARAKAS, new SweObjects(swissEph, new SweJulianDate(calendar),
-                GEO_CHENNAI, LAHIRI_TRADITIONAL).completeBuild());
+                GEO_CHENNAI, LAHIRI_AYANAMSA).completeBuild());
     }
 
     protected IKundali newKyivKundali(ISwissEph swissEph, Calendar calendar) {
         return new Kundali(KUNDALI_8_KARAKAS, new SweObjects(swissEph, new SweJulianDate(calendar),
-                GEO_KYIV, LAHIRI_CITRAPAKSA).completeBuild());
+                GEO_KYIV, TRUECITRA_AYANAMSA).completeBuild());
     }
 
     @BeforeAll
