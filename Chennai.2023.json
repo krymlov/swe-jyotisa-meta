@@ -15,8 +15,8 @@
       "lgtd" : "80°16'00\"E"
     },
     "datetime" : {
-      "name" : "2023-01-11 12:00:00",
-      "date" : "2023-01-11",
+      "name" : "2023-01-12 12:00:00",
+      "date" : "2023-01-12",
       "time" : "12:00:00",
       "zone" : "(+5.5)"
     }
@@ -579,151 +579,151 @@
         } ],
         "D16" : [ {
           "rasi" : 1,
-          "bhava" : 3
+          "bhava" : 2
         }, {
           "rasi" : 2,
-          "bhava" : 4
+          "bhava" : 3
         }, {
           "rasi" : 3,
-          "bhava" : 5
+          "bhava" : 4
         }, {
           "rasi" : 4,
-          "bhava" : 6
+          "bhava" : 5
         }, {
           "rasi" : 5,
-          "bhava" : 7
+          "bhava" : 6
         }, {
           "rasi" : 6,
-          "bhava" : 8
+          "bhava" : 7
         }, {
           "rasi" : 7,
-          "bhava" : 9
+          "bhava" : 8
         }, {
           "rasi" : 8,
-          "bhava" : 10
+          "bhava" : 9
         }, {
           "rasi" : 9,
-          "bhava" : 11
+          "bhava" : 10
         }, {
           "rasi" : 10,
-          "bhava" : 12
+          "bhava" : 11
         }, {
           "rasi" : 11,
-          "bhava" : 1
+          "bhava" : 12
         }, {
           "rasi" : 12,
-          "bhava" : 2
+          "bhava" : 1
         } ],
         "D20" : [ {
           "rasi" : 1,
-          "bhava" : 3
+          "bhava" : 2
         }, {
           "rasi" : 2,
-          "bhava" : 4
+          "bhava" : 3
         }, {
           "rasi" : 3,
-          "bhava" : 5
+          "bhava" : 4
         }, {
           "rasi" : 4,
-          "bhava" : 6
+          "bhava" : 5
         }, {
           "rasi" : 5,
-          "bhava" : 7
+          "bhava" : 6
         }, {
           "rasi" : 6,
-          "bhava" : 8
+          "bhava" : 7
         }, {
           "rasi" : 7,
-          "bhava" : 9
+          "bhava" : 8
         }, {
           "rasi" : 8,
-          "bhava" : 10
+          "bhava" : 9
         }, {
           "rasi" : 9,
-          "bhava" : 11
+          "bhava" : 10
         }, {
           "rasi" : 10,
-          "bhava" : 12
+          "bhava" : 11
         }, {
           "rasi" : 11,
-          "bhava" : 1
+          "bhava" : 12
         }, {
           "rasi" : 12,
-          "bhava" : 2
+          "bhava" : 1
         } ],
         "D24" : [ {
           "rasi" : 1,
-          "bhava" : 12
+          "bhava" : 11
         }, {
           "rasi" : 2,
-          "bhava" : 1
+          "bhava" : 12
         }, {
           "rasi" : 3,
-          "bhava" : 2
+          "bhava" : 1
         }, {
           "rasi" : 4,
-          "bhava" : 3
+          "bhava" : 2
         }, {
           "rasi" : 5,
-          "bhava" : 4
+          "bhava" : 3
         }, {
           "rasi" : 6,
-          "bhava" : 5
+          "bhava" : 4
         }, {
           "rasi" : 7,
-          "bhava" : 6
+          "bhava" : 5
         }, {
           "rasi" : 8,
-          "bhava" : 7
+          "bhava" : 6
         }, {
           "rasi" : 9,
-          "bhava" : 8
+          "bhava" : 7
         }, {
           "rasi" : 10,
-          "bhava" : 9
+          "bhava" : 8
         }, {
           "rasi" : 11,
-          "bhava" : 10
+          "bhava" : 9
         }, {
           "rasi" : 12,
-          "bhava" : 11
+          "bhava" : 10
         } ],
         "D27" : [ {
           "rasi" : 1,
-          "bhava" : 4
-        }, {
-          "rasi" : 2,
-          "bhava" : 5
-        }, {
-          "rasi" : 3,
-          "bhava" : 6
-        }, {
-          "rasi" : 4,
-          "bhava" : 7
-        }, {
-          "rasi" : 5,
-          "bhava" : 8
-        }, {
-          "rasi" : 6,
-          "bhava" : 9
-        }, {
-          "rasi" : 7,
-          "bhava" : 10
-        }, {
-          "rasi" : 8,
-          "bhava" : 11
-        }, {
-          "rasi" : 9,
-          "bhava" : 12
-        }, {
-          "rasi" : 10,
-          "bhava" : 1
-        }, {
-          "rasi" : 11,
           "bhava" : 2
         }, {
-          "rasi" : 12,
+          "rasi" : 2,
           "bhava" : 3
+        }, {
+          "rasi" : 3,
+          "bhava" : 4
+        }, {
+          "rasi" : 4,
+          "bhava" : 5
+        }, {
+          "rasi" : 5,
+          "bhava" : 6
+        }, {
+          "rasi" : 6,
+          "bhava" : 7
+        }, {
+          "rasi" : 7,
+          "bhava" : 8
+        }, {
+          "rasi" : 8,
+          "bhava" : 9
+        }, {
+          "rasi" : 9,
+          "bhava" : 10
+        }, {
+          "rasi" : 10,
+          "bhava" : 11
+        }, {
+          "rasi" : 11,
+          "bhava" : 12
+        }, {
+          "rasi" : 12,
+          "bhava" : 1
         } ],
         "D30" : [ {
           "rasi" : 1,
@@ -764,225 +764,225 @@
         } ],
         "D40" : [ {
           "rasi" : 1,
-          "bhava" : 6
+          "bhava" : 5
         }, {
           "rasi" : 2,
-          "bhava" : 7
+          "bhava" : 6
         }, {
           "rasi" : 3,
-          "bhava" : 8
+          "bhava" : 7
         }, {
           "rasi" : 4,
-          "bhava" : 9
+          "bhava" : 8
         }, {
           "rasi" : 5,
-          "bhava" : 10
+          "bhava" : 9
         }, {
           "rasi" : 6,
-          "bhava" : 11
+          "bhava" : 10
         }, {
           "rasi" : 7,
-          "bhava" : 12
+          "bhava" : 11
         }, {
           "rasi" : 8,
-          "bhava" : 1
+          "bhava" : 12
         }, {
           "rasi" : 9,
-          "bhava" : 2
+          "bhava" : 1
         }, {
           "rasi" : 10,
-          "bhava" : 3
+          "bhava" : 2
         }, {
           "rasi" : 11,
-          "bhava" : 4
+          "bhava" : 3
         }, {
           "rasi" : 12,
-          "bhava" : 5
+          "bhava" : 4
         } ],
         "D45" : [ {
           "rasi" : 1,
-          "bhava" : 12
-        }, {
-          "rasi" : 2,
-          "bhava" : 1
-        }, {
-          "rasi" : 3,
-          "bhava" : 2
-        }, {
-          "rasi" : 4,
-          "bhava" : 3
-        }, {
-          "rasi" : 5,
-          "bhava" : 4
-        }, {
-          "rasi" : 6,
-          "bhava" : 5
-        }, {
-          "rasi" : 7,
-          "bhava" : 6
-        }, {
-          "rasi" : 8,
-          "bhava" : 7
-        }, {
-          "rasi" : 9,
-          "bhava" : 8
-        }, {
-          "rasi" : 10,
-          "bhava" : 9
-        }, {
-          "rasi" : 11,
           "bhava" : 10
         }, {
-          "rasi" : 12,
+          "rasi" : 2,
           "bhava" : 11
+        }, {
+          "rasi" : 3,
+          "bhava" : 12
+        }, {
+          "rasi" : 4,
+          "bhava" : 1
+        }, {
+          "rasi" : 5,
+          "bhava" : 2
+        }, {
+          "rasi" : 6,
+          "bhava" : 3
+        }, {
+          "rasi" : 7,
+          "bhava" : 4
+        }, {
+          "rasi" : 8,
+          "bhava" : 5
+        }, {
+          "rasi" : 9,
+          "bhava" : 6
+        }, {
+          "rasi" : 10,
+          "bhava" : 7
+        }, {
+          "rasi" : 11,
+          "bhava" : 8
+        }, {
+          "rasi" : 12,
+          "bhava" : 9
         } ],
         "D60" : [ {
           "rasi" : 1,
-          "bhava" : 7
-        }, {
-          "rasi" : 2,
-          "bhava" : 8
-        }, {
-          "rasi" : 3,
-          "bhava" : 9
-        }, {
-          "rasi" : 4,
-          "bhava" : 10
-        }, {
-          "rasi" : 5,
-          "bhava" : 11
-        }, {
-          "rasi" : 6,
-          "bhava" : 12
-        }, {
-          "rasi" : 7,
-          "bhava" : 1
-        }, {
-          "rasi" : 8,
-          "bhava" : 2
-        }, {
-          "rasi" : 9,
-          "bhava" : 3
-        }, {
-          "rasi" : 10,
-          "bhava" : 4
-        }, {
-          "rasi" : 11,
           "bhava" : 5
         }, {
-          "rasi" : 12,
+          "rasi" : 2,
           "bhava" : 6
+        }, {
+          "rasi" : 3,
+          "bhava" : 7
+        }, {
+          "rasi" : 4,
+          "bhava" : 8
+        }, {
+          "rasi" : 5,
+          "bhava" : 9
+        }, {
+          "rasi" : 6,
+          "bhava" : 10
+        }, {
+          "rasi" : 7,
+          "bhava" : 11
+        }, {
+          "rasi" : 8,
+          "bhava" : 12
+        }, {
+          "rasi" : 9,
+          "bhava" : 1
+        }, {
+          "rasi" : 10,
+          "bhava" : 2
+        }, {
+          "rasi" : 11,
+          "bhava" : 3
+        }, {
+          "rasi" : 12,
+          "bhava" : 4
         } ],
         "D81" : [ {
           "rasi" : 1,
-          "bhava" : 8
-        }, {
-          "rasi" : 2,
-          "bhava" : 9
-        }, {
-          "rasi" : 3,
-          "bhava" : 10
-        }, {
-          "rasi" : 4,
-          "bhava" : 11
-        }, {
-          "rasi" : 5,
-          "bhava" : 12
-        }, {
-          "rasi" : 6,
-          "bhava" : 1
-        }, {
-          "rasi" : 7,
-          "bhava" : 2
-        }, {
-          "rasi" : 8,
-          "bhava" : 3
-        }, {
-          "rasi" : 9,
           "bhava" : 4
         }, {
-          "rasi" : 10,
+          "rasi" : 2,
           "bhava" : 5
         }, {
-          "rasi" : 11,
+          "rasi" : 3,
           "bhava" : 6
         }, {
-          "rasi" : 12,
+          "rasi" : 4,
           "bhava" : 7
+        }, {
+          "rasi" : 5,
+          "bhava" : 8
+        }, {
+          "rasi" : 6,
+          "bhava" : 9
+        }, {
+          "rasi" : 7,
+          "bhava" : 10
+        }, {
+          "rasi" : 8,
+          "bhava" : 11
+        }, {
+          "rasi" : 9,
+          "bhava" : 12
+        }, {
+          "rasi" : 10,
+          "bhava" : 1
+        }, {
+          "rasi" : 11,
+          "bhava" : 2
+        }, {
+          "rasi" : 12,
+          "bhava" : 3
         } ],
         "D108" : [ {
           "rasi" : 1,
-          "bhava" : 11
-        }, {
-          "rasi" : 2,
-          "bhava" : 12
-        }, {
-          "rasi" : 3,
-          "bhava" : 1
-        }, {
-          "rasi" : 4,
-          "bhava" : 2
-        }, {
-          "rasi" : 5,
-          "bhava" : 3
-        }, {
-          "rasi" : 6,
-          "bhava" : 4
-        }, {
-          "rasi" : 7,
-          "bhava" : 5
-        }, {
-          "rasi" : 8,
           "bhava" : 6
         }, {
-          "rasi" : 9,
+          "rasi" : 2,
           "bhava" : 7
         }, {
-          "rasi" : 10,
+          "rasi" : 3,
           "bhava" : 8
         }, {
-          "rasi" : 11,
+          "rasi" : 4,
           "bhava" : 9
         }, {
-          "rasi" : 12,
+          "rasi" : 5,
           "bhava" : 10
+        }, {
+          "rasi" : 6,
+          "bhava" : 11
+        }, {
+          "rasi" : 7,
+          "bhava" : 12
+        }, {
+          "rasi" : 8,
+          "bhava" : 1
+        }, {
+          "rasi" : 9,
+          "bhava" : 2
+        }, {
+          "rasi" : 10,
+          "bhava" : 3
+        }, {
+          "rasi" : 11,
+          "bhava" : 4
+        }, {
+          "rasi" : 12,
+          "bhava" : 5
         } ],
         "D144" : [ {
           "rasi" : 1,
-          "bhava" : 2
-        }, {
-          "rasi" : 2,
-          "bhava" : 3
-        }, {
-          "rasi" : 3,
-          "bhava" : 4
-        }, {
-          "rasi" : 4,
-          "bhava" : 5
-        }, {
-          "rasi" : 5,
-          "bhava" : 6
-        }, {
-          "rasi" : 6,
-          "bhava" : 7
-        }, {
-          "rasi" : 7,
-          "bhava" : 8
-        }, {
-          "rasi" : 8,
           "bhava" : 9
         }, {
-          "rasi" : 9,
+          "rasi" : 2,
           "bhava" : 10
         }, {
-          "rasi" : 10,
+          "rasi" : 3,
           "bhava" : 11
         }, {
-          "rasi" : 11,
+          "rasi" : 4,
           "bhava" : 12
         }, {
-          "rasi" : 12,
+          "rasi" : 5,
           "bhava" : 1
+        }, {
+          "rasi" : 6,
+          "bhava" : 2
+        }, {
+          "rasi" : 7,
+          "bhava" : 3
+        }, {
+          "rasi" : 8,
+          "bhava" : 4
+        }, {
+          "rasi" : 9,
+          "bhava" : 5
+        }, {
+          "rasi" : 10,
+          "bhava" : 6
+        }, {
+          "rasi" : 11,
+          "bhava" : 7
+        }, {
+          "rasi" : 12,
+          "bhava" : 8
         } ]
       }
     },
@@ -1436,151 +1436,151 @@
         } ],
         "D16" : [ {
           "bhava" : 1,
-          "rasi" : 11
-        }, {
-          "bhava" : 2,
           "rasi" : 12
         }, {
-          "bhava" : 3,
+          "bhava" : 2,
           "rasi" : 1
         }, {
-          "bhava" : 4,
+          "bhava" : 3,
           "rasi" : 2
         }, {
-          "bhava" : 5,
+          "bhava" : 4,
           "rasi" : 3
         }, {
-          "bhava" : 6,
+          "bhava" : 5,
           "rasi" : 4
         }, {
-          "bhava" : 7,
+          "bhava" : 6,
           "rasi" : 5
         }, {
-          "bhava" : 8,
+          "bhava" : 7,
           "rasi" : 6
         }, {
-          "bhava" : 9,
+          "bhava" : 8,
           "rasi" : 7
         }, {
-          "bhava" : 10,
+          "bhava" : 9,
           "rasi" : 8
         }, {
-          "bhava" : 11,
+          "bhava" : 10,
           "rasi" : 9
         }, {
-          "bhava" : 12,
+          "bhava" : 11,
           "rasi" : 10
+        }, {
+          "bhava" : 12,
+          "rasi" : 11
         } ],
         "D20" : [ {
           "bhava" : 1,
-          "rasi" : 11
-        }, {
-          "bhava" : 2,
           "rasi" : 12
         }, {
-          "bhava" : 3,
+          "bhava" : 2,
           "rasi" : 1
         }, {
-          "bhava" : 4,
+          "bhava" : 3,
           "rasi" : 2
         }, {
-          "bhava" : 5,
+          "bhava" : 4,
           "rasi" : 3
         }, {
-          "bhava" : 6,
+          "bhava" : 5,
           "rasi" : 4
         }, {
-          "bhava" : 7,
+          "bhava" : 6,
           "rasi" : 5
         }, {
-          "bhava" : 8,
+          "bhava" : 7,
           "rasi" : 6
         }, {
-          "bhava" : 9,
+          "bhava" : 8,
           "rasi" : 7
         }, {
-          "bhava" : 10,
+          "bhava" : 9,
           "rasi" : 8
         }, {
-          "bhava" : 11,
+          "bhava" : 10,
           "rasi" : 9
         }, {
-          "bhava" : 12,
+          "bhava" : 11,
           "rasi" : 10
+        }, {
+          "bhava" : 12,
+          "rasi" : 11
         } ],
         "D24" : [ {
           "bhava" : 1,
-          "rasi" : 2
-        }, {
-          "bhava" : 2,
           "rasi" : 3
         }, {
-          "bhava" : 3,
+          "bhava" : 2,
           "rasi" : 4
         }, {
-          "bhava" : 4,
+          "bhava" : 3,
           "rasi" : 5
         }, {
-          "bhava" : 5,
+          "bhava" : 4,
           "rasi" : 6
         }, {
-          "bhava" : 6,
+          "bhava" : 5,
           "rasi" : 7
         }, {
-          "bhava" : 7,
+          "bhava" : 6,
           "rasi" : 8
         }, {
-          "bhava" : 8,
+          "bhava" : 7,
           "rasi" : 9
         }, {
-          "bhava" : 9,
+          "bhava" : 8,
           "rasi" : 10
         }, {
-          "bhava" : 10,
+          "bhava" : 9,
           "rasi" : 11
         }, {
-          "bhava" : 11,
+          "bhava" : 10,
           "rasi" : 12
         }, {
-          "bhava" : 12,
+          "bhava" : 11,
           "rasi" : 1
+        }, {
+          "bhava" : 12,
+          "rasi" : 2
         } ],
         "D27" : [ {
           "bhava" : 1,
-          "rasi" : 10
-        }, {
-          "bhava" : 2,
-          "rasi" : 11
-        }, {
-          "bhava" : 3,
           "rasi" : 12
         }, {
-          "bhava" : 4,
+          "bhava" : 2,
           "rasi" : 1
         }, {
-          "bhava" : 5,
+          "bhava" : 3,
           "rasi" : 2
         }, {
-          "bhava" : 6,
+          "bhava" : 4,
           "rasi" : 3
         }, {
-          "bhava" : 7,
+          "bhava" : 5,
           "rasi" : 4
         }, {
-          "bhava" : 8,
+          "bhava" : 6,
           "rasi" : 5
         }, {
-          "bhava" : 9,
+          "bhava" : 7,
           "rasi" : 6
         }, {
-          "bhava" : 10,
+          "bhava" : 8,
           "rasi" : 7
         }, {
-          "bhava" : 11,
+          "bhava" : 9,
           "rasi" : 8
         }, {
-          "bhava" : 12,
+          "bhava" : 10,
           "rasi" : 9
+        }, {
+          "bhava" : 11,
+          "rasi" : 10
+        }, {
+          "bhava" : 12,
+          "rasi" : 11
         } ],
         "D30" : [ {
           "bhava" : 1,
@@ -1621,225 +1621,225 @@
         } ],
         "D40" : [ {
           "bhava" : 1,
-          "rasi" : 8
-        }, {
-          "bhava" : 2,
           "rasi" : 9
         }, {
-          "bhava" : 3,
+          "bhava" : 2,
           "rasi" : 10
         }, {
-          "bhava" : 4,
+          "bhava" : 3,
           "rasi" : 11
         }, {
-          "bhava" : 5,
+          "bhava" : 4,
           "rasi" : 12
         }, {
-          "bhava" : 6,
+          "bhava" : 5,
           "rasi" : 1
         }, {
-          "bhava" : 7,
+          "bhava" : 6,
           "rasi" : 2
         }, {
-          "bhava" : 8,
+          "bhava" : 7,
           "rasi" : 3
         }, {
-          "bhava" : 9,
+          "bhava" : 8,
           "rasi" : 4
         }, {
-          "bhava" : 10,
+          "bhava" : 9,
           "rasi" : 5
         }, {
-          "bhava" : 11,
+          "bhava" : 10,
           "rasi" : 6
         }, {
-          "bhava" : 12,
+          "bhava" : 11,
           "rasi" : 7
+        }, {
+          "bhava" : 12,
+          "rasi" : 8
         } ],
         "D45" : [ {
           "bhava" : 1,
-          "rasi" : 2
-        }, {
-          "bhava" : 2,
-          "rasi" : 3
-        }, {
-          "bhava" : 3,
           "rasi" : 4
         }, {
-          "bhava" : 4,
+          "bhava" : 2,
           "rasi" : 5
         }, {
-          "bhava" : 5,
+          "bhava" : 3,
           "rasi" : 6
         }, {
-          "bhava" : 6,
+          "bhava" : 4,
           "rasi" : 7
         }, {
-          "bhava" : 7,
+          "bhava" : 5,
           "rasi" : 8
         }, {
-          "bhava" : 8,
+          "bhava" : 6,
           "rasi" : 9
         }, {
-          "bhava" : 9,
+          "bhava" : 7,
           "rasi" : 10
         }, {
-          "bhava" : 10,
+          "bhava" : 8,
           "rasi" : 11
         }, {
-          "bhava" : 11,
+          "bhava" : 9,
           "rasi" : 12
         }, {
-          "bhava" : 12,
+          "bhava" : 10,
           "rasi" : 1
+        }, {
+          "bhava" : 11,
+          "rasi" : 2
+        }, {
+          "bhava" : 12,
+          "rasi" : 3
         } ],
         "D60" : [ {
           "bhava" : 1,
-          "rasi" : 7
-        }, {
-          "bhava" : 2,
-          "rasi" : 8
-        }, {
-          "bhava" : 3,
           "rasi" : 9
         }, {
-          "bhava" : 4,
+          "bhava" : 2,
           "rasi" : 10
         }, {
-          "bhava" : 5,
+          "bhava" : 3,
           "rasi" : 11
         }, {
-          "bhava" : 6,
+          "bhava" : 4,
           "rasi" : 12
         }, {
-          "bhava" : 7,
+          "bhava" : 5,
           "rasi" : 1
         }, {
-          "bhava" : 8,
+          "bhava" : 6,
           "rasi" : 2
         }, {
-          "bhava" : 9,
+          "bhava" : 7,
           "rasi" : 3
         }, {
-          "bhava" : 10,
+          "bhava" : 8,
           "rasi" : 4
         }, {
-          "bhava" : 11,
+          "bhava" : 9,
           "rasi" : 5
         }, {
-          "bhava" : 12,
+          "bhava" : 10,
           "rasi" : 6
+        }, {
+          "bhava" : 11,
+          "rasi" : 7
+        }, {
+          "bhava" : 12,
+          "rasi" : 8
         } ],
         "D81" : [ {
           "bhava" : 1,
-          "rasi" : 6
-        }, {
-          "bhava" : 2,
-          "rasi" : 7
-        }, {
-          "bhava" : 3,
-          "rasi" : 8
-        }, {
-          "bhava" : 4,
-          "rasi" : 9
-        }, {
-          "bhava" : 5,
           "rasi" : 10
         }, {
-          "bhava" : 6,
+          "bhava" : 2,
           "rasi" : 11
         }, {
-          "bhava" : 7,
+          "bhava" : 3,
           "rasi" : 12
         }, {
-          "bhava" : 8,
+          "bhava" : 4,
           "rasi" : 1
         }, {
-          "bhava" : 9,
+          "bhava" : 5,
           "rasi" : 2
         }, {
-          "bhava" : 10,
+          "bhava" : 6,
           "rasi" : 3
         }, {
-          "bhava" : 11,
+          "bhava" : 7,
           "rasi" : 4
         }, {
-          "bhava" : 12,
+          "bhava" : 8,
           "rasi" : 5
+        }, {
+          "bhava" : 9,
+          "rasi" : 6
+        }, {
+          "bhava" : 10,
+          "rasi" : 7
+        }, {
+          "bhava" : 11,
+          "rasi" : 8
+        }, {
+          "bhava" : 12,
+          "rasi" : 9
         } ],
         "D108" : [ {
           "bhava" : 1,
-          "rasi" : 3
-        }, {
-          "bhava" : 2,
-          "rasi" : 4
-        }, {
-          "bhava" : 3,
-          "rasi" : 5
-        }, {
-          "bhava" : 4,
-          "rasi" : 6
-        }, {
-          "bhava" : 5,
-          "rasi" : 7
-        }, {
-          "bhava" : 6,
           "rasi" : 8
         }, {
-          "bhava" : 7,
+          "bhava" : 2,
           "rasi" : 9
         }, {
-          "bhava" : 8,
+          "bhava" : 3,
           "rasi" : 10
         }, {
-          "bhava" : 9,
+          "bhava" : 4,
           "rasi" : 11
         }, {
-          "bhava" : 10,
+          "bhava" : 5,
           "rasi" : 12
         }, {
-          "bhava" : 11,
+          "bhava" : 6,
           "rasi" : 1
         }, {
-          "bhava" : 12,
+          "bhava" : 7,
           "rasi" : 2
+        }, {
+          "bhava" : 8,
+          "rasi" : 3
+        }, {
+          "bhava" : 9,
+          "rasi" : 4
+        }, {
+          "bhava" : 10,
+          "rasi" : 5
+        }, {
+          "bhava" : 11,
+          "rasi" : 6
+        }, {
+          "bhava" : 12,
+          "rasi" : 7
         } ],
         "D144" : [ {
           "bhava" : 1,
-          "rasi" : 12
-        }, {
-          "bhava" : 2,
-          "rasi" : 1
-        }, {
-          "bhava" : 3,
-          "rasi" : 2
-        }, {
-          "bhava" : 4,
-          "rasi" : 3
-        }, {
-          "bhava" : 5,
-          "rasi" : 4
-        }, {
-          "bhava" : 6,
           "rasi" : 5
         }, {
-          "bhava" : 7,
+          "bhava" : 2,
           "rasi" : 6
         }, {
-          "bhava" : 8,
+          "bhava" : 3,
           "rasi" : 7
         }, {
-          "bhava" : 9,
+          "bhava" : 4,
           "rasi" : 8
         }, {
-          "bhava" : 10,
+          "bhava" : 5,
           "rasi" : 9
         }, {
-          "bhava" : 11,
+          "bhava" : 6,
           "rasi" : 10
         }, {
-          "bhava" : 12,
+          "bhava" : 7,
           "rasi" : 11
+        }, {
+          "bhava" : 8,
+          "rasi" : 12
+        }, {
+          "bhava" : 9,
+          "rasi" : 1
+        }, {
+          "bhava" : 10,
+          "rasi" : 2
+        }, {
+          "bhava" : 11,
+          "rasi" : 3
+        }, {
+          "bhava" : 12,
+          "rasi" : 4
         } ]
       }
     }
@@ -1854,9 +1854,9 @@
         "bhava" : 2,
         "vakri" : 1,
         "deg" : "15°",
-        "degr" : "15°29'02\"",
-        "vdegr" : 15.483853,
-        "lgtd" : "15°29'02\"",
+        "degr" : "15°25'51\"",
+        "vdegr" : 15.4308605,
+        "lgtd" : "15°25'51\"",
         "npada" : "BHA1",
         "naksatra" : 2,
         "pada" : 1,
@@ -1869,9 +1869,9 @@
         "bhava" : 3,
         "vakri" : 1,
         "deg" : "13°",
-        "degr" : "13°58'10\"",
-        "vdegr" : 43.96956,
-        "lgtd" : "43°58'10\"",
+        "degr" : "13°57'19\"",
+        "vdegr" : 43.955368,
+        "lgtd" : "43°57'19\"",
         "npada" : "ROH2",
         "naksatra" : 4,
         "pada" : 2,
@@ -1883,15 +1883,15 @@
         "text" : "Chandra",
         "rasi" : 5,
         "bhava" : 6,
-        "deg" : "13°",
-        "degr" : "13°24'58\"",
-        "vdegr" : 133.41618,
-        "lgtd" : "133°24'58\"",
-        "npada" : "PPH1",
+        "deg" : "25°",
+        "degr" : "25°27'07\"",
+        "vdegr" : 145.4519,
+        "lgtd" : "145°27'07\"",
+        "npada" : "PPH4",
         "naksatra" : 11,
-        "pada" : 1,
+        "pada" : 4,
         "dignity" : 6,
-        "navamsa" : 5
+        "navamsa" : 8
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -1900,9 +1900,9 @@
         "bhava" : 8,
         "vakri" : 1,
         "deg" : "15°",
-        "degr" : "15°29'02\"",
-        "vdegr" : 195.48386,
-        "lgtd" : "195°29'02\"",
+        "degr" : "15°25'51\"",
+        "vdegr" : 195.43086,
+        "lgtd" : "195°25'51\"",
         "npada" : "SWA3",
         "naksatra" : 15,
         "pada" : 3,
@@ -1914,10 +1914,10 @@
         "rasi" : 9,
         "bhava" : 10,
         "vakri" : 1,
-        "deg" : "18°",
-        "degr" : "18°01'34\"",
-        "vdegr" : 258.02612,
-        "lgtd" : "258°01'34\"",
+        "deg" : "16°",
+        "degr" : "16°58'59\"",
+        "vdegr" : 256.983,
+        "lgtd" : "256°58'59\"",
         "npada" : "PSH2",
         "naksatra" : 20,
         "pada" : 2,
@@ -1929,30 +1929,30 @@
         "text" : "Surya",
         "rasi" : 9,
         "bhava" : 10,
-        "deg" : "26°",
-        "degr" : "26°34'41\"",
-        "vdegr" : 266.5782,
-        "lgtd" : "266°34'41\"",
-        "npada" : "PSH4",
-        "naksatra" : 20,
-        "pada" : 4,
+        "deg" : "27°",
+        "degr" : "27°35'49\"",
+        "vdegr" : 267.59683,
+        "lgtd" : "267°35'49\"",
+        "npada" : "USH1",
+        "naksatra" : 21,
+        "pada" : 1,
         "dignity" : 6,
-        "navamsa" : 8
+        "navamsa" : 9
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
         "rasi" : 10,
         "bhava" : 11,
-        "deg" : "16°",
-        "degr" : "16°04'17\"",
-        "vdegr" : 286.0714,
-        "lgtd" : "286°04'17\"",
-        "npada" : "SHR2",
+        "deg" : "17°",
+        "degr" : "17°19'17\"",
+        "vdegr" : 287.32147,
+        "lgtd" : "287°19'17\"",
+        "npada" : "SHR3",
         "naksatra" : 22,
-        "pada" : 2,
+        "pada" : 3,
         "dignity" : 6,
-        "navamsa" : 2
+        "navamsa" : 3
       }, {
         "code" : "SA",
         "name" : "Sa",
@@ -1960,9 +1960,9 @@
         "rasi" : 10,
         "bhava" : 11,
         "deg" : "29°",
-        "degr" : "29°19'06\"",
-        "vdegr" : 299.31827,
-        "lgtd" : "299°19'06\"",
+        "degr" : "29°25'36\"",
+        "vdegr" : 299.42667,
+        "lgtd" : "299°25'36\"",
         "npada" : "DHA2",
         "naksatra" : 23,
         "pada" : 2,
@@ -1975,9 +1975,9 @@
         "rasi" : 12,
         "bhava" : 1,
         "deg" : "08°",
-        "degr" : "08°23'41\"",
-        "vdegr" : 338.39478,
-        "lgtd" : "338°23'41\"",
+        "degr" : "08°32'32\"",
+        "vdegr" : 338.5422,
+        "lgtd" : "338°32'32\"",
         "npada" : "UBH2",
         "naksatra" : 26,
         "pada" : 2,
@@ -1989,10 +1989,10 @@
         "text" : "Lagna",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "27°",
-        "degr" : "27°45'40\"",
-        "vdegr" : 357.76102,
-        "lgtd" : "357°45'40\"",
+        "deg" : "28°",
+        "degr" : "28°55'10\"",
+        "vdegr" : 358.91953,
+        "lgtd" : "358°55'10\"",
         "npada" : "REV4",
         "naksatra" : 27,
         "pada" : 4,
@@ -2005,60 +2005,60 @@
         "text" : "Dhuma",
         "rasi" : 2,
         "bhava" : 3,
-        "deg" : "09°",
-        "degr" : "09°54'41\"",
-        "lgtd" : "39°54'41\"",
-        "naksatra" : 3,
-        "pada" : 4,
-        "navamsa" : 12
+        "deg" : "10°",
+        "degr" : "10°55'49\"",
+        "lgtd" : "40°55'49\"",
+        "naksatra" : 4,
+        "pada" : 1,
+        "navamsa" : 1
       }, {
         "code" : "UG3",
         "name" : "Par",
         "text" : "Parivesha",
         "rasi" : 5,
         "bhava" : 6,
-        "deg" : "20°",
-        "degr" : "20°05'19\"",
-        "lgtd" : "140°05'19\"",
+        "deg" : "19°",
+        "degr" : "19°04'11\"",
+        "lgtd" : "139°04'11\"",
         "naksatra" : 11,
-        "pada" : 3,
-        "navamsa" : 7
+        "pada" : 2,
+        "navamsa" : 6
       }, {
         "code" : "UG4",
         "name" : "Chp",
         "text" : "Indrachaapa",
         "rasi" : 8,
         "bhava" : 9,
-        "deg" : "09°",
-        "degr" : "09°54'41\"",
-        "lgtd" : "219°54'41\"",
+        "deg" : "10°",
+        "degr" : "10°55'49\"",
+        "lgtd" : "220°55'49\"",
         "naksatra" : 17,
-        "pada" : 2,
-        "navamsa" : 6
+        "pada" : 3,
+        "navamsa" : 7
       }, {
         "code" : "UG5",
         "name" : "Upk",
         "text" : "Upaketu",
         "rasi" : 8,
         "bhava" : 9,
-        "deg" : "26°",
-        "degr" : "26°34'41\"",
-        "lgtd" : "236°34'41\"",
+        "deg" : "27°",
+        "degr" : "27°35'49\"",
+        "lgtd" : "237°35'49\"",
         "naksatra" : 18,
-        "pada" : 3,
-        "navamsa" : 11
+        "pada" : 4,
+        "navamsa" : 12
       }, {
         "code" : "UG2",
         "name" : "Vya",
         "text" : "Vyatipaata",
         "rasi" : 11,
         "bhava" : 12,
-        "deg" : "20°",
-        "degr" : "20°05'19\"",
-        "lgtd" : "320°05'19\"",
-        "naksatra" : 25,
-        "pada" : 1,
-        "navamsa" : 1
+        "deg" : "19°",
+        "degr" : "19°04'11\"",
+        "lgtd" : "319°04'11\"",
+        "naksatra" : 24,
+        "pada" : 4,
+        "navamsa" : 12
       } ]
     },
     "D2" : {
@@ -2070,8 +2070,8 @@
         "bhava" : 12,
         "vakri" : 1,
         "deg" : "00°",
-        "degr" : "00°58'04\"",
-        "vdegr" : 90.967705
+        "degr" : "00°51'42\"",
+        "vdegr" : 90.861725
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -2080,8 +2080,8 @@
         "bhava" : 12,
         "vakri" : 1,
         "deg" : "00°",
-        "degr" : "00°58'04\"",
-        "vdegr" : 90.967705
+        "degr" : "00°51'42\"",
+        "vdegr" : 90.861725
       }, {
         "code" : "BU",
         "name" : "(Bu)",
@@ -2089,9 +2089,9 @@
         "rasi" : 4,
         "bhava" : 12,
         "vakri" : 1,
-        "deg" : "06°",
-        "degr" : "06°03'08\"",
-        "vdegr" : 96.05228,
+        "deg" : "03°",
+        "degr" : "03°57'58\"",
+        "vdegr" : 93.96603,
         "dignity" : 11
       }, {
         "code" : "GU",
@@ -2099,9 +2099,19 @@
         "text" : "Guru",
         "rasi" : 4,
         "bhava" : 12,
-        "deg" : "16°",
-        "degr" : "16°47'22\"",
-        "vdegr" : 106.78954,
+        "deg" : "17°",
+        "degr" : "17°05'04\"",
+        "vdegr" : 107.08443,
+        "dignity" : 5
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 4,
+        "bhava" : 12,
+        "deg" : "20°",
+        "degr" : "20°54'14\"",
+        "vdegr" : 110.90382,
         "dignity" : 5
       }, {
         "code" : "SY",
@@ -2109,9 +2119,9 @@
         "text" : "Surya",
         "rasi" : 4,
         "bhava" : 12,
-        "deg" : "23°",
-        "degr" : "23°09'23\"",
-        "vdegr" : 113.15639,
+        "deg" : "25°",
+        "degr" : "25°11'37\"",
+        "vdegr" : 115.19369,
         "dignity" : 5
       }, {
         "code" : "MA",
@@ -2121,8 +2131,8 @@
         "bhava" : 12,
         "vakri" : 1,
         "deg" : "27°",
-        "degr" : "27°56'21\"",
-        "vdegr" : 117.93912,
+        "degr" : "27°54'39\"",
+        "vdegr" : 117.910736,
         "dignity" : 4
       }, {
         "code" : "SK",
@@ -2130,9 +2140,9 @@
         "text" : "Shukra",
         "rasi" : 5,
         "bhava" : 1,
-        "deg" : "02°",
-        "degr" : "02°08'34\"",
-        "vdegr" : 122.1428,
+        "deg" : "04°",
+        "degr" : "04°38'35\"",
+        "vdegr" : 124.642944,
         "dignity" : 5
       }, {
         "code" : "LG",
@@ -2140,19 +2150,9 @@
         "text" : "Lagna",
         "rasi" : 5,
         "bhava" : 1,
-        "deg" : "25°",
-        "degr" : "25°31'19\"",
-        "vdegr" : 145.52205
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 5,
-        "bhava" : 1,
-        "deg" : "26°",
-        "degr" : "26°49'56\"",
-        "vdegr" : 146.83237,
-        "dignity" : 5
+        "deg" : "27°",
+        "degr" : "27°50'21\"",
+        "vdegr" : 147.83904
       }, {
         "code" : "SA",
         "name" : "Sa",
@@ -2160,8 +2160,8 @@
         "rasi" : 5,
         "bhava" : 1,
         "deg" : "28°",
-        "degr" : "28°38'12\"",
-        "vdegr" : 148.63655,
+        "degr" : "28°51'12\"",
+        "vdegr" : 148.8533,
         "dignity" : 4
       } ],
       "arudhas" : [ ],
@@ -2169,15 +2169,25 @@
     },
     "D3" : {
       "grahas" : [ {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 1,
+        "bhava" : 6,
+        "deg" : "16°",
+        "degr" : "16°21'21\"",
+        "vdegr" : 16.355722,
+        "dignity" : 5
+      }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
         "rasi" : 1,
         "bhava" : 6,
         "vakri" : 1,
-        "deg" : "24°",
-        "degr" : "24°04'42\"",
-        "vdegr" : 24.078411,
+        "deg" : "20°",
+        "degr" : "20°56'57\"",
+        "vdegr" : 20.949041,
         "dignity" : 5
       }, {
         "code" : "SK",
@@ -2185,9 +2195,9 @@
         "text" : "Shukra",
         "rasi" : 2,
         "bhava" : 7,
-        "deg" : "18°",
-        "degr" : "18°12'51\"",
-        "vdegr" : 48.214195,
+        "deg" : "21°",
+        "degr" : "21°57'52\"",
+        "vdegr" : 51.964413,
         "dignity" : 8
       }, {
         "code" : "RA",
@@ -2197,18 +2207,18 @@
         "bhava" : 10,
         "vakri" : 1,
         "deg" : "16°",
-        "degr" : "16°27'06\"",
-        "vdegr" : 136.45155
+        "degr" : "16°17'33\"",
+        "vdegr" : 136.29259
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
         "rasi" : 5,
         "bhava" : 10,
-        "deg" : "19°",
-        "degr" : "19°44'04\"",
-        "vdegr" : 139.73457,
-        "dignity" : 9
+        "deg" : "22°",
+        "degr" : "22°47'26\"",
+        "vdegr" : 142.79053,
+        "dignity" : 8
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -2217,8 +2227,8 @@
         "bhava" : 11,
         "vakri" : 1,
         "deg" : "11°",
-        "degr" : "11°54'31\"",
-        "vdegr" : 161.90868,
+        "degr" : "11°51'58\"",
+        "vdegr" : 161.8661,
         "dignity" : 4
       }, {
         "code" : "SA",
@@ -2226,9 +2236,9 @@
         "text" : "Shani",
         "rasi" : 6,
         "bhava" : 11,
-        "deg" : "27°",
-        "degr" : "27°57'17\"",
-        "vdegr" : 177.95483,
+        "deg" : "28°",
+        "degr" : "28°16'48\"",
+        "vdegr" : 178.27997,
         "dignity" : 6
       }, {
         "code" : "LG",
@@ -2236,19 +2246,9 @@
         "text" : "Lagna",
         "rasi" : 8,
         "bhava" : 1,
-        "deg" : "23°",
-        "degr" : "23°16'59\"",
-        "vdegr" : 233.28308
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 9,
-        "bhava" : 2,
-        "deg" : "10°",
-        "degr" : "10°14'55\"",
-        "vdegr" : 250.24854,
-        "dignity" : 5
+        "deg" : "26°",
+        "degr" : "26°45'31\"",
+        "vdegr" : 236.75854
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -2257,8 +2257,8 @@
         "bhava" : 4,
         "vakri" : 1,
         "deg" : "16°",
-        "degr" : "16°27'06\"",
-        "vdegr" : 316.45157
+        "degr" : "16°17'33\"",
+        "vdegr" : 316.29257
       }, {
         "code" : "GU",
         "name" : "Gu",
@@ -2266,8 +2266,8 @@
         "rasi" : 12,
         "bhava" : 5,
         "deg" : "25°",
-        "degr" : "25°11'04\"",
-        "vdegr" : 355.18433,
+        "degr" : "25°37'36\"",
+        "vdegr" : 355.62665,
         "dignity" : 8
       } ],
       "arudhas" : [ ],
@@ -2282,17 +2282,27 @@
         "bhava" : 5,
         "vakri" : 1,
         "deg" : "01°",
-        "degr" : "01°56'07\"",
-        "vdegr" : 1.9354118
+        "degr" : "01°43'24\"",
+        "vdegr" : 1.7234439
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 2,
+        "bhava" : 6,
+        "deg" : "11°",
+        "degr" : "11°48'27\"",
+        "vdegr" : 41.80763,
+        "dignity" : 9
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 3,
         "bhava" : 7,
-        "deg" : "03°",
-        "degr" : "03°34'45\"",
-        "vdegr" : 63.57909,
+        "deg" : "04°",
+        "degr" : "04°10'08\"",
+        "vdegr" : 64.16885,
         "dignity" : 4
       }, {
         "code" : "BU",
@@ -2301,9 +2311,9 @@
         "rasi" : 3,
         "bhava" : 7,
         "vakri" : 1,
-        "deg" : "12°",
-        "degr" : "12°06'16\"",
-        "vdegr" : 72.104546,
+        "deg" : "07°",
+        "degr" : "07°55'55\"",
+        "vdegr" : 67.93205,
         "dignity" : 8
       }, {
         "code" : "SK",
@@ -2311,9 +2321,9 @@
         "text" : "Shukra",
         "rasi" : 4,
         "bhava" : 8,
-        "deg" : "04°",
-        "degr" : "04°17'08\"",
-        "vdegr" : 94.28559,
+        "deg" : "09°",
+        "degr" : "09°17'09\"",
+        "vdegr" : 99.28588,
         "dignity" : 4
       }, {
         "code" : "MA",
@@ -2323,8 +2333,8 @@
         "bhava" : 9,
         "vakri" : 1,
         "deg" : "25°",
-        "degr" : "25°52'42\"",
-        "vdegr" : 145.87823,
+        "degr" : "25°49'17\"",
+        "vdegr" : 145.82147,
         "dignity" : 6
       }, {
         "code" : "SY",
@@ -2332,9 +2342,9 @@
         "text" : "Surya",
         "rasi" : 6,
         "bhava" : 10,
-        "deg" : "16°",
-        "degr" : "16°18'46\"",
-        "vdegr" : 166.31277,
+        "deg" : "20°",
+        "degr" : "20°23'15\"",
+        "vdegr" : 170.38737,
         "dignity" : 5
       }, {
         "code" : "RA",
@@ -2344,8 +2354,8 @@
         "bhava" : 11,
         "vakri" : 1,
         "deg" : "01°",
-        "degr" : "01°56'07\"",
-        "vdegr" : 181.93541
+        "degr" : "01°43'24\"",
+        "vdegr" : 181.72345
       }, {
         "code" : "SA",
         "name" : "Sa",
@@ -2353,63 +2363,52 @@
         "rasi" : 7,
         "bhava" : 11,
         "deg" : "27°",
-        "degr" : "27°16'23\"",
-        "vdegr" : 207.27312,
+        "degr" : "27°42'24\"",
+        "vdegr" : 207.70662,
         "dignity" : 10
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 8,
-        "bhava" : 12,
-        "deg" : "23°",
-        "degr" : "23°39'53\"",
-        "vdegr" : 233.66472,
-        "dignity" : 2
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
         "rasi" : 9,
         "bhava" : 1,
-        "deg" : "21°",
-        "degr" : "21°02'39\"",
-        "vdegr" : 261.0441
+        "deg" : "25°",
+        "degr" : "25°40'41\"",
+        "vdegr" : 265.67807
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D5" : {
       "grahas" : [ {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 3,
-        "bhava" : 8,
-        "vakri" : 1,
-        "deg" : "00°",
-        "degr" : "00°07'50\"",
-        "vdegr" : 60.130684,
-        "dignity" : 5
-      }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 6,
         "bhava" : 11,
-        "deg" : "11°",
-        "degr" : "11°58'26\"",
-        "vdegr" : 161.97386,
+        "deg" : "12°",
+        "degr" : "12°42'40\"",
+        "vdegr" : 162.71107,
         "dignity" : 8
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 7,
+        "bhava" : 12,
+        "deg" : "07°",
+        "degr" : "07°15'34\"",
+        "vdegr" : 187.25954,
+        "dignity" : 5
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
         "rasi" : 7,
         "bhava" : 12,
-        "deg" : "12°",
-        "degr" : "12°53'27\"",
-        "vdegr" : 192.89096,
+        "deg" : "17°",
+        "degr" : "17°59'03\"",
+        "vdegr" : 197.98422,
         "dignity" : 6
       }, {
         "code" : "LG",
@@ -2417,29 +2416,19 @@
         "text" : "Lagna",
         "rasi" : 8,
         "bhava" : 1,
-        "deg" : "18°",
-        "degr" : "18°48'18\"",
-        "vdegr" : 228.80513
+        "deg" : "24°",
+        "degr" : "24°35'51\"",
+        "vdegr" : 234.59758
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 8,
         "bhava" : 1,
-        "deg" : "26°",
-        "degr" : "26°35'29\"",
-        "vdegr" : 236.59138,
+        "deg" : "27°",
+        "degr" : "27°08'00\"",
+        "vdegr" : 237.13327,
         "dignity" : 6
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 9,
-        "bhava" : 2,
-        "deg" : "07°",
-        "degr" : "07°04'51\"",
-        "vdegr" : 247.0809,
-        "dignity" : 5
       }, {
         "code" : "RA",
         "name" : "Ra",
@@ -2448,8 +2437,8 @@
         "bhava" : 2,
         "vakri" : 1,
         "deg" : "17°",
-        "degr" : "17°25'09\"",
-        "vdegr" : 257.41925,
+        "degr" : "17°09'15\"",
+        "vdegr" : 257.1543,
         "dignity" : 11
       }, {
         "code" : "KE",
@@ -2459,9 +2448,20 @@
         "bhava" : 2,
         "vakri" : 1,
         "deg" : "17°",
-        "degr" : "17°25'09\"",
-        "vdegr" : 257.41925,
+        "degr" : "17°09'15\"",
+        "vdegr" : 257.1543,
         "dignity" : 11
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 9,
+        "bhava" : 2,
+        "vakri" : 1,
+        "deg" : "24°",
+        "degr" : "24°54'54\"",
+        "vdegr" : 264.91507,
+        "dignity" : 6
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -2470,8 +2470,8 @@
         "bhava" : 5,
         "vakri" : 1,
         "deg" : "09°",
-        "degr" : "09°50'52\"",
-        "vdegr" : 339.84778,
+        "degr" : "09°46'37\"",
+        "vdegr" : 339.77686,
         "dignity" : 8
       }, {
         "code" : "SK",
@@ -2479,9 +2479,9 @@
         "text" : "Shukra",
         "rasi" : 12,
         "bhava" : 5,
-        "deg" : "20°",
-        "degr" : "20°21'25\"",
-        "vdegr" : 350.357,
+        "deg" : "26°",
+        "degr" : "26°36'26\"",
+        "vdegr" : 356.60736,
         "dignity" : 11
       } ],
       "arudhas" : [ ],
@@ -2489,16 +2489,6 @@
     },
     "D6" : {
       "grahas" : [ {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 3,
-        "bhava" : 4,
-        "deg" : "20°",
-        "degr" : "20°29'49\"",
-        "vdegr" : 80.49708,
-        "dignity" : 6
-      }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
@@ -2506,8 +2496,8 @@
         "bhava" : 5,
         "vakri" : 1,
         "deg" : "02°",
-        "degr" : "02°54'11\"",
-        "vdegr" : 92.903114
+        "degr" : "02°35'07\"",
+        "vdegr" : 92.58517
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -2516,8 +2506,8 @@
         "bhava" : 5,
         "vakri" : 1,
         "deg" : "02°",
-        "degr" : "02°54'11\"",
-        "vdegr" : 92.903114
+        "degr" : "02°35'07\"",
+        "vdegr" : 92.58517
       }, {
         "code" : "BU",
         "name" : "(Bu)",
@@ -2525,19 +2515,29 @@
         "rasi" : 4,
         "bhava" : 5,
         "vakri" : 1,
-        "deg" : "18°",
-        "degr" : "18°09'25\"",
-        "vdegr" : 108.15682,
+        "deg" : "11°",
+        "degr" : "11°53'53\"",
+        "vdegr" : 101.89808,
         "dignity" : 4
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 6,
+        "bhava" : 7,
+        "deg" : "02°",
+        "degr" : "02°42'41\"",
+        "vdegr" : 152.71144,
+        "dignity" : 6
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
         "rasi" : 6,
         "bhava" : 7,
-        "deg" : "09°",
-        "degr" : "09°28'09\"",
-        "vdegr" : 159.46916,
+        "deg" : "15°",
+        "degr" : "15°34'52\"",
+        "vdegr" : 165.58107,
         "dignity" : 5
       }, {
         "code" : "GU",
@@ -2545,9 +2545,9 @@
         "text" : "Guru",
         "rasi" : 8,
         "bhava" : 9,
-        "deg" : "20°",
-        "degr" : "20°22'07\"",
-        "vdegr" : 230.36864,
+        "deg" : "21°",
+        "degr" : "21°15'12\"",
+        "vdegr" : 231.25328,
         "dignity" : 6
       }, {
         "code" : "MA",
@@ -2557,8 +2557,8 @@
         "bhava" : 10,
         "vakri" : 1,
         "deg" : "23°",
-        "degr" : "23°49'02\"",
-        "vdegr" : 263.81735,
+        "degr" : "23°43'56\"",
+        "vdegr" : 263.7322,
         "dignity" : 6
       }, {
         "code" : "SK",
@@ -2566,9 +2566,9 @@
         "text" : "Shukra",
         "rasi" : 10,
         "bhava" : 11,
-        "deg" : "06°",
-        "degr" : "06°25'42\"",
-        "vdegr" : 276.42838,
+        "deg" : "13°",
+        "degr" : "13°55'44\"",
+        "vdegr" : 283.92883,
         "dignity" : 6
       }, {
         "code" : "LG",
@@ -2576,18 +2576,18 @@
         "text" : "Lagna",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "16°",
-        "degr" : "16°33'58\"",
-        "vdegr" : 346.56616
+        "deg" : "23°",
+        "degr" : "23°31'02\"",
+        "vdegr" : 353.5171
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "25°",
-        "degr" : "25°54'35\"",
-        "vdegr" : 355.90967,
+        "deg" : "26°",
+        "degr" : "26°33'36\"",
+        "vdegr" : 356.55994,
         "dignity" : 5
       } ],
       "arudhas" : [ ],
@@ -2595,25 +2595,14 @@
     },
     "D7" : {
       "grahas" : [ {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 1,
-        "bhava" : 2,
-        "vakri" : 1,
-        "deg" : "06°",
-        "degr" : "06°10'59\"",
-        "vdegr" : 6.1829576,
-        "dignity" : 5
-      }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
         "rasi" : 3,
         "bhava" : 4,
-        "deg" : "06°",
-        "degr" : "06°02'50\"",
-        "vdegr" : 66.047356,
+        "deg" : "13°",
+        "degr" : "13°10'40\"",
+        "vdegr" : 73.17791,
         "dignity" : 5
       }, {
         "code" : "RA",
@@ -2623,38 +2612,28 @@
         "bhava" : 5,
         "vakri" : 1,
         "deg" : "18°",
-        "degr" : "18°23'13\"",
-        "vdegr" : 108.38697
-      }, {
-        "code" : "SK",
-        "name" : "Sk",
-        "text" : "Shukra",
-        "rasi" : 7,
-        "bhava" : 8,
-        "deg" : "22°",
-        "degr" : "22°29'59\"",
-        "vdegr" : 202.49979,
-        "dignity" : 8
+        "degr" : "18°00'58\"",
+        "vdegr" : 108.01603
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 7,
         "bhava" : 8,
-        "deg" : "28°",
-        "degr" : "28°45'48\"",
-        "vdegr" : 208.76341,
+        "deg" : "29°",
+        "degr" : "29°47'44\"",
+        "vdegr" : 209.7955,
         "dignity" : 4
       }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
+        "code" : "SK",
+        "name" : "Sk",
+        "text" : "Shukra",
         "rasi" : 8,
         "bhava" : 9,
-        "deg" : "03°",
-        "degr" : "03°54'48\"",
-        "vdegr" : 213.91325,
-        "dignity" : 2
+        "deg" : "01°",
+        "degr" : "01°15'01\"",
+        "vdegr" : 211.25029,
+        "dignity" : 5
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -2663,8 +2642,8 @@
         "bhava" : 11,
         "vakri" : 1,
         "deg" : "18°",
-        "degr" : "18°23'13\"",
-        "vdegr" : 288.38696
+        "degr" : "18°00'58\"",
+        "vdegr" : 288.01602
       }, {
         "code" : "SA",
         "name" : "Sa",
@@ -2672,9 +2651,19 @@
         "rasi" : 10,
         "bhava" : 11,
         "deg" : "25°",
-        "degr" : "25°13'41\"",
-        "vdegr" : 295.22794,
+        "degr" : "25°59'12\"",
+        "vdegr" : 295.98657,
         "dignity" : 8
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 10,
+        "bhava" : 11,
+        "deg" : "28°",
+        "degr" : "28°09'48\"",
+        "vdegr" : 298.16336,
+        "dignity" : 5
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -2683,8 +2672,8 @@
         "bhava" : 12,
         "vakri" : 1,
         "deg" : "07°",
-        "degr" : "07°47'13\"",
-        "vdegr" : 307.7869,
+        "degr" : "07°41'15\"",
+        "vdegr" : 307.6876,
         "dignity" : 5
       }, {
         "code" : "LG",
@@ -2692,15 +2681,36 @@
         "text" : "Lagna",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "14°",
-        "degr" : "14°19'38\"",
-        "vdegr" : 344.32718
+        "deg" : "22°",
+        "degr" : "22°26'12\"",
+        "vdegr" : 352.4366
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 12,
+        "bhava" : 1,
+        "vakri" : 1,
+        "deg" : "28°",
+        "degr" : "28°52'52\"",
+        "vdegr" : 358.8811,
+        "dignity" : 2
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D8" : {
       "grahas" : [ {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 3,
+        "bhava" : 4,
+        "deg" : "23°",
+        "degr" : "23°36'55\"",
+        "vdegr" : 83.61526,
+        "dignity" : 6
+      }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
@@ -2708,8 +2718,8 @@
         "bhava" : 6,
         "vakri" : 1,
         "deg" : "03°",
-        "degr" : "03°52'15\"",
-        "vdegr" : 123.87083
+        "degr" : "03°26'49\"",
+        "vdegr" : 123.446884
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -2718,17 +2728,17 @@
         "bhava" : 6,
         "vakri" : 1,
         "deg" : "03°",
-        "degr" : "03°52'15\"",
-        "vdegr" : 123.87083
+        "degr" : "03°26'49\"",
+        "vdegr" : 123.446884
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
         "rasi" : 5,
         "bhava" : 6,
-        "deg" : "08°",
-        "degr" : "08°34'16\"",
-        "vdegr" : 128.57118,
+        "deg" : "18°",
+        "degr" : "18°34'18\"",
+        "vdegr" : 138.57176,
         "dignity" : 4
       }, {
         "code" : "GU",
@@ -2736,9 +2746,9 @@
         "text" : "Guru",
         "rasi" : 7,
         "bhava" : 8,
-        "deg" : "07°",
-        "degr" : "07°09'29\"",
-        "vdegr" : 187.15819,
+        "deg" : "08°",
+        "degr" : "08°20'16\"",
+        "vdegr" : 188.3377,
         "dignity" : 4
       }, {
         "code" : "SA",
@@ -2746,9 +2756,9 @@
         "text" : "Shani",
         "rasi" : 8,
         "bhava" : 9,
-        "deg" : "24°",
-        "degr" : "24°32'46\"",
-        "vdegr" : 234.54622,
+        "deg" : "25°",
+        "degr" : "25°24'48\"",
+        "vdegr" : 235.41322,
         "dignity" : 4
       }, {
         "code" : "BU",
@@ -2757,9 +2767,9 @@
         "rasi" : 9,
         "bhava" : 10,
         "vakri" : 1,
-        "deg" : "24°",
-        "degr" : "24°12'33\"",
-        "vdegr" : 264.2091,
+        "deg" : "15°",
+        "degr" : "15°51'51\"",
+        "vdegr" : 255.8641,
         "dignity" : 5
       }, {
         "code" : "SY",
@@ -2767,9 +2777,9 @@
         "text" : "Surya",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "02°",
-        "degr" : "02°37'32\"",
-        "vdegr" : 332.62555,
+        "deg" : "10°",
+        "degr" : "10°46'29\"",
+        "vdegr" : 340.77475,
         "dignity" : 6
       }, {
         "code" : "LG",
@@ -2777,19 +2787,9 @@
         "text" : "Lagna",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "12°",
-        "degr" : "12°05'18\"",
-        "vdegr" : 342.08823
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 12,
-        "bhava" : 1,
-        "deg" : "17°",
-        "degr" : "17°19'46\"",
-        "vdegr" : 347.32944,
-        "dignity" : 5
+        "deg" : "21°",
+        "degr" : "21°21'22\"",
+        "vdegr" : 351.35614
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -2798,8 +2798,8 @@
         "bhava" : 1,
         "vakri" : 1,
         "deg" : "21°",
-        "degr" : "21°45'23\"",
-        "vdegr" : 351.75647,
+        "degr" : "21°38'35\"",
+        "vdegr" : 351.64294,
         "dignity" : 6
       } ],
       "arudhas" : [ ],
@@ -2814,28 +2814,18 @@
         "bhava" : 3,
         "vakri" : 1,
         "deg" : "05°",
-        "degr" : "05°43'34\"",
-        "vdegr" : 35.726017,
+        "degr" : "05°35'54\"",
+        "vdegr" : 35.598316,
         "dignity" : 5
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 2,
-        "bhava" : 3,
-        "deg" : "24°",
-        "degr" : "24°38'33\"",
-        "vdegr" : 54.642582,
-        "dignity" : 8
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 5,
-        "bhava" : 6,
-        "deg" : "00°",
-        "degr" : "00°44'44\"",
-        "vdegr" : 120.74562,
+        "rasi" : 3,
+        "bhava" : 4,
+        "deg" : "05°",
+        "degr" : "05°53'36\"",
+        "vdegr" : 65.893234,
         "dignity" : 6
       }, {
         "code" : "RA",
@@ -2844,9 +2834,9 @@
         "rasi" : 5,
         "bhava" : 6,
         "vakri" : 1,
-        "deg" : "19°",
-        "degr" : "19°21'17\"",
-        "vdegr" : 139.35468
+        "deg" : "18°",
+        "degr" : "18°52'40\"",
+        "vdegr" : 138.87775
       }, {
         "code" : "BU",
         "name" : "(Bu)",
@@ -2854,9 +2844,9 @@
         "rasi" : 6,
         "bhava" : 7,
         "vakri" : 1,
-        "deg" : "12°",
-        "degr" : "12°14'07\"",
-        "vdegr" : 162.23523,
+        "deg" : "02°",
+        "degr" : "02°50'50\"",
+        "vdegr" : 152.84712,
         "dignity" : 11
       }, {
         "code" : "GU",
@@ -2864,9 +2854,9 @@
         "text" : "Guru",
         "rasi" : 6,
         "bhava" : 7,
-        "deg" : "15°",
-        "degr" : "15°33'11\"",
-        "vdegr" : 165.55295,
+        "deg" : "16°",
+        "degr" : "16°52'48\"",
+        "vdegr" : 166.87993,
         "dignity" : 4
       }, {
         "code" : "SA",
@@ -2874,19 +2864,29 @@
         "text" : "Shani",
         "rasi" : 6,
         "bhava" : 7,
-        "deg" : "23°",
-        "degr" : "23°51'52\"",
-        "vdegr" : 173.8645,
+        "deg" : "24°",
+        "degr" : "24°50'24\"",
+        "vdegr" : 174.83989,
         "dignity" : 6
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 8,
+        "bhava" : 9,
+        "deg" : "19°",
+        "degr" : "19°04'02\"",
+        "vdegr" : 229.06717,
+        "dignity" : 2
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
-        "rasi" : 8,
-        "bhava" : 9,
-        "deg" : "29°",
-        "degr" : "29°12'13\"",
-        "vdegr" : 239.20374,
+        "rasi" : 9,
+        "bhava" : 10,
+        "deg" : "08°",
+        "degr" : "08°22'18\"",
+        "vdegr" : 248.3716,
         "dignity" : 6
       }, {
         "code" : "KE",
@@ -2895,24 +2895,34 @@
         "rasi" : 11,
         "bhava" : 12,
         "vakri" : 1,
-        "deg" : "19°",
-        "degr" : "19°21'17\"",
-        "vdegr" : 319.35468
+        "deg" : "18°",
+        "degr" : "18°52'40\"",
+        "vdegr" : 318.87775
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "09°",
-        "degr" : "09°50'57\"",
-        "vdegr" : 339.84924
+        "deg" : "20°",
+        "degr" : "20°16'32\"",
+        "vdegr" : 350.27563
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D10" : {
       "grahas" : [ {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 1,
+        "bhava" : 9,
+        "deg" : "14°",
+        "degr" : "14°31'09\"",
+        "vdegr" : 14.519075,
+        "dignity" : 5
+      }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
@@ -2920,29 +2930,29 @@
         "bhava" : 10,
         "vakri" : 1,
         "deg" : "19°",
-        "degr" : "19°41'44\"",
-        "vdegr" : 49.695576,
+        "degr" : "19°33'13\"",
+        "vdegr" : 49.553684,
         "dignity" : 5
       }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
-        "rasi" : 3,
-        "bhava" : 11,
+        "rasi" : 2,
+        "bhava" : 10,
         "vakri" : 1,
-        "deg" : "00°",
-        "degr" : "00°15'41\"",
-        "vdegr" : 60.261368,
-        "dignity" : 8
+        "deg" : "19°",
+        "degr" : "19°49'48\"",
+        "vdegr" : 49.830135,
+        "dignity" : 6
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 3,
         "bhava" : 11,
-        "deg" : "23°",
-        "degr" : "23°10'58\"",
-        "vdegr" : 83.18278,
+        "deg" : "24°",
+        "degr" : "24°16'00\"",
+        "vdegr" : 84.26654,
         "dignity" : 6
       }, {
         "code" : "LG",
@@ -2950,19 +2960,9 @@
         "text" : "Lagna",
         "rasi" : 5,
         "bhava" : 1,
-        "deg" : "07°",
-        "degr" : "07°36'37\"",
-        "vdegr" : 127.610275
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 5,
-        "bhava" : 1,
-        "deg" : "25°",
-        "degr" : "25°46'55\"",
-        "vdegr" : 145.78194,
-        "dignity" : 8
+        "deg" : "19°",
+        "degr" : "19°11'43\"",
+        "vdegr" : 139.19516
       }, {
         "code" : "RA",
         "name" : "Ra",
@@ -2971,18 +2971,18 @@
         "bhava" : 2,
         "vakri" : 1,
         "deg" : "04°",
-        "degr" : "04°50'19\"",
-        "vdegr" : 154.83853,
+        "degr" : "04°18'31\"",
+        "vdegr" : 154.30861,
         "dignity" : 9
       }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 9,
-        "bhava" : 5,
-        "deg" : "14°",
-        "degr" : "14°09'42\"",
-        "vdegr" : 254.1618,
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 6,
+        "bhava" : 2,
+        "deg" : "05°",
+        "degr" : "05°58'06\"",
+        "vdegr" : 155.96844,
         "dignity" : 5
       }, {
         "code" : "GU",
@@ -2990,9 +2990,9 @@
         "text" : "Guru",
         "rasi" : 10,
         "bhava" : 6,
-        "deg" : "23°",
-        "degr" : "23°56'52\"",
-        "vdegr" : 293.94772,
+        "deg" : "25°",
+        "degr" : "25°25'20\"",
+        "vdegr" : 295.42215,
         "dignity" : 2
       }, {
         "code" : "SK",
@@ -3000,9 +3000,9 @@
         "text" : "Shukra",
         "rasi" : 11,
         "bhava" : 7,
-        "deg" : "10°",
-        "degr" : "10°42'50\"",
-        "vdegr" : 310.714,
+        "deg" : "23°",
+        "degr" : "23°12'53\"",
+        "vdegr" : 323.2147,
         "dignity" : 6
       }, {
         "code" : "KE",
@@ -3012,8 +3012,8 @@
         "bhava" : 8,
         "vakri" : 1,
         "deg" : "04°",
-        "degr" : "04°50'19\"",
-        "vdegr" : 334.83853,
+        "degr" : "04°18'31\"",
+        "vdegr" : 334.30862,
         "dignity" : 9
       } ],
       "arudhas" : [ ],
@@ -3021,45 +3021,25 @@
     },
     "D11" : {
       "grahas" : [ {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 1,
-        "bhava" : 2,
-        "deg" : "27°",
-        "degr" : "27°34'41\"",
-        "vdegr" : 27.57798,
-        "dignity" : 5
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 2,
-        "bhava" : 3,
-        "deg" : "22°",
-        "degr" : "22°21'36\"",
-        "vdegr" : 52.360126,
-        "dignity" : 4
-      }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 2,
         "bhava" : 3,
-        "deg" : "22°",
-        "degr" : "22°30'04\"",
-        "vdegr" : 52.501053,
+        "deg" : "23°",
+        "degr" : "23°41'35\"",
+        "vdegr" : 53.69319,
         "dignity" : 6
       }, {
-        "code" : "GU",
-        "name" : "Gu",
-        "text" : "Guru",
-        "rasi" : 5,
-        "bhava" : 6,
-        "deg" : "02°",
-        "degr" : "02°20'33\"",
-        "vdegr" : 122.3425,
-        "dignity" : 6
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 3,
+        "bhava" : 4,
+        "deg" : "03°",
+        "degr" : "03°33'55\"",
+        "vdegr" : 63.565292,
+        "dignity" : 5
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -3068,8 +3048,28 @@
         "bhava" : 6,
         "vakri" : 1,
         "deg" : "03°",
-        "degr" : "03°39'54\"",
-        "vdegr" : 123.66513,
+        "degr" : "03°30'33\"",
+        "vdegr" : 123.509056,
+        "dignity" : 6
+      }, {
+        "code" : "GU",
+        "name" : "Gu",
+        "text" : "Guru",
+        "rasi" : 5,
+        "bhava" : 6,
+        "deg" : "03°",
+        "degr" : "03°57'52\"",
+        "vdegr" : 123.964355,
+        "dignity" : 6
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 6,
+        "bhava" : 7,
+        "deg" : "09°",
+        "degr" : "09°58'16\"",
+        "vdegr" : 159.97098,
         "dignity" : 6
       }, {
         "code" : "RA",
@@ -3078,20 +3078,20 @@
         "rasi" : 6,
         "bhava" : 7,
         "vakri" : 1,
-        "deg" : "20°",
-        "degr" : "20°19'21\"",
-        "vdegr" : 170.32239,
+        "deg" : "19°",
+        "degr" : "19°44'22\"",
+        "vdegr" : 169.73947,
         "dignity" : 9
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 9,
-        "bhava" : 10,
-        "deg" : "26°",
-        "degr" : "26°47'07\"",
-        "vdegr" : 266.78537,
-        "dignity" : 5
+        "rasi" : 10,
+        "bhava" : 11,
+        "deg" : "10°",
+        "degr" : "10°32'10\"",
+        "vdegr" : 280.53616,
+        "dignity" : 6
       }, {
         "code" : "BU",
         "name" : "(Bu)",
@@ -3099,9 +3099,9 @@
         "rasi" : 11,
         "bhava" : 12,
         "vakri" : 1,
-        "deg" : "18°",
-        "degr" : "18°17'15\"",
-        "vdegr" : 318.2875,
+        "deg" : "06°",
+        "degr" : "06°48'47\"",
+        "vdegr" : 306.81314,
         "dignity" : 5
       }, {
         "code" : "LG",
@@ -3109,9 +3109,9 @@
         "text" : "Lagna",
         "rasi" : 12,
         "bhava" : 1,
-        "deg" : "05°",
-        "degr" : "05°22'17\"",
-        "vdegr" : 335.3713
+        "deg" : "18°",
+        "degr" : "18°06'53\"",
+        "vdegr" : 348.1147
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -3119,9 +3119,9 @@
         "rasi" : 12,
         "bhava" : 1,
         "vakri" : 1,
-        "deg" : "20°",
-        "degr" : "20°19'21\"",
-        "vdegr" : 350.3224,
+        "deg" : "19°",
+        "degr" : "19°44'22\"",
+        "vdegr" : 349.73947,
         "dignity" : 9
       } ],
       "arudhas" : [ ],
@@ -3136,38 +3136,48 @@
         "bhava" : 3,
         "vakri" : 1,
         "deg" : "05°",
-        "degr" : "05°48'22\"",
-        "vdegr" : 5.8062353
+        "degr" : "05°10'13\"",
+        "vdegr" : 5.1703315
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 3,
+        "bhava" : 5,
+        "deg" : "05°",
+        "degr" : "05°25'22\"",
+        "vdegr" : 65.42289,
+        "dignity" : 6
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 3,
         "bhava" : 5,
-        "deg" : "10°",
-        "degr" : "10°44'14\"",
-        "vdegr" : 70.737274,
+        "deg" : "12°",
+        "degr" : "12°30'24\"",
+        "vdegr" : 72.50657,
         "dignity" : 4
       }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
-        "rasi" : 4,
-        "bhava" : 6,
+        "rasi" : 3,
+        "bhava" : 5,
         "vakri" : 1,
-        "deg" : "06°",
-        "degr" : "06°18'49\"",
-        "vdegr" : 96.313644,
-        "dignity" : 4
+        "deg" : "23°",
+        "degr" : "23°47'46\"",
+        "vdegr" : 83.796165,
+        "dignity" : 8
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
         "rasi" : 4,
         "bhava" : 6,
-        "deg" : "12°",
-        "degr" : "12°51'24\"",
-        "vdegr" : 102.85677,
+        "deg" : "27°",
+        "degr" : "27°51'28\"",
+        "vdegr" : 117.85764,
         "dignity" : 4
       }, {
         "code" : "RA",
@@ -3177,8 +3187,8 @@
         "bhava" : 9,
         "vakri" : 1,
         "deg" : "05°",
-        "degr" : "05°48'22\"",
-        "vdegr" : 185.80623
+        "degr" : "05°10'13\"",
+        "vdegr" : 185.17033
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -3187,38 +3197,28 @@
         "bhava" : 9,
         "vakri" : 1,
         "deg" : "17°",
-        "degr" : "17°38'05\"",
-        "vdegr" : 197.63469,
+        "degr" : "17°27'52\"",
+        "vdegr" : 197.46442,
         "dignity" : 5
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
-        "rasi" : 7,
-        "bhava" : 9,
-        "deg" : "18°",
-        "degr" : "18°56'18\"",
-        "vdegr" : 198.93832,
-        "dignity" : 2
+        "rasi" : 8,
+        "bhava" : 10,
+        "deg" : "01°",
+        "degr" : "01°09'44\"",
+        "vdegr" : 211.16214,
+        "dignity" : 6
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 9,
         "bhava" : 11,
-        "deg" : "21°",
-        "degr" : "21°49'10\"",
-        "vdegr" : 261.81934,
-        "dignity" : 5
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 10,
-        "bhava" : 12,
-        "deg" : "10°",
-        "degr" : "10°59'39\"",
-        "vdegr" : 280.99417,
+        "deg" : "23°",
+        "degr" : "23°07'11\"",
+        "vdegr" : 263.11984,
         "dignity" : 5
       }, {
         "code" : "LG",
@@ -3226,9 +3226,9 @@
         "text" : "Lagna",
         "rasi" : 11,
         "bhava" : 1,
-        "deg" : "03°",
-        "degr" : "03°07'56\"",
-        "vdegr" : 303.13232
+        "deg" : "17°",
+        "degr" : "17°02'03\"",
+        "vdegr" : 317.0342
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
@@ -3239,103 +3239,103 @@
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 1,
-        "bhava" : 3,
-        "deg" : "14°",
-        "degr" : "14°18'59\"",
-        "vdegr" : 14.316363,
+        "bhava" : 2,
+        "deg" : "16°",
+        "degr" : "16°40'32\"",
+        "vdegr" : 16.675423,
         "dignity" : 6
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 4,
-        "bhava" : 6,
-        "deg" : "19°",
-        "degr" : "19°05'33\"",
-        "vdegr" : 109.09244,
+        "bhava" : 5,
+        "deg" : "20°",
+        "degr" : "20°49'35\"",
+        "vdegr" : 110.82646,
         "dignity" : 4
       }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
         "rasi" : 6,
-        "bhava" : 8,
+        "bhava" : 7,
         "vakri" : 1,
-        "deg" : "18°",
-        "degr" : "18°25'05\"",
-        "vdegr" : 168.41818,
-        "dignity" : 9
+        "deg" : "01°",
+        "degr" : "01°43'42\"",
+        "vdegr" : 151.72821,
+        "dignity" : 11
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 6,
+        "bhava" : 7,
+        "deg" : "17°",
+        "degr" : "17°13'50\"",
+        "vdegr" : 167.23051,
+        "dignity" : 6
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 9,
-        "bhava" : 11,
+        "bhava" : 10,
         "vakri" : 1,
-        "deg" : "07°",
-        "degr" : "07°44'30\"",
-        "vdegr" : 247.74165,
+        "deg" : "06°",
+        "degr" : "06°53'38\"",
+        "vdegr" : 246.89377,
         "dignity" : 1
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 9,
-        "bhava" : 11,
+        "bhava" : 10,
         "vakri" : 1,
-        "deg" : "07°",
-        "degr" : "07°44'30\"",
-        "vdegr" : 247.74165,
+        "deg" : "06°",
+        "degr" : "06°53'38\"",
+        "vdegr" : 246.89377,
         "dignity" : 11
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 9,
+        "rasi" : 10,
         "bhava" : 11,
-        "deg" : "17°",
-        "degr" : "17°08'33\"",
-        "vdegr" : 257.14236,
-        "dignity" : 5
+        "deg" : "07°",
+        "degr" : "07°08'37\"",
+        "vdegr" : 277.14352,
+        "dignity" : 6
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
         "rasi" : 11,
-        "bhava" : 1,
-        "deg" : "05°",
-        "degr" : "05°15'04\"",
-        "vdegr" : 305.2511,
+        "bhava" : 12,
+        "deg" : "21°",
+        "degr" : "21°32'58\"",
+        "vdegr" : 321.54953,
         "dignity" : 4
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
-        "rasi" : 11,
-        "bhava" : 1,
-        "deg" : "24°",
-        "degr" : "24°10'35\"",
-        "vdegr" : 324.17642
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
         "rasi" : 12,
-        "bhava" : 2,
-        "deg" : "04°",
-        "degr" : "04°39'32\"",
-        "vdegr" : 334.65887,
-        "dignity" : 5
+        "bhava" : 1,
+        "deg" : "12°",
+        "degr" : "12°42'44\"",
+        "vdegr" : 342.71225
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 12,
-        "bhava" : 2,
+        "bhava" : 1,
         "vakri" : 1,
         "deg" : "13°",
-        "degr" : "13°30'47\"",
-        "vdegr" : 343.5129,
+        "degr" : "13°17'09\"",
+        "vdegr" : 343.2859,
         "dignity" : 6
       } ],
       "arudhas" : [ ],
@@ -3343,212 +3343,212 @@
     },
     "D20" : {
       "grahas" : [ {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 5,
-        "bhava" : 7,
-        "vakri" : 1,
-        "deg" : "00°",
-        "degr" : "00°31'22\"",
-        "vdegr" : 120.522736,
-        "dignity" : 6
-      }, {
         "code" : "CH",
         "name" : "Ch",
         "text" : "Chandra",
-        "rasi" : 5,
-        "bhava" : 7,
-        "deg" : "28°",
-        "degr" : "28°19'25\"",
-        "vdegr" : 148.3236,
-        "dignity" : 6
+        "rasi" : 1,
+        "bhava" : 2,
+        "deg" : "29°",
+        "degr" : "29°02'17\"",
+        "vdegr" : 29.03815,
+        "dignity" : 5
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 4,
+        "bhava" : 5,
+        "vakri" : 1,
+        "deg" : "09°",
+        "degr" : "09°39'37\"",
+        "vdegr" : 99.66027,
+        "dignity" : 4
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 6,
-        "bhava" : 8,
+        "bhava" : 7,
         "vakri" : 1,
         "deg" : "09°",
-        "degr" : "09°23'28\"",
-        "vdegr" : 159.39114,
+        "degr" : "09°06'27\"",
+        "vdegr" : 159.10736,
         "dignity" : 4
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 8,
-        "bhava" : 10,
-        "deg" : "16°",
-        "degr" : "16°21'56\"",
-        "vdegr" : 226.36555,
+        "bhava" : 9,
+        "deg" : "18°",
+        "degr" : "18°31'59\"",
+        "vdegr" : 228.53308,
         "dignity" : 4
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 10,
-        "bhava" : 12,
-        "deg" : "17°",
-        "degr" : "17°53'44\"",
-        "vdegr" : 287.89545,
+        "bhava" : 11,
+        "deg" : "20°",
+        "degr" : "20°50'39\"",
+        "vdegr" : 290.84427,
         "dignity" : 2
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 10,
-        "bhava" : 12,
-        "deg" : "21°",
-        "degr" : "21°33'50\"",
-        "vdegr" : 291.56387,
-        "dignity" : 4
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 11,
-        "bhava" : 1,
+        "bhava" : 12,
         "vakri" : 1,
-        "deg" : "09°",
-        "degr" : "09°40'37\"",
-        "vdegr" : 309.67706,
+        "deg" : "08°",
+        "degr" : "08°37'02\"",
+        "vdegr" : 308.61722,
         "dignity" : 8
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 11,
-        "bhava" : 1,
+        "bhava" : 12,
         "vakri" : 1,
-        "deg" : "09°",
-        "degr" : "09°40'37\"",
-        "vdegr" : 309.67706
+        "deg" : "08°",
+        "degr" : "08°37'02\"",
+        "vdegr" : 308.61722
+      }, {
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 11,
+        "bhava" : 12,
+        "deg" : "11°",
+        "degr" : "11°56'13\"",
+        "vdegr" : 311.9369,
+        "dignity" : 4
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
-        "rasi" : 11,
+        "rasi" : 12,
         "bhava" : 1,
-        "deg" : "15°",
-        "degr" : "15°13'14\"",
-        "vdegr" : 315.22055
+        "deg" : "08°",
+        "degr" : "08°23'25\"",
+        "vdegr" : 338.39032
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 11,
+        "rasi" : 12,
         "bhava" : 1,
-        "deg" : "21°",
-        "degr" : "21°25'41\"",
-        "vdegr" : 321.42795,
-        "dignity" : 6
+        "deg" : "16°",
+        "degr" : "16°25'46\"",
+        "vdegr" : 346.4294,
+        "dignity" : 11
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D24" : {
       "grahas" : [ {
-        "code" : "LG",
-        "name" : "Lg",
-        "text" : "Lagna",
-        "rasi" : 2,
-        "bhava" : 1,
-        "deg" : "06°",
-        "degr" : "06°15'53\"",
-        "vdegr" : 36.264656
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 1,
+        "bhava" : 11,
+        "deg" : "10°",
+        "degr" : "10°50'45\"",
+        "vdegr" : 10.845779,
+        "dignity" : 5
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
-        "rasi" : 2,
+        "rasi" : 3,
         "bhava" : 1,
-        "deg" : "07°",
-        "degr" : "07°52'36\"",
-        "vdegr" : 37.876644,
-        "dignity" : 4
+        "deg" : "02°",
+        "degr" : "02°19'27\"",
+        "vdegr" : 62.324272,
+        "dignity" : 5
+      }, {
+        "code" : "LG",
+        "name" : "Lg",
+        "text" : "Lagna",
+        "rasi" : 3,
+        "bhava" : 1,
+        "deg" : "04°",
+        "degr" : "04°04'06\"",
+        "vdegr" : 64.06839
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 3,
-        "bhava" : 2,
+        "bhava" : 1,
         "vakri" : 1,
-        "deg" : "05°",
-        "degr" : "05°16'10\"",
-        "vdegr" : 65.26938,
+        "deg" : "04°",
+        "degr" : "04°55'44\"",
+        "vdegr" : 64.92884,
         "dignity" : 4
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 3,
-        "bhava" : 2,
-        "deg" : "13°",
-        "degr" : "13°38'19\"",
-        "vdegr" : 73.63866,
+        "bhava" : 1,
+        "deg" : "16°",
+        "degr" : "16°14'23\"",
+        "vdegr" : 76.23969,
         "dignity" : 6
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 3,
-        "bhava" : 2,
-        "deg" : "21°",
-        "degr" : "21°59'18\"",
-        "vdegr" : 81.98832,
-        "dignity" : 6
-      }, {
-        "code" : "SK",
-        "name" : "Sk",
-        "text" : "Shukra",
-        "rasi" : 4,
-        "bhava" : 3,
-        "deg" : "25°",
-        "degr" : "25°42'49\"",
-        "vdegr" : 115.713554,
-        "dignity" : 4
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 5,
-        "bhava" : 4,
+        "bhava" : 3,
         "vakri" : 1,
-        "deg" : "11°",
-        "degr" : "11°36'45\"",
-        "vdegr" : 131.61247
+        "deg" : "10°",
+        "degr" : "10°20'26\"",
+        "vdegr" : 130.34067
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 5,
-        "bhava" : 4,
+        "bhava" : 3,
         "vakri" : 1,
-        "deg" : "11°",
-        "degr" : "11°36'45\"",
-        "vdegr" : 131.61247
+        "deg" : "10°",
+        "degr" : "10°20'26\"",
+        "vdegr" : 130.34067
+      }, {
+        "code" : "SK",
+        "name" : "Sk",
+        "text" : "Shukra",
+        "rasi" : 5,
+        "bhava" : 3,
+        "deg" : "25°",
+        "degr" : "25°42'55\"",
+        "vdegr" : 145.71529,
+        "dignity" : 4
       }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
-        "rasi" : 7,
-        "bhava" : 6,
+        "rasi" : 6,
+        "bhava" : 4,
         "vakri" : 1,
-        "deg" : "12°",
-        "degr" : "12°37'38\"",
-        "vdegr" : 192.62729,
-        "dignity" : 6
+        "deg" : "17°",
+        "degr" : "17°35'32\"",
+        "vdegr" : 167.59233,
+        "dignity" : 9
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 10,
-        "bhava" : 9,
-        "deg" : "21°",
-        "degr" : "21°28'28\"",
-        "vdegr" : 291.47455,
+        "bhava" : 8,
+        "deg" : "25°",
+        "degr" : "25°00'47\"",
+        "vdegr" : 295.01312,
         "dignity" : 2
       } ],
       "arudhas" : [ ],
@@ -3556,133 +3556,132 @@
     },
     "D27" : {
       "grahas" : [ {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
         "rasi" : 1,
-        "bhava" : 4,
-        "deg" : "02°",
-        "degr" : "02°14'13\"",
-        "vdegr" : 2.2368593,
-        "dignity" : 5
+        "bhava" : 2,
+        "deg" : "25°",
+        "degr" : "25°06'53\"",
+        "vdegr" : 25.114809,
+        "dignity" : 10
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 2,
+        "bhava" : 3,
+        "vakri" : 1,
+        "deg" : "26°",
+        "degr" : "26°38'00\"",
+        "vdegr" : 56.633247
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 4,
         "bhava" : 5,
         "vakri" : 1,
-        "deg" : "28°",
-        "degr" : "28°03'51\"",
-        "vdegr" : 58.06403
+        "deg" : "08°",
+        "degr" : "08°32'29\"",
+        "vdegr" : 98.54137,
+        "dignity" : 4
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 4,
-        "bhava" : 7,
+        "bhava" : 5,
         "vakri" : 1,
-        "deg" : "17°",
-        "degr" : "17°10'41\"",
-        "vdegr" : 107.17805,
+        "deg" : "16°",
+        "degr" : "16°47'42\"",
+        "vdegr" : 106.794945,
         "dignity" : 1
-      }, {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 5,
-        "bhava" : 8,
-        "vakri" : 1,
-        "deg" : "06°",
-        "degr" : "06°42'21\"",
-        "vdegr" : 126.705696,
-        "dignity" : 6
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 5,
-        "bhava" : 8,
-        "deg" : "16°",
-        "degr" : "16°39'32\"",
-        "vdegr" : 136.65886,
+        "bhava" : 6,
+        "deg" : "20°",
+        "degr" : "20°38'23\"",
+        "vdegr" : 140.63977,
         "dignity" : 6
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 6,
-        "bhava" : 9,
-        "deg" : "11°",
-        "degr" : "11°35'37\"",
-        "vdegr" : 161.59349,
+        "bhava" : 7,
+        "deg" : "14°",
+        "degr" : "14°31'11\"",
+        "vdegr" : 164.51965,
         "dignity" : 6
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 6,
-        "bhava" : 9,
-        "deg" : "13°",
-        "degr" : "13°55'40\"",
-        "vdegr" : 163.92775,
-        "dignity" : 1
+        "rasi" : 7,
+        "bhava" : 8,
+        "deg" : "17°",
+        "degr" : "17°40'47\"",
+        "vdegr" : 197.6797,
+        "dignity" : 8
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 8,
-        "bhava" : 11,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "28°",
-        "degr" : "28°03'51\"",
-        "vdegr" : 238.06403,
+        "deg" : "26°",
+        "degr" : "26°38'00\"",
+        "vdegr" : 236.63324,
         "dignity" : 8
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 11,
+        "bhava" : 12,
+        "deg" : "27°",
+        "degr" : "27°12'05\"",
+        "vdegr" : 327.2015,
+        "dignity" : 5
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
-        "rasi" : 10,
-        "bhava" : 1,
-        "deg" : "29°",
-        "degr" : "29°32'52\"",
-        "vdegr" : 299.54773
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
         "rasi" : 12,
-        "bhava" : 3,
-        "deg" : "27°",
-        "degr" : "27°36'40\"",
-        "vdegr" : 357.61124,
-        "dignity" : 6
+        "bhava" : 1,
+        "deg" : "00°",
+        "degr" : "00°49'37\"",
+        "vdegr" : 330.82693
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D30" : {
       "grahas" : [ {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 3,
-        "bhava" : 8,
-        "vakri" : 1,
-        "deg" : "00°",
-        "degr" : "00°47'03\"",
-        "vdegr" : 60.784103,
-        "dignity" : 6
-      }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 6,
         "bhava" : 11,
-        "deg" : "11°",
-        "degr" : "11°50'35\"",
-        "vdegr" : 161.84319,
+        "deg" : "16°",
+        "degr" : "16°15'59\"",
+        "vdegr" : 166.26642,
         "dignity" : 4
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 7,
+        "bhava" : 12,
+        "deg" : "13°",
+        "degr" : "13°33'26\"",
+        "vdegr" : 193.55722,
+        "dignity" : 9
       }, {
         "code" : "SY",
         "name" : "Sy",
@@ -3690,18 +3689,18 @@
         "rasi" : 7,
         "bhava" : 12,
         "deg" : "17°",
-        "degr" : "17°20'45\"",
-        "vdegr" : 197.34581,
-        "dignity" : 5
+        "degr" : "17°54'19\"",
+        "vdegr" : 197.90535,
+        "dignity" : 6
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 8,
         "bhava" : 1,
-        "deg" : "09°",
-        "degr" : "09°32'54\"",
-        "vdegr" : 219.54832,
+        "deg" : "12°",
+        "degr" : "12°47'59\"",
+        "vdegr" : 222.7996,
         "dignity" : 5
       }, {
         "code" : "LG",
@@ -3709,19 +3708,9 @@
         "text" : "Lagna",
         "rasi" : 8,
         "bhava" : 1,
-        "deg" : "22°",
-        "degr" : "22°49'51\"",
-        "vdegr" : 232.83083
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 9,
-        "bhava" : 2,
-        "deg" : "12°",
-        "degr" : "12°29'07\"",
-        "vdegr" : 252.4854,
-        "dignity" : 9
+        "deg" : "27°",
+        "degr" : "27°35'08\"",
+        "vdegr" : 237.5855
       }, {
         "code" : "RA",
         "name" : "Ra",
@@ -3729,9 +3718,9 @@
         "rasi" : 9,
         "bhava" : 2,
         "vakri" : 1,
-        "deg" : "14°",
-        "degr" : "14°30'56\"",
-        "vdegr" : 254.5156
+        "deg" : "12°",
+        "degr" : "12°55'33\"",
+        "vdegr" : 252.92583
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -3739,19 +3728,30 @@
         "rasi" : 9,
         "bhava" : 2,
         "vakri" : 1,
-        "deg" : "14°",
-        "degr" : "14°30'56\"",
-        "vdegr" : 254.5156
+        "deg" : "12°",
+        "degr" : "12°55'33\"",
+        "vdegr" : 252.92583
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 9,
+        "bhava" : 2,
+        "vakri" : 1,
+        "deg" : "29°",
+        "degr" : "29°29'25\"",
+        "vdegr" : 269.49042,
+        "dignity" : 6
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
         "rasi" : 12,
         "bhava" : 5,
-        "deg" : "02°",
-        "degr" : "02°08'31\"",
-        "vdegr" : 332.14194,
-        "dignity" : 6
+        "deg" : "09°",
+        "degr" : "09°38'39\"",
+        "vdegr" : 339.6441,
+        "dignity" : 11
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -3759,9 +3759,9 @@
         "rasi" : 12,
         "bhava" : 5,
         "vakri" : 1,
-        "deg" : "29°",
-        "degr" : "29°05'12\"",
-        "vdegr" : 359.08673,
+        "deg" : "28°",
+        "degr" : "28°39'40\"",
+        "vdegr" : 358.66104,
         "dignity" : 8
       } ],
       "arudhas" : [ ],
@@ -3769,215 +3769,215 @@
     },
     "D40" : {
       "grahas" : [ {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 1,
-        "bhava" : 6,
-        "vakri" : 1,
-        "deg" : "01°",
-        "degr" : "01°02'44\"",
-        "vdegr" : 1.0454736,
-        "dignity" : 5
-      }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 1,
-        "bhava" : 6,
+        "bhava" : 5,
         "vakri" : 1,
         "deg" : "18°",
-        "degr" : "18°46'56\"",
-        "vdegr" : 18.782297,
+        "degr" : "18°12'53\"",
+        "vdegr" : 18.214737,
         "dignity" : 8
+      }, {
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 1,
+        "bhava" : 5,
+        "deg" : "23°",
+        "degr" : "23°52'26\"",
+        "vdegr" : 23.87379,
+        "dignity" : 10
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 4,
-        "bhava" : 9,
-        "deg" : "12°",
-        "degr" : "12°51'21\"",
-        "vdegr" : 102.85593,
-        "dignity" : 4
+        "rasi" : 6,
+        "bhava" : 10,
+        "deg" : "02°",
+        "degr" : "02°51'32\"",
+        "vdegr" : 152.85883,
+        "dignity" : 1
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 6,
-        "bhava" : 11,
-        "deg" : "05°",
-        "degr" : "05°47'27\"",
-        "vdegr" : 155.79091,
+        "bhava" : 10,
+        "deg" : "11°",
+        "degr" : "11°41'19\"",
+        "vdegr" : 161.68855,
         "dignity" : 4
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 6,
-        "bhava" : 11,
-        "deg" : "26°",
-        "degr" : "26°38'50\"",
-        "vdegr" : 176.6472,
-        "dignity" : 6
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
-        "rasi" : 8,
+        "rasi" : 9,
         "bhava" : 1,
-        "deg" : "00°",
-        "degr" : "00°26'28\"",
-        "vdegr" : 210.44109
+        "deg" : "16°",
+        "degr" : "16°46'50\"",
+        "vdegr" : 256.78064
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 9,
-        "bhava" : 2,
+        "bhava" : 1,
         "vakri" : 1,
-        "deg" : "19°",
-        "degr" : "19°21'15\"",
-        "vdegr" : 259.35413,
+        "deg" : "17°",
+        "degr" : "17°14'04\"",
+        "vdegr" : 257.23444,
         "dignity" : 1
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 9,
-        "bhava" : 2,
+        "bhava" : 1,
         "vakri" : 1,
-        "deg" : "19°",
-        "degr" : "19°21'15\"",
-        "vdegr" : 259.35413,
+        "deg" : "17°",
+        "degr" : "17°14'04\"",
+        "vdegr" : 257.23444,
         "dignity" : 11
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 10,
-        "bhava" : 3,
-        "deg" : "02°",
-        "degr" : "02°43'52\"",
-        "vdegr" : 272.7311,
+        "bhava" : 2,
+        "deg" : "07°",
+        "degr" : "07°03'58\"",
+        "vdegr" : 277.06616,
         "dignity" : 8
       }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 12,
-        "bhava" : 5,
-        "deg" : "13°",
-        "degr" : "13°07'40\"",
-        "vdegr" : 343.12775,
-        "dignity" : 6
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 10,
+        "bhava" : 2,
+        "deg" : "28°",
+        "degr" : "28°04'35\"",
+        "vdegr" : 298.0763,
+        "dignity" : 5
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 11,
+        "bhava" : 3,
+        "vakri" : 1,
+        "deg" : "19°",
+        "degr" : "19°19'14\"",
+        "vdegr" : 319.32056,
+        "dignity" : 5
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D45" : {
       "grahas" : [ {
-        "code" : "SK",
-        "name" : "Sk",
-        "text" : "Shukra",
-        "rasi" : 1,
-        "bhava" : 12,
-        "deg" : "03°",
-        "degr" : "03°12'46\"",
-        "vdegr" : 3.2129133,
-        "dignity" : 5
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 1,
-        "bhava" : 12,
-        "deg" : "03°",
-        "degr" : "03°43'41\"",
-        "vdegr" : 3.7280989,
-        "dignity" : 5
-      }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 1,
-        "bhava" : 12,
+        "bhava" : 10,
         "vakri" : 1,
-        "deg" : "28°",
-        "degr" : "28°37'48\"",
-        "vdegr" : 28.630083,
+        "deg" : "27°",
+        "degr" : "27°59'30\"",
+        "vdegr" : 27.99158,
+        "dignity" : 8
+      }, {
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 2,
+        "bhava" : 11,
+        "deg" : "11°",
+        "degr" : "11°51'29\"",
+        "vdegr" : 41.858013,
+        "dignity" : 4
+      }, {
+        "code" : "SK",
+        "name" : "Sk",
+        "text" : "Shukra",
+        "rasi" : 2,
+        "bhava" : 11,
+        "deg" : "29°",
+        "degr" : "29°27'58\"",
+        "vdegr" : 59.46617,
         "dignity" : 8
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
-        "rasi" : 2,
+        "rasi" : 4,
         "bhava" : 1,
-        "deg" : "19°",
-        "degr" : "19°14'46\"",
-        "vdegr" : 49.246227
+        "deg" : "11°",
+        "degr" : "11°22'42\"",
+        "vdegr" : 101.378235
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 7,
+        "bhava" : 4,
+        "deg" : "05°",
+        "degr" : "05°20'09\"",
+        "vdegr" : 185.33583,
+        "dignity" : 5
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
-        "rasi" : 8,
-        "bhava" : 7,
-        "deg" : "29°",
-        "degr" : "29°19'21\"",
-        "vdegr" : 239.3225,
-        "dignity" : 4
+        "rasi" : 9,
+        "bhava" : 6,
+        "deg" : "04°",
+        "degr" : "04°11'58\"",
+        "vdegr" : 244.19942,
+        "dignity" : 5
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
         "rasi" : 9,
-        "bhava" : 8,
-        "deg" : "17°",
-        "degr" : "17°45'53\"",
-        "vdegr" : 257.76477,
+        "bhava" : 6,
+        "deg" : "24°",
+        "degr" : "24°23'59\"",
+        "vdegr" : 264.39963,
         "dignity" : 8
       }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
-        "rasi" : 12,
-        "bhava" : 11,
+        "rasi" : 10,
+        "bhava" : 7,
         "vakri" : 1,
-        "deg" : "01°",
-        "degr" : "01°10'34\"",
-        "vdegr" : 331.17615,
-        "dignity" : 1
+        "deg" : "14°",
+        "degr" : "14°14'08\"",
+        "vdegr" : 284.2356,
+        "dignity" : 5
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 12,
-        "bhava" : 11,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "06°",
-        "degr" : "06°46'24\"",
-        "vdegr" : 336.77338
+        "deg" : "04°",
+        "degr" : "04°23'19\"",
+        "vdegr" : 334.38873
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 12,
-        "bhava" : 11,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "06°",
-        "degr" : "06°46'24\"",
-        "vdegr" : 336.77338,
+        "deg" : "04°",
+        "degr" : "04°23'19\"",
+        "vdegr" : 334.38873,
         "dignity" : 9
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 12,
-        "bhava" : 11,
-        "deg" : "26°",
-        "degr" : "26°01'07\"",
-        "vdegr" : 356.0187,
-        "dignity" : 6
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
@@ -3988,209 +3988,209 @@
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 1,
-        "bhava" : 7,
+        "bhava" : 5,
         "vakri" : 1,
-        "deg" : "29°",
-        "degr" : "29°01'52\"",
-        "vdegr" : 29.031176
+        "deg" : "25°",
+        "degr" : "25°51'06\"",
+        "vdegr" : 25.851658
       }, {
         "code" : "SY",
         "name" : "Sy",
         "text" : "Surya",
-        "rasi" : 2,
+        "rasi" : 4,
         "bhava" : 8,
-        "deg" : "04°",
-        "degr" : "04°41'30\"",
-        "vdegr" : 34.69161,
-        "dignity" : 4
+        "deg" : "05°",
+        "degr" : "05°48'38\"",
+        "vdegr" : 95.810684,
+        "dignity" : 6
       }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
-        "rasi" : 4,
-        "bhava" : 10,
-        "deg" : "23°",
-        "degr" : "23°41'11\"",
-        "vdegr" : 113.68636,
-        "dignity" : 10
+        "rasi" : 5,
+        "bhava" : 9,
+        "deg" : "02°",
+        "degr" : "02°31'58\"",
+        "vdegr" : 122.53284,
+        "dignity" : 6
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 5,
-        "bhava" : 11,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "28°",
-        "degr" : "28°10'24\"",
-        "vdegr" : 148.17345,
+        "deg" : "27°",
+        "degr" : "27°19'20\"",
+        "vdegr" : 147.3221,
         "dignity" : 6
       }, {
-        "code" : "SK",
-        "name" : "Sk",
-        "text" : "Shukra",
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
         "rasi" : 6,
-        "bhava" : 12,
-        "deg" : "04°",
-        "degr" : "04°17'02\"",
-        "vdegr" : 154.28389,
-        "dignity" : 1
-      }, {
-        "code" : "LG",
-        "name" : "Lg",
-        "text" : "Lagna",
-        "rasi" : 7,
-        "bhava" : 1,
-        "deg" : "15°",
-        "degr" : "15°39'42\"",
-        "vdegr" : 195.66164
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 7,
-        "bhava" : 1,
-        "deg" : "24°",
-        "degr" : "24°58'15\"",
-        "vdegr" : 204.9708,
-        "dignity" : 5
+        "bhava" : 10,
+        "vakri" : 1,
+        "deg" : "28°",
+        "degr" : "28°58'51\"",
+        "vdegr" : 178.98082,
+        "dignity" : 8
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 7,
-        "bhava" : 1,
+        "bhava" : 11,
         "vakri" : 1,
-        "deg" : "29°",
-        "degr" : "29°01'52\"",
-        "vdegr" : 209.03117
+        "deg" : "25°",
+        "degr" : "25°51'06\"",
+        "vdegr" : 205.85165
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 7,
+        "bhava" : 11,
+        "deg" : "27°",
+        "degr" : "27°06'52\"",
+        "vdegr" : 207.11446,
+        "dignity" : 5
+      }, {
+        "code" : "SK",
+        "name" : "Sk",
+        "text" : "Shukra",
+        "rasi" : 8,
+        "bhava" : 12,
+        "deg" : "19°",
+        "degr" : "19°17'18\"",
+        "vdegr" : 229.28822,
+        "dignity" : 5
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 8,
-        "bhava" : 2,
-        "deg" : "19°",
-        "degr" : "19°05'48\"",
-        "vdegr" : 229.09665,
+        "bhava" : 12,
+        "deg" : "25°",
+        "degr" : "25°35'57\"",
+        "vdegr" : 235.59923,
         "dignity" : 4
       }, {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
+        "code" : "LG",
+        "name" : "Lg",
+        "text" : "Lagna",
         "rasi" : 9,
-        "bhava" : 3,
-        "vakri" : 1,
-        "deg" : "01°",
-        "degr" : "01°34'06\"",
-        "vdegr" : 241.5682,
-        "dignity" : 5
+        "bhava" : 1,
+        "deg" : "25°",
+        "degr" : "25°10'16\"",
+        "vdegr" : 265.171
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
     },
     "D81" : {
       "grahas" : [ {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 1,
-        "bhava" : 8,
-        "deg" : "06°",
-        "degr" : "06°42'38\"",
-        "vdegr" : 6.710578,
-        "dignity" : 5
-      }, {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 1,
-        "bhava" : 8,
-        "vakri" : 1,
-        "deg" : "20°",
-        "degr" : "20°07'02\"",
-        "vdegr" : 20.117085,
-        "dignity" : 5
-      }, {
         "code" : "GU",
         "name" : "Gu",
         "text" : "Guru",
-        "rasi" : 2,
-        "bhava" : 9,
-        "deg" : "19°",
-        "degr" : "19°58'36\"",
-        "vdegr" : 49.976585,
+        "rasi" : 3,
+        "bhava" : 6,
+        "deg" : "01°",
+        "degr" : "01°55'10\"",
+        "vdegr" : 61.919327,
         "dignity" : 4
+      }, {
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 3,
+        "bhava" : 6,
+        "deg" : "15°",
+        "degr" : "15°20'40\"",
+        "vdegr" : 75.34442,
+        "dignity" : 5
       }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 5,
-        "bhava" : 12,
-        "deg" : "04°",
-        "degr" : "04°46'50\"",
-        "vdegr" : 124.78048,
-        "dignity" : 4
-      }, {
-        "code" : "SK",
-        "name" : "Sk",
-        "text" : "Shukra",
-        "rasi" : 5,
-        "bhava" : 12,
-        "deg" : "11°",
-        "degr" : "11°47'00\"",
-        "vdegr" : 131.78325,
+        "bhava" : 8,
+        "deg" : "13°",
+        "degr" : "13°33'32\"",
+        "vdegr" : 133.55896,
         "dignity" : 4
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 6,
-        "bhava" : 1,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "24°",
-        "degr" : "24°11'32\"",
-        "vdegr" : 174.1921,
+        "deg" : "19°",
+        "degr" : "19°53'59\"",
+        "vdegr" : 169.89973,
         "dignity" : 9
+      }, {
+        "code" : "SK",
+        "name" : "Sk",
+        "text" : "Shukra",
+        "rasi" : 8,
+        "bhava" : 11,
+        "deg" : "23°",
+        "degr" : "23°02'21\"",
+        "vdegr" : 233.03911,
+        "dignity" : 5
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 9,
+        "bhava" : 12,
+        "deg" : "21°",
+        "degr" : "21°36'16\"",
+        "vdegr" : 261.6045,
+        "dignity" : 5
       }, {
         "code" : "LG",
         "name" : "Lg",
         "text" : "Lagna",
-        "rasi" : 6,
+        "rasi" : 10,
         "bhava" : 1,
-        "deg" : "28°",
-        "degr" : "28°38'36\"",
-        "vdegr" : 178.6432
+        "deg" : "02°",
+        "degr" : "02°28'51\"",
+        "vdegr" : 272.48083
+      }, {
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
+        "rasi" : 10,
+        "bhava" : 1,
+        "vakri" : 1,
+        "deg" : "25°",
+        "degr" : "25°37'27\"",
+        "vdegr" : 295.62408,
+        "dignity" : 5
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 11,
-        "bhava" : 6,
+        "bhava" : 2,
         "vakri" : 1,
-        "deg" : "21°",
-        "degr" : "21°32'03\"",
-        "vdegr" : 321.53415,
+        "deg" : "20°",
+        "degr" : "20°23'05\"",
+        "vdegr" : 320.38483,
         "dignity" : 5
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 12,
-        "bhava" : 7,
-        "deg" : "22°",
-        "degr" : "22°50'01\"",
-        "vdegr" : 352.83368,
-        "dignity" : 6
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 12,
-        "bhava" : 7,
+        "bhava" : 3,
         "vakri" : 1,
-        "deg" : "24°",
-        "degr" : "24°11'32\"",
-        "vdegr" : 354.19208,
+        "deg" : "19°",
+        "degr" : "19°53'59\"",
+        "vdegr" : 349.89975,
         "dignity" : 9
       } ],
       "arudhas" : [ ],
@@ -4198,106 +4198,106 @@
     },
     "D108" : {
       "grahas" : [ {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 3,
+        "bhava" : 8,
+        "deg" : "18°",
+        "degr" : "18°48'22\"",
+        "vdegr" : 78.80601,
+        "dignity" : 6
+      }, {
         "code" : "SA",
         "name" : "Sa",
         "text" : "Shani",
         "rasi" : 3,
-        "bhava" : 1,
-        "deg" : "16°",
-        "degr" : "16°22'26\"",
-        "vdegr" : 76.37397,
-        "dignity" : 6
-      }, {
-        "code" : "LG",
-        "name" : "Lg",
-        "text" : "Lagna",
-        "rasi" : 3,
-        "bhava" : 1,
+        "bhava" : 8,
         "deg" : "28°",
-        "degr" : "28°11'27\"",
-        "vdegr" : 88.19095
+        "degr" : "28°04'43\"",
+        "vdegr" : 88.078606,
+        "dignity" : 6
       }, {
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
         "rasi" : 4,
-        "bhava" : 2,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "08°",
-        "degr" : "08°42'44\"",
-        "vdegr" : 98.712204,
+        "deg" : "07°",
+        "degr" : "07°10'47\"",
+        "vdegr" : 97.17979,
         "dignity" : 1
       }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
+        "code" : "SK",
+        "name" : "Sk",
+        "text" : "Shukra",
         "rasi" : 5,
-        "bhava" : 3,
-        "deg" : "08°",
-        "degr" : "08°56'51\"",
-        "vdegr" : 128.94743,
-        "dignity" : 6
+        "bhava" : 10,
+        "deg" : "10°",
+        "degr" : "10°43'08\"",
+        "vdegr" : 130.71881,
+        "dignity" : 4
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 6,
-        "bhava" : 4,
+        "bhava" : 11,
         "vakri" : 1,
-        "deg" : "22°",
-        "degr" : "22°15'22\"",
-        "vdegr" : 172.25612
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 7,
-        "bhava" : 5,
-        "deg" : "20°",
-        "degr" : "20°26'42\"",
-        "vdegr" : 200.4449,
-        "dignity" : 2
+        "deg" : "16°",
+        "degr" : "16°31'59\"",
+        "vdegr" : 166.53299
       }, {
         "code" : "BU",
         "name" : "(Bu)",
         "text" : "Budha",
-        "rasi" : 10,
-        "bhava" : 8,
+        "rasi" : 7,
+        "bhava" : 12,
         "vakri" : 1,
-        "deg" : "26°",
-        "degr" : "26°49'22\"",
-        "vdegr" : 296.82278,
-        "dignity" : 5
-      }, {
-        "code" : "SK",
-        "name" : "Sk",
-        "text" : "Shukra",
-        "rasi" : 11,
-        "bhava" : 9,
-        "deg" : "25°",
-        "degr" : "25°42'40\"",
-        "vdegr" : 325.711,
+        "deg" : "04°",
+        "degr" : "04°09'56\"",
+        "vdegr" : 184.16547,
         "dignity" : 6
       }, {
-        "code" : "GU",
-        "name" : "Gu",
-        "text" : "Guru",
+        "code" : "LG",
+        "name" : "Lg",
+        "text" : "Lagna",
+        "rasi" : 8,
+        "bhava" : 1,
+        "deg" : "03°",
+        "degr" : "03°18'28\"",
+        "vdegr" : 213.30777
+      }, {
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
         "rasi" : 12,
-        "bhava" : 10,
-        "deg" : "06°",
-        "degr" : "06°38'08\"",
-        "vdegr" : 336.63544,
-        "dignity" : 8
+        "bhava" : 5,
+        "deg" : "10°",
+        "degr" : "10°27'33\"",
+        "vdegr" : 340.45923,
+        "dignity" : 6
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 12,
-        "bhava" : 10,
+        "bhava" : 5,
         "vakri" : 1,
+        "deg" : "16°",
+        "degr" : "16°31'59\"",
+        "vdegr" : 346.533
+      }, {
+        "code" : "GU",
+        "name" : "Gu",
+        "text" : "Guru",
+        "rasi" : 12,
+        "bhava" : 5,
         "deg" : "22°",
-        "degr" : "22°15'22\"",
-        "vdegr" : 352.2561
+        "degr" : "22°33'33\"",
+        "vdegr" : 352.5591,
+        "dignity" : 8
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
@@ -4307,105 +4307,105 @@
         "code" : "MA",
         "name" : "(Ma)",
         "text" : "Mangala",
-        "rasi" : 2,
-        "bhava" : 3,
+        "rasi" : 1,
+        "bhava" : 9,
         "vakri" : 1,
-        "deg" : "01°",
-        "degr" : "01°36'59\"",
-        "vdegr" : 31.616268,
-        "dignity" : 5
-      }, {
-        "code" : "CH",
-        "name" : "Ch",
-        "text" : "Chandra",
-        "rasi" : 2,
-        "bhava" : 3,
-        "deg" : "11°",
-        "degr" : "11°55'48\"",
-        "vdegr" : 41.929916,
-        "dignity" : 9
-      }, {
-        "code" : "SY",
-        "name" : "Sy",
-        "text" : "Surya",
-        "rasi" : 2,
-        "bhava" : 3,
-        "deg" : "17°",
-        "degr" : "17°15'35\"",
-        "vdegr" : 47.259857,
-        "dignity" : 4
+        "deg" : "29°",
+        "degr" : "29°34'23\"",
+        "vdegr" : 29.573051,
+        "dignity" : 8
       }, {
         "code" : "KE",
         "name" : "Ke",
         "text" : "Ketu",
         "rasi" : 3,
-        "bhava" : 4,
+        "bhava" : 11,
         "vakri" : 1,
-        "deg" : "09°",
-        "degr" : "09°40'29\"",
-        "vdegr" : 69.67482,
+        "deg" : "02°",
+        "degr" : "02°02'38\"",
+        "vdegr" : 62.043976,
         "dignity" : 1
-      }, {
-        "code" : "SA",
-        "name" : "Sa",
-        "text" : "Shani",
-        "rasi" : 5,
-        "bhava" : 6,
-        "deg" : "21°",
-        "degr" : "21°49'55\"",
-        "vdegr" : 141.83195,
-        "dignity" : 4
-      }, {
-        "code" : "BU",
-        "name" : "(Bu)",
-        "text" : "Budha",
-        "rasi" : 6,
-        "bhava" : 7,
-        "vakri" : 1,
-        "deg" : "15°",
-        "degr" : "15°45'49\"",
-        "vdegr" : 165.7637,
-        "dignity" : 9
-      }, {
-        "code" : "GU",
-        "name" : "Gu",
-        "text" : "Guru",
-        "rasi" : 7,
-        "bhava" : 8,
-        "deg" : "08°",
-        "degr" : "08°50'50\"",
-        "vdegr" : 188.84726,
-        "dignity" : 4
       }, {
         "code" : "SK",
         "name" : "Sk",
         "text" : "Shukra",
-        "rasi" : 9,
-        "bhava" : 10,
+        "rasi" : 3,
+        "bhava" : 11,
         "deg" : "04°",
-        "degr" : "04°16'53\"",
-        "vdegr" : 244.28133,
-        "dignity" : 5
+        "degr" : "04°17'30\"",
+        "vdegr" : 64.29175,
+        "dignity" : 6
+      }, {
+        "code" : "CH",
+        "name" : "Ch",
+        "text" : "Chandra",
+        "rasi" : 5,
+        "bhava" : 1,
+        "deg" : "05°",
+        "degr" : "05°04'29\"",
+        "vdegr" : 125.07468,
+        "dignity" : 6
+      }, {
+        "code" : "LG",
+        "name" : "Lg",
+        "text" : "Lagna",
+        "rasi" : 5,
+        "bhava" : 1,
+        "deg" : "24°",
+        "degr" : "24°24'37\"",
+        "vdegr" : 144.41035
+      }, {
+        "code" : "SA",
+        "name" : "Sa",
+        "text" : "Shani",
+        "rasi" : 6,
+        "bhava" : 2,
+        "deg" : "07°",
+        "degr" : "07°26'17\"",
+        "vdegr" : 157.43814,
+        "dignity" : 6
+      }, {
+        "code" : "GU",
+        "name" : "Gu",
+        "text" : "Guru",
+        "rasi" : 8,
+        "bhava" : 4,
+        "deg" : "00°",
+        "degr" : "00°04'44\"",
+        "vdegr" : 210.07881,
+        "dignity" : 6
+      }, {
+        "code" : "SY",
+        "name" : "Sy",
+        "text" : "Surya",
+        "rasi" : 8,
+        "bhava" : 4,
+        "deg" : "13°",
+        "degr" : "13°56'44\"",
+        "vdegr" : 223.94565,
+        "dignity" : 6
       }, {
         "code" : "RA",
         "name" : "Ra",
         "text" : "Rahu",
         "rasi" : 9,
-        "bhava" : 10,
+        "bhava" : 5,
         "vakri" : 1,
-        "deg" : "09°",
-        "degr" : "09°40'29\"",
-        "vdegr" : 249.67482,
+        "deg" : "02°",
+        "degr" : "02°02'38\"",
+        "vdegr" : 242.04398,
         "dignity" : 1
       }, {
-        "code" : "LG",
-        "name" : "Lg",
-        "text" : "Lagna",
+        "code" : "BU",
+        "name" : "(Bu)",
+        "text" : "Budha",
         "rasi" : 12,
-        "bhava" : 1,
-        "deg" : "07°",
-        "degr" : "07°35'17\"",
-        "vdegr" : 337.58792
+        "bhava" : 8,
+        "vakri" : 1,
+        "deg" : "15°",
+        "degr" : "15°33'14\"",
+        "vdegr" : 345.55396,
+        "dignity" : 2
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ ]
