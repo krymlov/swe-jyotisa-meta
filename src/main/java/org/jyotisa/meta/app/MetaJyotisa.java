@@ -30,8 +30,8 @@ import java.util.Map;
 public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     private static final long serialVersionUID = 217206238818222333L;
 
-    protected String metaVersion = "2.10.03i";
-    protected String appVersion = "2.10.03i";
+    protected String metaVersion = "2.10.03j";
+    protected String appVersion = "2.10.03j";
     protected String appName = "swe-jyotisa";
 
     protected final MetaEvent event = new MetaEvent();
