@@ -17,6 +17,7 @@ import java.util.Calendar;
 import static java.nio.charset.StandardCharsets.UTF_8;
 import static java.util.TimeZone.getTimeZone;
 import static org.apache.commons.io.FileUtils.writeStringToFile;
+import static org.swisseph.api.ISweConstants.STR_EY;
 import static org.swisseph.utils.IDateUtils.F2H_2M_2S;
 import static org.swisseph.utils.IDateUtils.F4Y_2M_2D;
 import static org.swisseph.utils.IDegreeUtils.toLAT;
@@ -55,8 +56,8 @@ public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
         jyotisa.event().datetime().date(IDateUtils.format(date, F4Y_2M_2D).toString());
         jyotisa.event().datetime().time(IDateUtils.format(date, F2H_2M_2S).toString());
 
-        String tmzsign = date.timeZone() >= 0 ? "+" : "-";
-        jyotisa.event().datetime().zone("(" + tmzsign + date.timeZone() + ")");
+        String tmzsign = date.timeZone() >= 0 ? "+" : STR_EY;
+        jyotisa.event().datetime().zone("(UTC" + tmzsign + date.timeZone() + ")");
     }
 
     @Test
