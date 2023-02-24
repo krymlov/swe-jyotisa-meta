@@ -40,6 +40,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.lang.Character.toLowerCase;
+import static java.lang.Math.round;
 import static java.util.Comparator.comparingDouble;
 import static org.apache.commons.lang3.StringUtils.*;
 import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
@@ -129,10 +130,10 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         List<Integer> mainBox = jyotisa.kundali().mainBox();
         Integer width = mainBox.get(2), height = mainBox.get(3);
         List<Integer> infoBox = jyotisa.kundali().southStyle().infoBox();
-        infoBox.add(width / 4);
-        infoBox.add(height / 4);
-        infoBox.add(width / 2);
-        infoBox.add(height / 2);
+        infoBox.add(round(width / 4f));
+        infoBox.add(round(height / 4f));
+        infoBox.add(round(width / 2f));
+        infoBox.add(round(height / 2f));
     }
 
     default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
