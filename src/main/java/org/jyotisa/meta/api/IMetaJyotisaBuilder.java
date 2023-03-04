@@ -128,12 +128,15 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         if (!confMetaStyle(ViewStyle.south)) return;
 
         List<Integer> mainBox = jyotisa.kundali().mainBox();
-        Integer width = mainBox.get(2), height = mainBox.get(3);
         List<Integer> infoBox = jyotisa.kundali().southStyle().infoBox();
-        infoBox.add(round(width / 4f));
-        infoBox.add(round(height / 4f));
-        infoBox.add(round(width / 2f));
-        infoBox.add(round(height / 2f));
+
+        final int width = Math.round(mainBox.get(2) / 4f);
+        final int height = Math.round(mainBox.get(3) / 4f);
+
+        infoBox.add(width);
+        infoBox.add(height);
+        infoBox.add(width * 2);
+        infoBox.add(height * 2);
     }
 
     default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
