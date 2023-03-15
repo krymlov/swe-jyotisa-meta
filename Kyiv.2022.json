@@ -11,8 +11,8 @@
     "location" : {
       "name" : "Kyiv, Ukraine",
       "text" : "Kyiv 2022, Ukraine",
-      "lttd" : "50°26'00\"N",
-      "lgtd" : "30°31'00\"E"
+      "lat" : "50°26'00\"N",
+      "lon" : "30°31'00\"E"
     },
     "datetime" : {
       "name" : "2022-11-21 12:00:00",

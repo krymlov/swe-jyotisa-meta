@@ -12,24 +12,24 @@ import org.jyotisa.meta.base.MetaTheme;
  * @version 1.0, 2022-11
  */
 public class MetaLocation extends MetaTheme {
-    private static final long serialVersionUID = -3965816142560214082L;
+    private static final long serialVersionUID = -4601809175474681300L;
 
-    protected String lttd;
-    protected String lgtd;
+    protected String lat;
+    protected String lon;
 
-    public String lttd() {
-        return lttd;
+    public String lat() {
+        return lat;
     }
 
-    public void lttd(String latitude) {
-        this.lttd = latitude;
+    public void lat(String latitude) {
+        this.lat = latitude;
     }
 
-    public String lgtd() {
-        return lgtd;
+    public String lon() {
+        return lon;
     }
 
-    public void lgtd(String longitude) {
-        this.lgtd = longitude;
+    public void lon(String longitude) {
+        this.lon = longitude;
     }
 }

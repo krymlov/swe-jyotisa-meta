@@ -49,8 +49,8 @@ public class KyivJsonTest extends AbstractTest implements IMetaJyotisaBuilder {
 
         jyotisa.event().location().name("Kyiv, Ukraine");
         jyotisa.event().location().text("Kyiv " + year + ", Ukraine");
-        jyotisa.event().location().lttd(toLAT(kundali.sweLocation().latitude()).toString());
-        jyotisa.event().location().lgtd(toLON(kundali.sweLocation().longitude()).toString());
+        jyotisa.event().location().lat(toLAT(kundali.sweLocation().latitude()).toString());
+        jyotisa.event().location().lon(toLON(kundali.sweLocation().longitude()).toString());
 
         jyotisa.event().datetime().name(IDateUtils.format6(date).toString());
         jyotisa.event().datetime().date(IDateUtils.format(date, F4Y_2M_2D).toString());

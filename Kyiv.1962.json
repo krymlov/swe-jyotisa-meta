@@ -11,8 +11,8 @@
     "location" : {
       "name" : "Kyiv, Ukraine",
       "text" : "Kyiv 1962, Ukraine",
-      "lttd" : "50°26'00\"N",
-      "lgtd" : "30°31'00\"E"
+      "lat" : "50°26'00\"N",
+      "lon" : "30°31'00\"E"
     },
     "datetime" : {
       "name" : "1962-02-04 08:30:00",

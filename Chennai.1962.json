@@ -11,8 +11,8 @@
     "location" : {
       "name" : "Chennai, India",
       "text" : "Chennai 1962, India",
-      "lttd" : "13°05'00\"N",
-      "lgtd" : "80°16'00\"E"
+      "lat" : "13°05'00\"N",
+      "lon" : "80°16'00\"E"
     },
     "datetime" : {
       "name" : "1962-02-04 08:30:00",
