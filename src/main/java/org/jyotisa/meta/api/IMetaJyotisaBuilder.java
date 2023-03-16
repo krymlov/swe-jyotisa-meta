@@ -40,7 +40,6 @@ import java.util.List;
 import java.util.Map;
 
 import static java.lang.Character.toLowerCase;
-import static java.lang.Math.round;
 import static java.util.Comparator.comparingDouble;
 import static org.apache.commons.lang3.StringUtils.*;
 import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
@@ -55,7 +54,7 @@ import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
 import static org.jyotisa.varga.EVarga.RASI;
 import static org.swisseph.api.ISweConstants.RASI_LENGTH;
-import static org.swisseph.utils.IDegreeUtils.toDMS;
+import static org.swisseph.utils.IDegreeUtils.toDMSms;
 import static swisseph.SweConst.ODEGREE_CHAR;
 
 /**
@@ -335,7 +334,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         final IGraha graha = grahaEntity.entityEnum();
         final MetaObject obj = new MetaObject();
         final double vargaRasiLongitude = varga.rasiLongitude(grahaEntity.longitude());
-        final String degr = toDMS(vargaRasiLongitude).toString();
+        final String degr = toDMSms(vargaRasiLongitude).toString();
 
         IDignity dignity = grahaEntity.dignity(varga);
         if (null != dignity) obj.dignity(dignity.fid());
@@ -352,7 +351,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
 
         if (varga.code().equals(D01_CD)) {
             final INaksatraPada pada = grahaEntity.pada();
-            obj.lgtd(toDMS(grahaEntity.longitude()).toString());
+            obj.lon(toDMSms(grahaEntity.longitude()).toString());
             obj.npada(buildMetaNaksatraPadaName(grahaEntity));
             obj.naksatra(pada.naksatra().fid());
             obj.navamsa(pada.navamsa().fid());
@@ -405,12 +404,12 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     }
 
     default MetaObject buildMetaRasiUpagraha(IUpagrahaEntity upagrahaEntity) {
-        final String degr = toDMS(rasiDegree(upagrahaEntity.longitude())).toString();
+        final String degr = toDMSms(rasiDegree(upagrahaEntity.longitude())).toString();
         final IUpagraha upagraha = upagrahaEntity.entityEnum();
         final INaksatraPada pada = upagrahaEntity.pada();
         final MetaObject obj = new MetaObject();
 
-        obj.lgtd(toDMS(upagrahaEntity.longitude()).toString());
+        obj.lon(toDMSms(upagrahaEntity.longitude()).toString());
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.name(buildMetaUpagrahaName(upagraha));
         obj.text(buildMetaUpagrahaText(upagraha));

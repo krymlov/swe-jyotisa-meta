@@ -12,7 +12,7 @@ import org.jyotisa.meta.base.MetaTheme;
  * @version 1.0, 2022-11
  */
 public class MetaObject extends MetaTheme {
-    private static final long serialVersionUID = 834945199344749356L;
+    private static final long serialVersionUID = 9171470605395207803L;
 
     protected Integer rasi;
     protected Integer bhava;
@@ -21,8 +21,8 @@ public class MetaObject extends MetaTheme {
     protected String deg;
     protected String degr;
     protected Float vdegr;
-    protected String lttd;
-    protected String lgtd;
+    protected String lat;
+    protected String lon;
     protected String npada;
 
     protected Integer naksatra;
@@ -71,20 +71,20 @@ public class MetaObject extends MetaTheme {
         this.degr = degr;
     }
 
-    public String lttd() {
-        return lttd;
+    public String lat() {
+        return lat;
     }
 
-    public void lttd(String lttd) {
-        this.lttd = lttd;
+    public void lat(String latitude) {
+        this.lat = latitude;
     }
 
-    public String lgtd() {
-        return lgtd;
+    public String lon() {
+        return lon;
     }
 
-    public void lgtd(String lgtd) {
-        this.lgtd = lgtd;
+    public void lon(String longitude) {
+        this.lon = longitude;
     }
 
     public Float vdegr() {
