@@ -1,6 +1,6 @@
 {
-  "metaVersion" : "2.10.03j2",
-  "appVersion" : "2.10.03j2",
+  "metaVersion" : "2.10.03j3",
+  "appVersion" : "2.10.03j3",
   "appName" : "swe-jyotisa",
   "event" : {
     "type" : "kundali",
@@ -15,8 +15,8 @@
       "lon" : "30°31'00\"E"
     },
     "datetime" : {
-      "name" : "1962-02-04 08:30:00",
-      "date" : "1962-02-04",
+      "name" : "1962–02–04 08:30:00",
+      "date" : "1962–02–04",
       "time" : "08:30:00",
       "zone" : "(UTC+3.0)"
     }

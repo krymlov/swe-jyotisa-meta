@@ -1,6 +1,6 @@
 {
-  "metaVersion" : "2.10.03j2",
-  "appVersion" : "2.10.03j2",
+  "metaVersion" : "2.10.03j3",
+  "appVersion" : "2.10.03j3",
   "appName" : "swe-jyotisa",
   "event" : {
     "type" : "prasna",
@@ -15,8 +15,8 @@
       "lon" : "30°31'00\"E"
     },
     "datetime" : {
-      "name" : "2022-11-21 12:00:00",
-      "date" : "2022-11-21",
+      "name" : "2022–11–21 12:00:00",
+      "date" : "2022–11–21",
       "time" : "12:00:00",
       "zone" : "(UTC+2.0)"
     }
