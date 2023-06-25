@@ -62,6 +62,7 @@ import static swisseph.SweConst.ODEGREE_CHAR;
  * @version 1.0, 2022-11
  */
 public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaTheme {
+    String[] PADA_DIGITS = new String[]{"", "¹", "²", "³", "⁴"};
 
     default IMetaJyotisa buildMetaJyotisa(IKundali kundali) {
         final MetaJyotisa jyotisa = new MetaJyotisa();
@@ -385,7 +386,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     }
 
     default String buildMetaNaksatraPadaName(IGrahaEntity grahaEntity) {
-        return grahaEntity.pada().naksatra().following().name() + grahaEntity.pada().pada();
+        final INaksatraPada pada = grahaEntity.pada();
+        return pada.naksatra().following().name() + PADA_DIGITS[pada.pada()];
     }
 
     default void addMetaRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
