@@ -344,9 +344,9 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         obj.vdegr((float) (((obj.rasi() - 1) * RASI_LENGTH) + vargaRasiLongitude));
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
-        obj.name(buildMetaGrahaName(graha, grahaEntity.vakri()));
+        obj.name(buildMetaGrahaName(grahaEntity));
+        obj.text(buildMetaGrahaText(grahaEntity));
         if (grahaEntity.vakri()) obj.vakri(1);
-        obj.text(buildMetaGrahaText(graha));
         obj.code(graha.code());
         obj.degr(degr);
 
@@ -362,13 +362,14 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         return obj;
     }
 
-    default String buildMetaGrahaName(IGraha graha, boolean vakri) {
+    default String buildMetaGrahaName(IGrahaEntity grahaEntity) {
+        final IGraha graha = grahaEntity.entityEnum();
         final String name = graha.all()[1].name();
         final StringBuilder builder = new StringBuilder(name.length());
 
-        final boolean printVakri = vakri &&
-                !name.equalsIgnoreCase(RA_CD) &&
-                !name.equalsIgnoreCase(KE_CD);
+        final boolean printVakri = grahaEntity.vakri()
+                && !name.equalsIgnoreCase(RA_CD)
+                && !name.equalsIgnoreCase(KE_CD);
 
         if (printVakri) builder.append('(');
         builder.append(name.charAt(0));
@@ -381,8 +382,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         return builder.toString();
     }
 
-    default String buildMetaGrahaText(IGraha graha) {
-        return capitalizeFully(graha.all()[2].name());
+    default String buildMetaGrahaText(IGrahaEntity grahaEntity) {
+        return capitalizeFully(grahaEntity.entityEnum().all()[2].name());
     }
 
     default String buildMetaNaksatraPadaName(IGrahaEntity grahaEntity) {
@@ -413,8 +414,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
 
         obj.lon(toDMSms(upagrahaEntity.longitude()).toString());
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
-        obj.name(buildMetaUpagrahaName(upagraha));
-        obj.text(buildMetaUpagrahaText(upagraha));
+        obj.name(buildMetaUpagrahaName(upagrahaEntity));
+        obj.text(buildMetaUpagrahaText(upagrahaEntity));
         obj.bhava(upagrahaEntity.bhava().fid());
         obj.naksatra(pada.naksatra().fid());
         obj.navamsa(pada.navamsa().fid());
@@ -426,12 +427,12 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         return obj;
     }
 
-    default String buildMetaUpagrahaName(IUpagraha upagraha) {
-        return capitalizeFully(upagraha.name());
+    default String buildMetaUpagrahaName(IUpagrahaEntity upagrahaEntity) {
+        return capitalizeFully(upagrahaEntity.entityEnum().name());
     }
 
-    default String buildMetaUpagrahaText(IUpagraha upagraha) {
-        return capitalizeFully(EUpagraha.values()[upagraha.fid()].name());
+    default String buildMetaUpagrahaText(IUpagrahaEntity upagrahaEntity) {
+        return capitalizeFully(EUpagraha.values()[upagrahaEntity.entityEnum().fid()].name());
     }
 
 }
