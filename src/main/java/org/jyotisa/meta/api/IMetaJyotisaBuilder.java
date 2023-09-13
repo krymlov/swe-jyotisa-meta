@@ -62,7 +62,8 @@ import static swisseph.SweConst.ODEGREE_CHAR;
  * @version 1.0, 2022-11
  */
 public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaTheme {
-    String[] PADA_DIGITS = new String[]{"", "¹", "²", "³", "⁴"};
+    String[] DIGNITY_SYMBOLS = new String[]{EMPTY, "↓", "↙", EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, "↖", "↑"};
+    String[] PADA_DIGITS = new String[]{EMPTY, "¹", "²", "³", "⁴"};
 
     default IMetaJyotisa buildMetaJyotisa(IKundali kundali) {
         final MetaJyotisa jyotisa = new MetaJyotisa();
@@ -332,37 +333,39 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     }
 
     default MetaObject buildMetaVargaGraha(IVarga varga, int lagnaRasiFid, IGrahaEntity grahaEntity) {
-        final IGraha graha = grahaEntity.entityEnum();
         final MetaObject obj = new MetaObject();
         final double vargaRasiLongitude = varga.rasiLongitude(grahaEntity.longitude());
         final String degr = toDMSms(vargaRasiLongitude).toString();
-
-        IDignity dignity = grahaEntity.dignity(varga);
-        if (null != dignity) obj.dignity(dignity.fid());
 
         obj.rasi(varga.rasi(grahaEntity.longitude()).fid());
         obj.vdegr((float) (((obj.rasi() - 1) * RASI_LENGTH) + vargaRasiLongitude));
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
-        obj.name(buildMetaGrahaName(grahaEntity));
-        obj.text(buildMetaGrahaText(grahaEntity));
+        obj.name(buildMetaGrahaName(varga, grahaEntity));
+        obj.text(buildMetaGrahaText(varga, grahaEntity));
+        obj.code(grahaEntity.entityEnum().code());
         if (grahaEntity.vakri()) obj.vakri(1);
-        obj.code(graha.code());
         obj.degr(degr);
 
         if (varga.code().equals(D01_CD)) {
             final INaksatraPada pada = grahaEntity.pada();
             obj.lon(toDMSms(grahaEntity.longitude()).toString());
-            obj.npada(buildMetaNaksatraPadaName(grahaEntity));
+            obj.npada(buildMetaNaksatraPadaName(varga, grahaEntity));
             obj.naksatra(pada.naksatra().fid());
             obj.navamsa(pada.navamsa().fid());
             obj.pada(pada.pada());
         }
 
+        final IDignity dignity = grahaEntity.dignity(varga);
+        if (null != dignity) {
+            obj.dignity(dignity.fid());
+            writeMetaVargaGrahaDignity(obj, dignity);
+        }
+
         return obj;
     }
 
-    default String buildMetaGrahaName(IGrahaEntity grahaEntity) {
+    default String buildMetaGrahaName(IVarga varga, IGrahaEntity grahaEntity) {
         final IGraha graha = grahaEntity.entityEnum();
         final String name = graha.all()[1].name();
         final StringBuilder builder = new StringBuilder(name.length());
@@ -382,11 +385,11 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         return builder.toString();
     }
 
-    default String buildMetaGrahaText(IGrahaEntity grahaEntity) {
+    default String buildMetaGrahaText(IVarga varga, IGrahaEntity grahaEntity) {
         return capitalizeFully(grahaEntity.entityEnum().all()[2].name());
     }
 
-    default String buildMetaNaksatraPadaName(IGrahaEntity grahaEntity) {
+    default String buildMetaNaksatraPadaName(IVarga varga, IGrahaEntity grahaEntity) {
         final INaksatraPada pada = grahaEntity.pada();
         return pada.naksatra().following().name() + PADA_DIGITS[pada.pada()];
     }
@@ -433,6 +436,12 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
 
     default String buildMetaUpagrahaText(IUpagrahaEntity upagrahaEntity) {
         return capitalizeFully(EUpagraha.values()[upagrahaEntity.entityEnum().fid()].name());
+    }
+
+    default void writeMetaVargaGrahaDignity(MetaObject metaObject, IDignity dignity) {
+        if (null == dignity) return;
+        String ds = DIGNITY_SYMBOLS[dignity.uid()];
+        if (!EMPTY.equals(ds)) metaObject.deg(ds + metaObject.deg());
     }
 
 }
