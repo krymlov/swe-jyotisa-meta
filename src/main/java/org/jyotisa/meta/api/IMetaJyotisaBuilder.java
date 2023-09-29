@@ -340,7 +340,6 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         obj.rasi(varga.rasi(grahaEntity.longitude()).fid());
         obj.vdegr((float) (((obj.rasi() - 1) * RASI_LENGTH) + vargaRasiLongitude));
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
-        obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
         obj.name(buildMetaGrahaName(varga, grahaEntity));
         obj.text(buildMetaGrahaText(varga, grahaEntity));
         obj.code(grahaEntity.entityEnum().code());
@@ -351,9 +350,12 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
             final INaksatraPada pada = grahaEntity.pada();
             obj.lon(toDMSms(grahaEntity.longitude()).toString());
             obj.npada(buildMetaNaksatraPadaName(varga, grahaEntity));
+            obj.bhava(grahaEntity.bhava().fid());
             obj.naksatra(pada.naksatra().fid());
             obj.navamsa(pada.navamsa().fid());
             obj.pada(pada.pada());
+        } else {
+            obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
         }
 
         final IDignity dignity = grahaEntity.dignity(varga);
