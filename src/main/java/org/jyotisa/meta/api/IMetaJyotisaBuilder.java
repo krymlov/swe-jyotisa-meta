@@ -6,6 +6,7 @@
 package org.jyotisa.meta.api;
 
 import org.jyotisa.api.IKundali;
+import org.jyotisa.api.bhava.IBhava;
 import org.jyotisa.api.bhava.IBhavaEnum;
 import org.jyotisa.api.dignity.IDignity;
 import org.jyotisa.api.dignity.IDignityEnum;
@@ -312,11 +313,11 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     default void addMetaVargaGrahas(IMetaJyotisa jyotisa, IKundali kundali) {
         final IGrahas grahas = kundali.grahas();
         final IGrahaEntity lagna = grahas.lagna();
-        final Iterator<IVargaEnum> iterator = confMetaVargas();
+        final Iterator<IVargaEnum> confVargas = confMetaVargas();
         final List<IGrahaEntity> filteredGrahas = confMetaGrahasFilter(grahas.all());
 
-        while (iterator.hasNext()) {
-            final IVarga varga = iterator.next().varga();
+        while (confVargas.hasNext()) {
+            final IVarga varga = confVargas.next().varga();
             final MetaObjects objects = new MetaObjects();
             final List<MetaObject> metaGrahas = objects.grahas();
             final int lgRasiFid = varga.rasi(lagna.longitude()).fid();
@@ -324,7 +325,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
             jyotisa.objects().put(varga.code(), objects);
 
             for (IGrahaEntity graha : filteredGrahas) {
-                metaGrahas.add(buildMetaVargaGraha(varga, lgRasiFid, graha));
+                MetaObject metaObject = buildMetaVargaGraha(varga, lgRasiFid, graha);
+                if (null != metaObject) metaGrahas.add(metaObject);
             }
 
             if (!metaGrahas.isEmpty()) metaGrahas.sort(comparingDouble(MetaObject::vdegr));
@@ -347,10 +349,11 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         obj.degr(degr);
 
         if (varga.code().equals(D01_CD)) {
+            final IBhava bhava = grahaEntity.bhava();
             final INaksatraPada pada = grahaEntity.pada();
             obj.lon(toDMSms(grahaEntity.longitude()).toString());
             obj.npada(buildMetaNaksatraPadaName(varga, grahaEntity));
-            obj.bhava(grahaEntity.bhava().fid());
+            obj.bhava(null != bhava ? bhava.fid() : 0);
             obj.naksatra(pada.naksatra().fid());
             obj.navamsa(pada.navamsa().fid());
             obj.pada(pada.pada());
@@ -407,7 +410,8 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         upagrahas.sort(comparingDouble(ISweEnumEntity::longitude));
 
         for (final IUpagrahaEntity upagrahaEntity : upagrahas) {
-            metaUpagrahas.add(buildMetaRasiUpagraha(upagrahaEntity));
+            MetaObject metaObject = buildMetaRasiUpagraha(upagrahaEntity);
+            if (null != metaObject) metaUpagrahas.add(metaObject);
         }
     }
 
@@ -415,13 +419,14 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         final String degr = toDMSms(rasiDegree(upagrahaEntity.longitude())).toString();
         final IUpagraha upagraha = upagrahaEntity.entityEnum();
         final INaksatraPada pada = upagrahaEntity.pada();
+        final IBhava bhava = upagrahaEntity.bhava();
         final MetaObject obj = new MetaObject();
 
         obj.lon(toDMSms(upagrahaEntity.longitude()).toString());
         obj.deg(degr.substring(0, degr.indexOf(ODEGREE_CHAR) + 1));
         obj.name(buildMetaUpagrahaName(upagrahaEntity));
         obj.text(buildMetaUpagrahaText(upagrahaEntity));
-        obj.bhava(upagrahaEntity.bhava().fid());
+        obj.bhava(null != bhava ? bhava.fid() : 0);
         obj.naksatra(pada.naksatra().fid());
         obj.navamsa(pada.navamsa().fid());
         obj.rasi(pada.rasi().fid());
