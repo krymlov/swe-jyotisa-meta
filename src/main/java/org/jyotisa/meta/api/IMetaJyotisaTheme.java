@@ -43,9 +43,9 @@ public interface IMetaJyotisaTheme {
 
         grahas.forEach(it -> {
             final int idx = it.rasi() - 1;
-            if (sizes[idx] > minVal) sizes[idx] -= decVal;
+            sizes[idx] = Math.max(minVal, sizes[idx] - decVal);
             if (null != it.vakri() && toBoolean(it.vakri(), VAKRI_TRUE, VAKRI_FALSE)) {
-                if (sizes[idx] > minVal) sizes[idx] -= decValVakri;
+                sizes[idx] = Math.max(minVal, sizes[idx] - decValVakri);
             }
         });
 
