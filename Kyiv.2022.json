@@ -1009,7 +1009,8 @@
         "npada" : "BHA²",
         "naksatra" : 2,
         "pada" : 2,
-        "navamsa" : 6
+        "navamsa" : 6,
+        "karaka" : 5
       }, {
         "code" : "MA",
         "name" : "(Ma)",
@@ -1026,7 +1027,8 @@
         "naksatra" : 5,
         "pada" : 2,
         "dignity" : 5,
-        "navamsa" : 6
+        "navamsa" : 6,
+        "karaka" : 1
       }, {
         "code" : "CH",
         "name" : "Ch",
@@ -1042,7 +1044,8 @@
         "naksatra" : 14,
         "pada" : 3,
         "dignity" : 5,
-        "navamsa" : 7
+        "navamsa" : 7,
+        "karaka" : 8
       }, {
         "code" : "KE",
         "name" : "Ke",
@@ -1074,7 +1077,8 @@
         "naksatra" : 17,
         "pada" : 1,
         "dignity" : 6,
-        "navamsa" : 5
+        "navamsa" : 5,
+        "karaka" : 6
       }, {
         "code" : "BU",
         "name" : "Bu",
@@ -1090,7 +1094,8 @@
         "naksatra" : 17,
         "pada" : 3,
         "dignity" : 5,
-        "navamsa" : 7
+        "navamsa" : 7,
+        "karaka" : 4
       }, {
         "code" : "SK",
         "name" : "Sk",
@@ -1106,7 +1111,8 @@
         "naksatra" : 17,
         "pada" : 3,
         "dignity" : 5,
-        "navamsa" : 7
+        "navamsa" : 7,
+        "karaka" : 3
       }, {
         "code" : "LG",
         "name" : "Lg",
@@ -1137,7 +1143,8 @@
         "naksatra" : 23,
         "pada" : 1,
         "dignity" : 8,
-        "navamsa" : 5
+        "navamsa" : 5,
+        "karaka" : 2
       }, {
         "code" : "GU",
         "name" : "(Gu)",
@@ -1154,7 +1161,8 @@
         "naksatra" : 26,
         "pada" : 1,
         "dignity" : 8,
-        "navamsa" : 5
+        "navamsa" : 5,
+        "karaka" : 7
       } ],
       "arudhas" : [ ],
       "upagrahas" : [ {

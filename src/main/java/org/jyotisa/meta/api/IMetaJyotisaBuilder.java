@@ -357,6 +357,13 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
             obj.naksatra(pada.naksatra().fid());
             obj.navamsa(pada.navamsa().fid());
             obj.pada(pada.pada());
+
+            // the chara karaka belongs to the graha in the natal chart, not to a division of it,
+            // so it is written here beside the other D-1-only fields rather than in every varga.
+            // MetaObject has declared this field since the model was written and nothing filled
+            // it, so the karaka reference table was being emitted with nothing to point at it.
+            final ICharaKaraka karaka = grahaEntity.charaKaraka();
+            if (null != karaka) obj.karaka(karaka.fid());
         } else {
             obj.bhava(((obj.rasi() + 12 - lagnaRasiFid) % 12 + 1));
         }
