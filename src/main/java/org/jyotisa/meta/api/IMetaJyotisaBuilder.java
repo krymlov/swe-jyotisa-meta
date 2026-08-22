@@ -396,7 +396,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
 
     default String buildMetaNaksatraPadaName(IVarga varga, IGrahaEntity grahaEntity) {
         final INaksatraPada pada = grahaEntity.pada();
-        return pada.naksatra().following().name() + PADA_DIGITS[pada.pada()];
+        return pada.naksatra().label() + PADA_DIGITS[pada.pada()];
     }
 
     default void addMetaRasiUpagrahas(IMetaJyotisa jyotisa, IKundali kundali) {
