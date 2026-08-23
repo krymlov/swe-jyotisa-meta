@@ -37,6 +37,8 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     protected final MetaEvent event = new MetaEvent();
     protected final MetaOptions options = new MetaOptions();
     protected final MetaKundali kundali = new MetaKundali();
+    protected final MetaChalita chalita = new MetaChalita();
+    protected final MetaAshtakavarga ashtakavarga = new MetaAshtakavarga();
 
     protected final Map<String, MetaObjects> objects = new LinkedHashMap<>(EVarga.values().length);
 
@@ -89,6 +91,16 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     @Override
     public MetaKundali kundali() {
         return kundali;
+    }
+
+    @Override
+    public MetaChalita chalita() {
+        return chalita;
+    }
+
+    @Override
+    public MetaAshtakavarga ashtakavarga() {
+        return ashtakavarga;
     }
 
     @Override

@@ -30,6 +30,8 @@ public interface IMetaJyotisa extends IMetaPojo {
     MetaEvent event();
     MetaOptions options();
     MetaKundali kundali();
+    MetaChalita chalita();
+    MetaAshtakavarga ashtakavarga();
 
     Map<String, MetaObjects> objects();
 

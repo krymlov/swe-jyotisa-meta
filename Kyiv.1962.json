@@ -992,6 +992,195 @@
       }
     }
   },
+  "chalita" : {
+    "calculated" : true,
+    "bhavas" : [ {
+      "bhava" : 1,
+      "rasi" : 10,
+      "madhya" : "19°27'20.58\"",
+      "startRasi" : 10,
+      "start" : "08°46'09.60\"",
+      "closeRasi" : 11,
+      "close" : "08°46'09.60\"",
+      "grahas" : [ "LG", "SY", "CH", "BU", "GU", "SK", "SA", "KE" ]
+    }, {
+      "bhava" : 2,
+      "rasi" : 11,
+      "madhya" : "28°04'58.61\"",
+      "startRasi" : 11,
+      "start" : "08°46'09.60\"",
+      "closeRasi" : 12,
+      "close" : "17°23'47.63\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 3,
+      "rasi" : 1,
+      "madhya" : "06°42'36.65\"",
+      "startRasi" : 12,
+      "start" : "17°23'47.63\"",
+      "closeRasi" : 1,
+      "close" : "26°01'25.66\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 4,
+      "rasi" : 2,
+      "madhya" : "15°20'14.68\"",
+      "startRasi" : 1,
+      "start" : "26°01'25.66\"",
+      "closeRasi" : 2,
+      "close" : "26°01'25.66\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 5,
+      "rasi" : 3,
+      "madhya" : "06°42'36.65\"",
+      "startRasi" : 2,
+      "start" : "26°01'25.66\"",
+      "closeRasi" : 3,
+      "close" : "17°23'47.63\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 6,
+      "rasi" : 3,
+      "madhya" : "28°04'58.61\"",
+      "startRasi" : 3,
+      "start" : "17°23'47.63\"",
+      "closeRasi" : 4,
+      "close" : "08°46'09.60\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 7,
+      "rasi" : 4,
+      "madhya" : "19°27'20.58\"",
+      "startRasi" : 4,
+      "start" : "08°46'09.60\"",
+      "closeRasi" : 5,
+      "close" : "08°46'09.60\"",
+      "grahas" : [ "RA", "SW" ]
+    }, {
+      "bhava" : 8,
+      "rasi" : 5,
+      "madhya" : "28°04'58.61\"",
+      "startRasi" : 5,
+      "start" : "08°46'09.60\"",
+      "closeRasi" : 6,
+      "close" : "17°23'47.63\"",
+      "grahas" : [ "TE" ]
+    }, {
+      "bhava" : 9,
+      "rasi" : 7,
+      "madhya" : "06°42'36.65\"",
+      "startRasi" : 6,
+      "start" : "17°23'47.63\"",
+      "closeRasi" : 7,
+      "close" : "26°01'25.66\"",
+      "grahas" : [ "SM" ]
+    }, {
+      "bhava" : 10,
+      "rasi" : 8,
+      "madhya" : "15°20'14.68\"",
+      "startRasi" : 7,
+      "start" : "26°01'25.66\"",
+      "closeRasi" : 8,
+      "close" : "26°01'25.66\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 11,
+      "rasi" : 9,
+      "madhya" : "06°42'36.65\"",
+      "startRasi" : 8,
+      "start" : "26°01'25.66\"",
+      "closeRasi" : 9,
+      "close" : "17°23'47.63\"",
+      "grahas" : [ ]
+    }, {
+      "bhava" : 12,
+      "rasi" : 9,
+      "madhya" : "28°04'58.61\"",
+      "startRasi" : 9,
+      "start" : "17°23'47.63\"",
+      "closeRasi" : 10,
+      "close" : "08°46'09.60\"",
+      "grahas" : [ "MA" ]
+    } ]
+  },
+  "ashtakavarga" : {
+    "complete" : true,
+    "sarva" : [ {
+      "rasi" : 1,
+      "bhava" : 4,
+      "sarva" : 26
+    }, {
+      "rasi" : 2,
+      "bhava" : 5,
+      "sarva" : 25
+    }, {
+      "rasi" : 3,
+      "bhava" : 6,
+      "sarva" : 34
+    }, {
+      "rasi" : 4,
+      "bhava" : 7,
+      "sarva" : 19
+    }, {
+      "rasi" : 5,
+      "bhava" : 8,
+      "sarva" : 26
+    }, {
+      "rasi" : 6,
+      "bhava" : 9,
+      "sarva" : 26
+    }, {
+      "rasi" : 7,
+      "bhava" : 10,
+      "sarva" : 36
+    }, {
+      "rasi" : 8,
+      "bhava" : 11,
+      "sarva" : 54
+    }, {
+      "rasi" : 9,
+      "bhava" : 12,
+      "sarva" : 16
+    }, {
+      "rasi" : 10,
+      "bhava" : 1,
+      "sarva" : 24
+    }, {
+      "rasi" : 11,
+      "bhava" : 2,
+      "sarva" : 22
+    }, {
+      "rasi" : 12,
+      "bhava" : 3,
+      "sarva" : 29
+    } ],
+    "bhinna" : [ {
+      "graha" : "SY",
+      "bindu" : [ 4, 2, 5, 4, 3, 5, 6, 7, 3, 3, 3, 3 ]
+    }, {
+      "graha" : "CH",
+      "bindu" : [ 3, 4, 5, 5, 3, 2, 7, 8, 0, 3, 2, 7 ]
+    }, {
+      "graha" : "BU",
+      "bindu" : [ 5, 3, 5, 2, 6, 5, 5, 8, 3, 5, 5, 2 ]
+    }, {
+      "graha" : "SK",
+      "bindu" : [ 5, 6, 2, 0, 6, 7, 3, 8, 3, 3, 3, 6 ]
+    }, {
+      "graha" : "MA",
+      "bindu" : [ 2, 2, 6, 2, 3, 1, 5, 8, 2, 3, 1, 4 ]
+    }, {
+      "graha" : "GU",
+      "bindu" : [ 5, 5, 4, 5, 3, 5, 6, 7, 1, 5, 7, 3 ]
+    }, {
+      "graha" : "SA",
+      "bindu" : [ 2, 3, 7, 1, 2, 1, 4, 8, 4, 2, 1, 4 ]
+    }, {
+      "graha" : "LG",
+      "bindu" : [ 5, 2, 7, 1, 2, 2, 7, 7, 2, 5, 3, 6 ]
+    } ]
+  },
   "objects" : {
     "D1" : {
       "grahas" : [ {

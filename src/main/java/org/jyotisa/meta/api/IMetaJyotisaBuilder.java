@@ -31,6 +31,18 @@ import org.jyotisa.meta.options.MetaOption;
 import org.jyotisa.meta.options.MetaView;
 import org.jyotisa.rasi.ERasi;
 import org.jyotisa.upagraha.EUpagraha;
+import org.jyotisa.api.bhava.IBhava;
+import org.jyotisa.api.bhava.IBhavaChalita;
+import org.jyotisa.api.graha.IGraha;
+import org.jyotisa.api.rasi.IRasi;
+import org.jyotisa.api.varga.IAshtakavarga;
+import org.jyotisa.bhava.EBhava;
+import org.jyotisa.meta.kundali.MetaAshtakavarga;
+import org.jyotisa.meta.kundali.MetaChalita;
+import org.jyotisa.meta.kundali.MetaBhinna;
+import org.jyotisa.meta.kundali.MetaChalitaBhava;
+import org.jyotisa.meta.kundali.MetaSarva;
+import org.jyotisa.rasi.ERasi;
 import org.jyotisa.varga.EVarga;
 import org.swisseph.api.ISweEnumEntity;
 import org.swisseph.api.ISweEnumIterator;
@@ -47,6 +59,8 @@ import static org.apache.commons.lang3.text.WordUtils.capitalizeFully;
 import static org.jyotisa.api.graha.IGraha.KE_CD;
 import static org.jyotisa.api.graha.IGraha.RA_CD;
 import static org.jyotisa.api.rasi.IRasi.rasiDegree;
+import static org.jyotisa.api.rasi.IRasi.rasiFid0;
+import static org.swisseph.api.ISweObjects.LG;
 import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.meta.kundali.MetaBhava.NIL_BHAVA;
 import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
@@ -92,7 +106,99 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         addMetaVargaGrahas(jyotisa, kundali);
         addMetaRasiUpagrahas(jyotisa, kundali);
 
+        addMetaBhavaChalita(jyotisa, kundali);
+        addMetaAshtakavarga(jyotisa, kundali);
+
         return jyotisa;
+    }
+
+    /**
+     * Bhava Chalita - Porphyry cusps read as Sripati bhavas, i.e. the cusp is the bhava's
+     * <b>middle</b> and the lagna sits halfway along the first one.
+     * <p>
+     * Each longitude is split into a rasi and a degree-within-it exactly as
+     * {@link #buildMetaVargaGraha} splits a graha's, so a consumer renders it against the
+     * document's own {@code rasi} table without parsing anything.
+     * <p>
+     * A chart built without an ascendant reports {@code calculated = false} and no bhavas at all,
+     * rather than twelve counted from zero.
+     */
+    default void addMetaBhavaChalita(IMetaJyotisa jyotisa, IKundali kundali) {
+        final IBhavaChalita chalita = kundali.bhavaChalita();
+        final MetaChalita meta = jyotisa.chalita();
+
+        meta.calculated(chalita.isCalculated());
+        if (!chalita.isCalculated()) return;
+
+        final ISweEnumIterator<IBhavaEnum> bhavas = EBhava.iterator();
+
+        while (bhavas.hasNext()) {
+            final IBhava bhava = bhavas.next().bhava();
+            final MetaChalitaBhava metaBhava = new MetaChalitaBhava();
+
+            metaBhava.bhava(bhava.fid());
+            buildMetaChalitaPoint(chalita.start(bhava), metaBhava::startRasi, metaBhava::start);
+            buildMetaChalitaPoint(chalita.madhya(bhava), metaBhava::rasi, metaBhava::madhya);
+            buildMetaChalitaPoint(chalita.close(bhava), metaBhava::closeRasi, metaBhava::close);
+
+            for (IGraha graha : chalita.grahas(bhava)) metaBhava.grahas().add(graha.code());
+
+            meta.bhavas().add(metaBhava);
+        }
+    }
+
+    /** one chalita longitude, as the sign it is in and the position inside that sign */
+    default void buildMetaChalitaPoint(double longitude,
+                                       java.util.function.Consumer<Integer> rasi,
+                                       java.util.function.Consumer<String> degr) {
+        rasi.accept(rasiFid0(longitude) + 1);
+        degr.accept(toDMSms(rasiDegree(longitude)).toString());
+    }
+
+    /**
+     * Sarvashtakavarga, one total per rasi, each carrying the bhava it falls in so the table
+     * stands on its own without the chart beside it.
+     * <p>
+     * The eight Bhinnashtakavarga rows go with it, each indexed by rasi in the same order, so the
+     * classical table can be rendered without a second pass - but see {@link MetaAshtakavarga}:
+     * the total is the seven grahas, and Lagna's row does not belong in it. {@code complete} is
+     * false when a point was missing, and then every total is short by that point's contribution.
+     */
+    default void addMetaAshtakavarga(IMetaJyotisa jyotisa, IKundali kundali) {
+        final IAshtakavarga ashtakavarga = kundali.ashtakavarga();
+        final MetaAshtakavarga meta = jyotisa.ashtakavarga();
+
+        meta.complete(ashtakavarga.isComplete());
+
+        final int lagnaRasiFid = kundali.sweObjects().signs()[LG];
+
+        final ISweEnumIterator<IRasiEnum> rasis = ERasi.iterator();
+
+        while (rasis.hasNext()) {
+            final IRasi rasi = rasis.next().rasi();
+            final MetaSarva sarva = new MetaSarva();
+
+            sarva.rasi(rasi.fid());
+            sarva.sarva(ashtakavarga.sarva(rasi));
+
+            // the whole-sign distance from the lagna, the convention every bhava column here uses
+            if (lagnaRasiFid >= 1) sarva.bhava((rasi.fid() + 12 - lagnaRasiFid) % 12 + 1);
+
+            meta.sarva().add(sarva);
+        }
+
+        for (IGraha point : ashtakavarga.points()) {
+            final MetaBhinna bhinna = new MetaBhinna();
+            final int[] bindu = new int[12];
+
+            final ISweEnumIterator<IRasiEnum> byRasi = ERasi.iterator();
+            for (int i = 0; byRasi.hasNext(); i++) bindu[i] = ashtakavarga.bindu(point, byRasi.next().rasi());
+
+            bhinna.graha(point.code());
+            bhinna.bindu(bindu);
+
+            meta.bhinna().add(bhinna);
+        }
     }
 
     default void addMetaOptionsGroups(IMetaJyotisa jyotisa) {
@@ -126,19 +232,31 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
     default void addMetaKundaliMainBox(IMetaJyotisa jyotisa) {
     }
 
+    /**
+     * The interior of the South grid - the four cells the chart does not use, which carry the
+     * event text and the varga selector.
+     * <p>
+     * <b>Both edges are derived, never stepped.</b> The near edge is the first quarter and the far
+     * edge is {@code size - quarter}, which is how the grid's own lines are placed; taking
+     * {@code 2 * quarter} for the span instead puts the far edge on {@code 3 * quarter}, and the
+     * two agree only when the size is a multiple of four. They did in portrait (396: 297 either
+     * way) and did not in landscape (302: 226 against 228, and 439: 329 against 330), so the box
+     * overhung the grid by two pixels down and one across - drawn as a second line a hair outside
+     * the real one.
+     */
     default void addMetaSouthStyleInfoBox(IMetaJyotisa jyotisa) {
         if (!confMetaStyle(ViewStyle.south)) return;
 
         List<Integer> mainBox = jyotisa.kundali().mainBox();
         List<Integer> infoBox = jyotisa.kundali().southStyle().infoBox();
 
-        final int width = Math.round(mainBox.get(2) / 4f);
-        final int height = Math.round(mainBox.get(3) / 4f);
+        final int nearX = Math.round(mainBox.get(2) / 4f);
+        final int nearY = Math.round(mainBox.get(3) / 4f);
 
-        infoBox.add(width);
-        infoBox.add(height);
-        infoBox.add(width * 2);
-        infoBox.add(height * 2);
+        infoBox.add(nearX);
+        infoBox.add(nearY);
+        infoBox.add(mainBox.get(2) - nearX - nearX);
+        infoBox.add(mainBox.get(3) - nearY - nearY);
     }
 
     default void addMetaSouthStyleViewBox(IMetaJyotisa jyotisa) {
