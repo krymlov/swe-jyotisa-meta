@@ -1104,6 +1104,54 @@
       "grahas" : [ "MA" ]
     } ]
   },
+  "panchanga" : {
+    "vaara" : {
+      "fid" : 1,
+      "code" : "SYVR",
+      "name" : "1",
+      "text" : "Syvr",
+      "desc" : "Surya Vaara"
+    },
+    "tithi" : {
+      "fid" : 15,
+      "code" : "K15",
+      "name" : "15",
+      "text" : "K15",
+      "desc" : "Krishna Amavasya",
+      "progress" : 9.42
+    },
+    "naksatra" : {
+      "fid" : 22,
+      "code" : "N22",
+      "name" : "22",
+      "text" : "Shr",
+      "desc" : "Shravana",
+      "progress" : 22.52
+    },
+    "nityaYoga" : {
+      "fid" : 16,
+      "code" : "NY16",
+      "name" : "16",
+      "text" : "Sdhi",
+      "desc" : "Siddhi",
+      "progress" : 92.79
+    },
+    "karana" : {
+      "fid" : 9,
+      "code" : "KR9",
+      "name" : "9",
+      "text" : "Csp",
+      "desc" : "Chatushpada",
+      "progress" : 18.84
+    },
+    "ayanamsa" : "TRUE_CITRA",
+    "ayanamsaDegr" : "23°18'34.37\"",
+    "siderealTime" : "16:27:41",
+    "sunrise" : "1962–02–03 08:36:41",
+    "sunset" : "1962–02–03 17:47:32",
+    "moonrise" : "1962–02–04 08:05:44",
+    "moonset" : "1962–02–04 17:12:57"
+  },
   "ashtakavarga" : {
     "complete" : true,
     "sarva" : [ {

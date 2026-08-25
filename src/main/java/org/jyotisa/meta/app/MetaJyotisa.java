@@ -38,6 +38,7 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     protected final MetaOptions options = new MetaOptions();
     protected final MetaKundali kundali = new MetaKundali();
     protected final MetaChalita chalita = new MetaChalita();
+    protected final MetaPanchanga panchanga = new MetaPanchanga();
     protected final MetaAshtakavarga ashtakavarga = new MetaAshtakavarga();
 
     protected final Map<String, MetaObjects> objects = new LinkedHashMap<>(EVarga.values().length);
@@ -96,6 +97,11 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     @Override
     public MetaChalita chalita() {
         return chalita;
+    }
+
+    @Override
+    public MetaPanchanga panchanga() {
+        return panchanga;
     }
 
     @Override

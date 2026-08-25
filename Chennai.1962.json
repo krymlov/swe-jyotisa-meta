@@ -1956,6 +1956,54 @@
       "grahas" : [ "SY", "BU", "GU", "SK", "SA", "KE" ]
     } ]
   },
+  "panchanga" : {
+    "vaara" : {
+      "fid" : 1,
+      "code" : "SYVR",
+      "name" : "1",
+      "text" : "Syvr",
+      "desc" : "Surya Vaara"
+    },
+    "tithi" : {
+      "fid" : 14,
+      "code" : "K14",
+      "name" : "14",
+      "text" : "K14",
+      "desc" : "Krishna Chaturdasi",
+      "progress" : 97.38
+    },
+    "naksatra" : {
+      "fid" : 21,
+      "code" : "N21",
+      "name" : "21",
+      "text" : "Ush",
+      "desc" : "Uttara Ashadha",
+      "progress" : 75.54
+    },
+    "nityaYoga" : {
+      "fid" : 16,
+      "code" : "NY16",
+      "name" : "16",
+      "text" : "Sdhi",
+      "desc" : "Siddhi",
+      "progress" : 80.13
+    },
+    "karana" : {
+      "fid" : 8,
+      "code" : "KR8",
+      "name" : "8",
+      "text" : "Skn",
+      "desc" : "Sakuna",
+      "progress" : 94.75
+    },
+    "ayanamsa" : "LAHIRI",
+    "ayanamsaDegr" : "23°19'29.35\"",
+    "siderealTime" : "17:16:16",
+    "sunrise" : "1962–02–04 06:38:34",
+    "sunset" : "1962–02–04 18:07:20",
+    "moonrise" : "1962–02–04 05:47:05",
+    "moonset" : "1962–02–04 17:32:25"
+  },
   "ashtakavarga" : {
     "complete" : true,
     "sarva" : [ {

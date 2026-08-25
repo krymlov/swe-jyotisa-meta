@@ -1104,6 +1104,54 @@
       "grahas" : [ ]
     } ]
   },
+  "panchanga" : {
+    "vaara" : {
+      "fid" : 2,
+      "code" : "CHVR",
+      "name" : "2",
+      "text" : "Chvr",
+      "desc" : "Chandra Vaara"
+    },
+    "tithi" : {
+      "fid" : 13,
+      "code" : "K13",
+      "name" : "13",
+      "text" : "K13",
+      "desc" : "Krishna Trayodasi",
+      "progress" : 23.35
+    },
+    "naksatra" : {
+      "fid" : 14,
+      "code" : "N14",
+      "name" : "14",
+      "text" : "Cht",
+      "desc" : "Chitra",
+      "progress" : 51.29
+    },
+    "nityaYoga" : {
+      "fid" : 3,
+      "code" : "NY3",
+      "name" : "3",
+      "text" : "Ayus",
+      "desc" : "Ayushmana",
+      "progress" : 74.63
+    },
+    "karana" : {
+      "fid" : 5,
+      "code" : "KR5",
+      "name" : "5",
+      "text" : "Grj",
+      "desc" : "Garija",
+      "progress" : 46.7
+    },
+    "ayanamsa" : "TRUE_CITRA",
+    "ayanamsaDegr" : "24°09'26.04\"",
+    "siderealTime" : "16:03:37",
+    "sunrise" : "2022–11–21 07:27:41",
+    "sunset" : "2022–11–21 15:59:20",
+    "moonrise" : "2022–11–21 03:57:18",
+    "moonset" : "2022–11–21 14:48:25"
+  },
   "ashtakavarga" : {
     "complete" : true,
     "sarva" : [ {

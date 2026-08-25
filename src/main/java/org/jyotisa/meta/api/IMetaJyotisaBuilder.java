@@ -6,6 +6,16 @@
 package org.jyotisa.meta.api;
 
 import org.jyotisa.api.IKundali;
+import org.jyotisa.api.panchanga.IPanchanga;
+import org.jyotisa.api.IKundaliFields;
+import org.jyotisa.api.karana.IKarana;
+import org.jyotisa.api.naksatra.INaksatraPada;
+import org.jyotisa.api.nityayoga.INityaYoga;
+import org.jyotisa.api.tithi.ITithi;
+import org.jyotisa.app.KundaliFields;
+import org.swisseph.api.ISweJulianDate;
+import org.swisseph.api.ISweObjects;
+import org.swisseph.app.SweJulianDate;
 import org.jyotisa.api.bhava.IBhava;
 import org.jyotisa.api.bhava.IBhavaEnum;
 import org.jyotisa.api.dignity.IDignity;
@@ -31,6 +41,16 @@ import org.jyotisa.meta.options.MetaOption;
 import org.jyotisa.meta.options.MetaView;
 import org.jyotisa.rasi.ERasi;
 import org.jyotisa.upagraha.EUpagraha;
+import org.jyotisa.api.panchanga.IPanchanga;
+import org.jyotisa.api.IKundaliFields;
+import org.jyotisa.api.karana.IKarana;
+import org.jyotisa.api.naksatra.INaksatraPada;
+import org.jyotisa.api.nityayoga.INityaYoga;
+import org.jyotisa.api.tithi.ITithi;
+import org.jyotisa.app.KundaliFields;
+import org.swisseph.api.ISweJulianDate;
+import org.swisseph.api.ISweObjects;
+import org.swisseph.app.SweJulianDate;
 import org.jyotisa.api.bhava.IBhava;
 import org.jyotisa.api.bhava.IBhavaChalita;
 import org.jyotisa.api.graha.IGraha;
@@ -41,9 +61,19 @@ import org.jyotisa.meta.kundali.MetaAshtakavarga;
 import org.jyotisa.meta.kundali.MetaChalita;
 import org.jyotisa.meta.kundali.MetaBhinna;
 import org.jyotisa.meta.kundali.MetaChalitaBhava;
+import org.jyotisa.meta.kundali.MetaLimb;
+import org.jyotisa.meta.kundali.MetaPanchanga;
 import org.jyotisa.meta.kundali.MetaSarva;
 import org.jyotisa.rasi.ERasi;
+import org.jyotisa.karana.EKarana;
+import org.jyotisa.naksatra.ENaksatra;
+import org.jyotisa.nityayoga.ENityaYoga;
+import org.jyotisa.tithi.ETithi;
+import org.jyotisa.vaara.EVaara;
 import org.jyotisa.varga.EVarga;
+import org.jyotisa.api.naksatra.INaksatra;
+import org.swisseph.api.ISweEnumSequence;
+import org.swisseph.api.ISweEnum;
 import org.swisseph.api.ISweEnumEntity;
 import org.swisseph.api.ISweEnumIterator;
 
@@ -69,6 +99,9 @@ import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
 import static org.jyotisa.meta.kundali.MetaRasi.NIL_RASI;
 import static org.jyotisa.varga.EVarga.RASI;
 import static org.swisseph.api.ISweConstants.RASI_LENGTH;
+import static org.swisseph.utils.IDateUtils.F4Y_2M_2D_2H_2M_2S;
+import static org.swisseph.utils.IDateUtils.format;
+import static org.swisseph.utils.IDegreeUtils.toDMS;
 import static org.swisseph.utils.IDegreeUtils.toDMSms;
 import static swisseph.SweConst.ODEGREE_CHAR;
 
@@ -106,6 +139,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         addMetaVargaGrahas(jyotisa, kundali);
         addMetaRasiUpagrahas(jyotisa, kundali);
 
+        addMetaPanchanga(jyotisa, kundali);
         addMetaBhavaChalita(jyotisa, kundali);
         addMetaAshtakavarga(jyotisa, kundali);
 
@@ -199,6 +233,72 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
 
             meta.bhinna().add(bhinna);
         }
+    }
+
+    /**
+     * The panchanga, plus the frame the whole document is computed in: the ayanamsa, sidereal time
+     * and the sun's own rising and setting.
+     * <p>
+     * None of it can be derived from the longitudes the feed already carries, which is why it is
+     * exported rather than left to the consumer. The percentages are what make the five limbs
+     * useful rather than decorative - a tithi at 96% is about to turn.
+     * <p>
+     * <b>Times are local to the chart's own place</b>, matching the event block rather than the
+     * UTC that {@code KundaliFields.toString()} prints, and snapped to whole seconds through
+     * {@code KundaliFields.atWholeSecond} so a value never renders one second short.
+     */
+    default void addMetaPanchanga(IMetaJyotisa jyotisa, IKundali kundali) {
+        final MetaPanchanga meta = jyotisa.panchanga();
+        final IPanchanga panchanga = kundali.panchanga();
+        final IKundaliFields fields = kundali.fields();
+        final ISweObjects sweObjects = kundali.sweObjects();
+
+        final INaksatra naksatra = panchanga.pada().naksatra();
+
+        buildMetaLimb(meta.vaara(), EVaara.byVaara(panchanga.vaara()), panchanga.vaara(), null);
+        buildMetaLimb(meta.tithi(), ETithi.byTithi(panchanga.tithi()), panchanga.tithi(),
+                ITithi.progress(panchanga));
+        buildMetaLimb(meta.naksatra(), ENaksatra.byNaksatra(naksatra), naksatra,
+                INaksatraPada.progress(panchanga));
+        buildMetaLimb(meta.nityaYoga(), ENityaYoga.byYoga(panchanga.yoga()), panchanga.yoga(),
+                INityaYoga.progress(panchanga));
+        buildMetaLimb(meta.karana(), EKarana.byKarana(panchanga.karana()), panchanga.karana(),
+                IKarana.progress(panchanga));
+
+        meta.ayanamsa(sweObjects.sweOptions().ayanamsa().name());
+        meta.ayanamsaDegr(toDMSms(sweObjects.ayanamsa()).toString());
+        meta.siderealTime(toDMS(fields.siderealTime(), true).toString());
+
+        meta.sunrise(localTime(kundali, fields.sunrise()));
+        meta.sunset(localTime(kundali, fields.sunset()));
+        meta.moonrise(localTime(kundali, fields.moonrise()));
+        meta.moonset(localTime(kundali, fields.moonset()));
+    }
+
+    /**
+     * Filled exactly as {@link #buildMetaBhava} fills a bhava, which is the reference entry that
+     * uses all four fields: {@code name} the ordinal, {@code text} the short alias off the leaf,
+     * {@code desc} the registry constant's own full name. So {@code Vaara 1 / Syvr / Surya} reads
+     * like {@code Bhava 1 / Tan / Tanu}.
+     */
+    default <E extends ISweEnumSequence<E>> void buildMetaLimb(
+            MetaLimb limb, ISweEnum entry, ISweEnumSequence<E> leaf, Double progress) {
+        limb.fid(entry.fid());
+        limb.code(entry.code());
+        limb.name(String.valueOf(entry.fid()));
+        limb.text(capitalizeFully(leaf.all()[1].name()));
+        // the underscore matters: a bhava is TANU, but a vaara is SURYA_VAARA and a tithi
+        // KRISHNA_PANCHAMI, and capitalizeFully alone leaves those as "Surya_vaara"
+        limb.desc(capitalizeFully(entry.name().replace('_', ' ')));
+        if (null != progress) limb.progress(progress.floatValue());
+    }
+
+    /** a julian day as local wall-clock time at the chart's own place, to the whole second */
+    default String localTime(IKundali kundali, double julianDay) {
+        final ISweJulianDate date = kundali.sweObjects().sweJulianDate();
+        return format(kundali.sweObjects().swissEph().initDateTime(new SweJulianDate(
+                KundaliFields.atWholeSecond(julianDay), date.timeZone())),
+                F4Y_2M_2D_2H_2M_2S).toString();
     }
 
     default void addMetaOptionsGroups(IMetaJyotisa jyotisa) {
