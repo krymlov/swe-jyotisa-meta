@@ -28,6 +28,7 @@ public class MetaPanchanga implements IMetaPojo {
     protected final MetaLimb vaara = new MetaLimb();
     protected final MetaLimb tithi = new MetaLimb();
     protected final MetaLimb naksatra = new MetaLimb();
+    protected final MetaLimb pada = new MetaLimb();
     protected final MetaLimb nityaYoga = new MetaLimb();
     protected final MetaLimb karana = new MetaLimb();
 
@@ -52,6 +53,15 @@ public class MetaPanchanga implements IMetaPojo {
 
     public MetaLimb naksatra() {
         return naksatra;
+    }
+
+    /**
+     * The quarter of the naksatra, whose {@code progress} measures the pada's own 3&deg;20' and
+     * <b>not</b> the naksatra's 13&deg;20' above it. The two are easy to confuse: at pada 2 they
+     * read almost like complements - 60.6% of the pada is 40.1% of the naksatra.
+     */
+    public MetaLimb pada() {
+        return pada;
     }
 
     public MetaLimb nityaYoga() {

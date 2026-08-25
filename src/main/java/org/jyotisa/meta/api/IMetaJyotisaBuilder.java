@@ -258,8 +258,13 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         buildMetaLimb(meta.vaara(), EVaara.byVaara(panchanga.vaara()), panchanga.vaara(), null);
         buildMetaLimb(meta.tithi(), ETithi.byTithi(panchanga.tithi()), panchanga.tithi(),
                 ITithi.progress(panchanga));
+        // INaksatra, not INaksatraPada: the row is the naksatra, and the pada function measures
+        // the quarter (3 deg 20') rather than the whole 13 deg 20'. For pada 2 the two read almost
+        // like complements - 60.6% of the pada is 40.1% of the naksatra - which is how the wrong
+        // one looked "inverted" rather than simply wrong. Kundali.toString() has always used this.
         buildMetaLimb(meta.naksatra(), ENaksatra.byNaksatra(naksatra), naksatra,
-                INaksatraPada.progress(panchanga));
+                INaksatra.progress(panchanga));
+        buildMetaPada(meta.pada(), panchanga);
         buildMetaLimb(meta.nityaYoga(), ENityaYoga.byYoga(panchanga.yoga()), panchanga.yoga(),
                 INityaYoga.progress(panchanga));
         buildMetaLimb(meta.karana(), EKarana.byKarana(panchanga.karana()), panchanga.karana(),
@@ -291,6 +296,25 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         // KRISHNA_PANCHAMI, and capitalizeFully alone leaves those as "Surya_vaara"
         limb.desc(capitalizeFully(entry.name().replace('_', ' ')));
         if (null != progress) limb.progress(progress.floatValue());
+    }
+
+    /**
+     * The naksatra pada, filled by hand rather than through {@link #buildMetaLimb}: the family is
+     * computed rather than declared, so it has no registry constant with an alias list to read a
+     * short and a long name from. {@code fid} is the composite the family defines - naksatra fid
+     * and pada digit, 19 and 2 giving 192 - and {@code name} the pada digit alone, which is the
+     * ordinal a bhava puts there.
+     */
+    default void buildMetaPada(MetaLimb limb, IPanchanga panchanga) {
+        final INaksatraPada pada = panchanga.pada();
+        final INaksatra naksatra = pada.naksatra();
+
+        limb.fid(pada.fid());
+        limb.code(pada.code());
+        limb.name(String.valueOf(pada.pada()));
+        limb.text(capitalizeFully(naksatra.label()) + SPACE + pada.pada());
+        limb.desc(capitalizeFully(ENaksatra.byNaksatra(naksatra).name()) + SPACE + pada.pada());
+        limb.progress((float) INaksatraPada.progress(panchanga));
     }
 
     /** a julian day as local wall-clock time at the chart's own place, to the whole second */
