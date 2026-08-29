@@ -15,6 +15,8 @@ import org.jyotisa.bhava.EBhava;
 import org.jyotisa.dignity.EDignity;
 import org.jyotisa.graha.EGraha;
 import org.jyotisa.karaka.ECharaKaraka;
+import org.jyotisa.api.vimsottari.IVimsottariDasaEnum;
+import org.jyotisa.vimsottari.EVimsottariDasa;
 import org.jyotisa.meta.options.MetaView;
 import org.jyotisa.naksatra.ENaksatra;
 import org.jyotisa.rasi.ERasi;
@@ -56,6 +58,24 @@ public interface IMetaJyotisaConfig {
         if (styles.length == 1) viewList.add(new MetaView(styles[0], D09_CD));
 
         return viewList.iterator();
+    }
+
+    /**
+     * How deep the Vimsottari dasha is exported: 1 mahadasha, 2 antardasha, 3 pratyantardasha,
+     * 4 sookshma, 5 prana. <b>0 leaves it out of the document entirely.</b>
+     * <p>
+     * Three by default, which is what a reader following a chart normally wants and what the
+     * Kundali view offers on its own buttons. It is a setting rather than a constant because the
+     * cost is nine-fold per level - 9, 81, 729, 6561, 59049 periods - so a consumer that only ever
+     * shows mahadashas should say so, and one that wants sookshma can ask.
+     */
+    default int confMetaVimsottariLevels() {
+        return 3;
+    }
+
+    /** the nine Vimsottari lords for the document's reference table */
+    default ISweEnumIterator<IVimsottariDasaEnum> confMetaDasas() {
+        return EVimsottariDasa.iterator();
     }
 
     default ISweEnumIterator<ICharaKaraka> confMetaCharaKarakas() {

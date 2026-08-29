@@ -12,6 +12,7 @@ import org.jyotisa.meta.api.IMetaJyotisa;
 import org.jyotisa.meta.base.MetaTheme;
 import org.jyotisa.meta.event.MetaEvent;
 import org.jyotisa.meta.kundali.*;
+import org.jyotisa.vimsottari.EVimsottariDasa;
 import org.jyotisa.meta.objects.MetaObjects;
 import org.jyotisa.meta.options.MetaOptions;
 import org.jyotisa.naksatra.ENaksatra;
@@ -40,12 +41,14 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     protected final MetaChalita chalita = new MetaChalita();
     protected final MetaPanchanga panchanga = new MetaPanchanga();
     protected final MetaAshtakavarga ashtakavarga = new MetaAshtakavarga();
+    protected final MetaVimsottari vimsottari = new MetaVimsottari();
 
     protected final Map<String, MetaObjects> objects = new LinkedHashMap<>(EVarga.values().length);
 
     protected final List<MetaNaksatra> naksatra = new ArrayList<>(ENaksatra.values().length);
     protected final List<MetaDignity> dignity = new ArrayList<>(EDignity.values().length);
     protected final List<MetaKaraka> karaka = new ArrayList<>(ECharaKaraka.values().length);
+    protected final List<MetaDasa> dasa = new ArrayList<>(EVimsottariDasa.values().length);
     protected final List<MetaBhava> bhava = new ArrayList<>(EBhava.values().length);
     protected final List<MetaRasi> rasi = new ArrayList<>(ERasi.values().length);
 
@@ -105,6 +108,11 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     }
 
     @Override
+    public MetaVimsottari vimsottari() {
+        return vimsottari;
+    }
+
+    @Override
     public MetaAshtakavarga ashtakavarga() {
         return ashtakavarga;
     }
@@ -127,6 +135,11 @@ public class MetaJyotisa extends MetaTheme implements IMetaJyotisa {
     @Override
     public List<MetaKaraka> karaka() {
         return karaka;
+    }
+
+    @Override
+    public List<MetaDasa> dasa() {
+        return dasa;
     }
 
     @Override

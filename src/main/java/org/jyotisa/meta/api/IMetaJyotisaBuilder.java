@@ -31,6 +31,9 @@ import org.jyotisa.api.upagraha.IUpagraha;
 import org.jyotisa.api.upagraha.IUpagrahaEntity;
 import org.jyotisa.api.varga.IVarga;
 import org.jyotisa.api.varga.IVargaEnum;
+import org.jyotisa.api.vimsottari.IVimsottariDasaEnum;
+import org.jyotisa.api.vimsottari.IVimsottariDasas;
+import org.jyotisa.api.vimsottari.IVimsottariPeriod;
 import org.jyotisa.bhava.EBhava;
 import org.jyotisa.meta.app.MetaJyotisa;
 import org.jyotisa.meta.base.MetaTheme;
@@ -93,6 +96,7 @@ import static org.jyotisa.api.rasi.IRasi.rasiFid0;
 import static org.swisseph.api.ISweObjects.LG;
 import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.meta.kundali.MetaBhava.NIL_BHAVA;
+import static org.jyotisa.meta.kundali.MetaDasa.NIL_DASA;
 import static org.jyotisa.meta.kundali.MetaDignity.NIL_DIGNITY;
 import static org.jyotisa.meta.kundali.MetaKaraka.NIL_KARAKA;
 import static org.jyotisa.meta.kundali.MetaNaksatra.NIL_NAKSATRA;
@@ -130,6 +134,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         addMetaNorthStyleObjects(jyotisa, kundali);
 
         addMetaCharaKarakaEnum(jyotisa);
+        addMetaVimsottariDasaEnum(jyotisa);
         addMetaNaksatraEnum(jyotisa);
         addMetaDignityEnum(jyotisa);
         addMetaBhavaEnums(jyotisa);
@@ -142,6 +147,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         addMetaPanchanga(jyotisa, kundali);
         addMetaBhavaChalita(jyotisa, kundali);
         addMetaAshtakavarga(jyotisa, kundali);
+        addMetaVimsottari(jyotisa, kundali);
 
         return jyotisa;
     }
@@ -500,6 +506,76 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         entity.desc(capitalizeFully(bhavaEnum.name()));
         entity.name(String.valueOf(bhavaEnum.fid()));
         return entity;
+    }
+
+    /**
+     * The Vimsottari dasha, to {@code confMetaVimsottariLevels()} deep.
+     * <p>
+     * Only starting moments are written, and only the ninth mahadasha's close - the periods of any
+     * level tile their parent exactly, so every other end is the next sibling's start. See
+     * {@link MetaVimsottari} for the rule and for why the alternative was not worth its size.
+     * <p>
+     * <b>Times are local to the chart's own place</b>, like the panchanga block and unlike the UTC
+     * that {@code Kundali.toString()} prints, because this is what a reader is shown.
+     * <p>
+     * The chart is asked for exactly the requested depth, but may answer with a deeper tree it
+     * already had, so the recursion stops on the depth asked for rather than on running out of
+     * sub-periods.
+     */
+    default void addMetaVimsottari(IMetaJyotisa jyotisa, IKundali kundali) {
+        final int levels = confMetaVimsottariLevels();
+        if (levels < 1) return;
+
+        final MetaVimsottari meta = jyotisa.vimsottari();
+        final IVimsottariDasas dasas = kundali.vimsottari(levels);
+        final List<IVimsottariPeriod> mahadashas = dasas.periods();
+
+        meta.levels(levels);
+        meta.year(dasas.year().name());
+        meta.to(localTime(kundali, mahadashas.get(mahadashas.size() - 1).close()));
+
+        for (final IVimsottariPeriod period : mahadashas) {
+            meta.periods().add(buildMetaPeriod(kundali, period, levels));
+        }
+    }
+
+    /** one period and, unless this is the deepest level asked for, its nine sub-periods */
+    default MetaPeriod buildMetaPeriod(IKundali kundali, IVimsottariPeriod period, int levels) {
+        final MetaPeriod meta = new MetaPeriod();
+        meta.fid(period.dasa().fid());
+        meta.from(localTime(kundali, period.start()));
+
+        if (period.level() < levels) {
+            final List<MetaPeriod> subs = new ArrayList<>(9);
+            for (final IVimsottariPeriod sub : period.periods()) {
+                subs.add(buildMetaPeriod(kundali, sub, levels));
+            }
+            meta.periods(subs);
+        }
+
+        return meta;
+    }
+
+    default void addMetaVimsottariDasaEnum(IMetaJyotisa jyotisa) {
+        final List<MetaDasa> list = jyotisa.dasa();
+        list.add(NIL_DASA); // #0
+        final ISweEnumIterator<IVimsottariDasaEnum> iterator = confMetaDasas();
+        while (iterator.hasNext()) list.add(buildMetaDasa(iterator.next()));
+    }
+
+    /**
+     * {@code text} comes from the ruling graha rather than from the dasha's own alias list, whose
+     * second constant is the code again - see {@link MetaDasa}.
+     */
+    default MetaDasa buildMetaDasa(IVimsottariDasaEnum entry) {
+        final MetaDasa meta = new MetaDasa();
+        meta.fid(entry.fid());
+        meta.code(entry.code());
+        meta.name(String.valueOf(entry.fid()));
+        meta.text(entry.dasa().lord().label());
+        meta.desc(capitalizeFully(entry.name().replace('_', ' ')));
+        meta.years((int) entry.dasa().length());
+        return meta;
     }
 
     default void addMetaCharaKarakaEnum(IMetaJyotisa jyotisa) {
