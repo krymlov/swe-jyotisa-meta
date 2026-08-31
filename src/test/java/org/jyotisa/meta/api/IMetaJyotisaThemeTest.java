@@ -34,7 +34,7 @@ class IMetaJyotisaThemeTest {
 
     @Test
     void themeMetaGrahas_defaultTuningConstants() {
-        assertEquals(26, theme.themeMetaGrahasBaseSize());
+        assertEquals(28, theme.themeMetaGrahasBaseSize());
         assertEquals(14, theme.themeMetaGrahasBaseSizeMinVal());
         assertEquals(2, theme.themeMetaGrahasBaseSizeDecVal());
         assertEquals(1, theme.themeMetaGrahasBaseSizeDecValVakri());
@@ -45,14 +45,14 @@ class IMetaJyotisaThemeTest {
     void themeMetaGrahas_oneGrahaAloneInARasiKeepsBaseSizeMinusOneStep() {
         MetaObject g = graha(1, false);
         theme.themeMetaGrahas(new ArrayList<>(Collections.singletonList(g)));
-        assertEquals("24", g.size());
+        assertEquals("26", g.size());
     }
 
     @Test
     void themeMetaGrahas_vakriGrahaGetsAnExtraDecrement() {
         MetaObject g = graha(1, true);
         theme.themeMetaGrahas(new ArrayList<>(Collections.singletonList(g)));
-        assertEquals("23", g.size());
+        assertEquals("25", g.size());
     }
 
     @Test
@@ -64,8 +64,8 @@ class IMetaJyotisaThemeTest {
         theme.themeMetaGrahas(list);
 
         // base(26) -2 (g1) -2 (g2) -1 (g2 vakri) = 21, applied to both
-        assertEquals("21", g1.size());
-        assertEquals("21", g2.size());
+        assertEquals("23", g1.size());
+        assertEquals("23", g2.size());
     }
 
     @Test
@@ -76,9 +76,9 @@ class IMetaJyotisaThemeTest {
 
         theme.themeMetaGrahas(new ArrayList<>(java.util.Arrays.asList(inRasi1, inRasi2, anotherInRasi1)));
 
-        assertEquals("22", inRasi1.size());       // 26 - 2 - 2
-        assertEquals("22", anotherInRasi1.size());
-        assertEquals("24", inRasi2.size());        // 26 - 2, alone
+        assertEquals("24", inRasi1.size());       // 28 - 2 - 2
+        assertEquals("24", anotherInRasi1.size());
+        assertEquals("26", inRasi2.size());        // 28 - 2, alone
     }
 
     @Test
@@ -111,7 +111,7 @@ class IMetaJyotisaThemeTest {
                     "size " + size + " must never be below the configured minimum "
                             + theme.themeMetaGrahasBaseSizeMinVal());
         }
-        assertEquals("14", list.get(0).size());
+        assertEquals("15", list.get(0).size());
     }
 
     @Test

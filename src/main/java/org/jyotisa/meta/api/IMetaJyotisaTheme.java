@@ -17,7 +17,7 @@ public interface IMetaJyotisaTheme {
     }
 
     default int themeMetaGrahasBaseSize() {
-        return 26;
+        return 28;
     }
 
     default int themeMetaGrahasBaseSizeMinVal() {
