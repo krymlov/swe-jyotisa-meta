@@ -26,7 +26,9 @@ import org.swisseph.api.ISweEnumIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.jyotisa.api.varga.IVarga.D01_CD;
 import static org.jyotisa.api.varga.IVarga.D09_CD;
@@ -104,6 +106,22 @@ public interface IMetaJyotisaConfig {
 
     default ISweEnumIterator<IRasiEnum> confMetaRasis() {
         return ERasi.iterator();
+    }
+
+    /**
+     * The grahas {@link #confMetaGrahas()} names, as the set of {@code ISweObjects} indices.
+     * <p>
+     * For the places that hold plain {@link org.jyotisa.api.graha.IGraha}s rather than entities and
+     * so cannot use {@link #confMetaGrahasFilter} - Bhava Chalita is one. It exists so that those
+     * places follow the <b>same</b> setting as the D1 objects rather than carrying a second one:
+     * two knobs for "which grahas are shown" would only ever be a pair to keep in sync.
+     */
+    default Set<Integer> confMetaGrahaUids() {
+        final ISweEnumIterator<IGrahaEnum> iterator = confMetaGrahas();
+        final Set<Integer> uids = new HashSet<>();
+
+        while (iterator.hasNext()) uids.add(iterator.next().graha().uid());
+        return uids;
     }
 
     default List<IGrahaEntity> confMetaGrahasFilter(IGrahaEntity[] all) {

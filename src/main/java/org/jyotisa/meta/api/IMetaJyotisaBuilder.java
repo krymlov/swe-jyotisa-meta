@@ -83,6 +83,7 @@ import org.swisseph.api.ISweEnumIterator;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.Map;
 
 import static java.lang.Character.toLowerCase;
@@ -162,6 +163,11 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
      * <p>
      * A chart built without an ascendant reports {@code calculated = false} and no bhavas at all,
      * rather than twelve counted from zero.
+     * <p>
+     * <b>The grahas listed are the ones {@link #confMetaGrahas()} names</b>, not everything the
+     * chalita placed. {@code IBhavaChalita} places every calculated body, so without that filter a
+     * feed configured for the ten traditional grahas still showed Uranus, Neptune and Pluto here -
+     * and only here, which is the shape of inconsistency a single shared setting prevents.
      */
     default void addMetaBhavaChalita(IMetaJyotisa jyotisa, IKundali kundali) {
         final IBhavaChalita chalita = kundali.bhavaChalita();
@@ -171,6 +177,9 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         if (!chalita.isCalculated()) return;
 
         final ISweEnumIterator<IBhavaEnum> bhavas = EBhava.iterator();
+        // the same grahas the D1 objects carry, so the two cannot disagree about what is shown -
+        // IBhavaChalita places every calculated body, the outer three included
+        final Set<Integer> shown = confMetaGrahaUids();
 
         while (bhavas.hasNext()) {
             final IBhava bhava = bhavas.next().bhava();
@@ -181,7 +190,9 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
             buildMetaChalitaPoint(chalita.madhya(bhava), metaBhava::rasi, metaBhava::madhya);
             buildMetaChalitaPoint(chalita.close(bhava), metaBhava::closeRasi, metaBhava::close);
 
-            for (IGraha graha : chalita.grahas(bhava)) metaBhava.grahas().add(graha.code());
+            for (IGraha graha : chalita.grahas(bhava)) {
+                if (shown.contains(graha.uid())) metaBhava.grahas().add(graha.code());
+            }
 
             meta.bhavas().add(metaBhava);
         }

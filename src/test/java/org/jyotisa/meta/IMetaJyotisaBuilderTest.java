@@ -11,7 +11,11 @@ import org.jyotisa.meta.api.IMetaJyotisaBuilder;
 import org.jyotisa.meta.api.IMetaNorthStyleCalc;
 import org.jyotisa.meta.api.ViewStyle;
 import org.jyotisa.meta.app.MetaJyotisa;
+import org.jyotisa.api.graha.IGrahaEnum;
+import org.jyotisa.graha.EGraha;
 import org.jyotisa.meta.kundali.MetaBhavaSeq;
+import org.jyotisa.meta.kundali.MetaChalitaBhava;
+import org.swisseph.api.ISweEnumIterator;
 import org.jyotisa.meta.objects.MetaObject;
 import org.jyotisa.meta.objects.MetaObjects;
 import org.jyotisa.varga.EVarga;
@@ -69,6 +73,60 @@ class IMetaJyotisaBuilderTest extends AbstractTest implements IMetaJyotisaBuilde
     private static MetaObject byCode(List<MetaObject> list, String code) {
         for (MetaObject obj : list) if (code.equals(obj.code())) return obj;
         throw new AssertionError("no object with code " + code + " in " + list);
+    }
+
+    /**
+     * Bhava Chalita lists the grahas {@code confMetaGrahas()} names, and no others.
+     * <p>
+     * {@code IBhavaChalita} places every calculated body, the outer three included, so a feed
+     * configured for the ten traditional grahas used to show Uranus, Neptune and Pluto in this one
+     * block and nowhere else. Reported from a real chart. Both halves are asserted - that the outer
+     * three are gone, and that the ten that should be there still are - because a filter that
+     * dropped everything would satisfy the first alone.
+     */
+    @Test
+    void buildMetaJyotisa_chalitaListsOnlyTheConfiguredGrahas() {
+        final IMetaJyotisa jyotisa = buildMetaJyotisa(fixedChennaiKundali());
+        final List<String> placed = new java.util.ArrayList<>();
+
+        for (MetaChalitaBhava bhava : jyotisa.chalita().bhavas()) placed.addAll(bhava.grahas());
+
+        assertFalse(placed.isEmpty(), "the chalita should place the chart's grahas somewhere");
+        for (String outer : new String[]{"SW", "SM", "TE"}) {
+            assertFalse(placed.contains(outer),
+                    outer + " is not among the configured grahas, so the chalita must not list it: "
+                            + placed);
+        }
+        for (String graha : new String[]{"LG", "SY", "CH", "MA", "BU", "GU", "SK", "SA", "RA", "KE"}) {
+            assertTrue(placed.contains(graha),
+                    graha + " is configured and calculated, so the chalita must list it: " + placed);
+        }
+    }
+
+    /**
+     * And it follows the setting rather than a list of its own: narrowing the configured grahas
+     * narrows the chalita with it, which is the whole reason there is no second switch for this.
+     */
+    @Test
+    void buildMetaJyotisa_chalitaFollowsANarrowedGrahaConfiguration() {
+        final IMetaJyotisaBuilder narrowed = new IMetaJyotisaBuilder() {
+            @Override
+            public void addMetaEventInfo(IMetaJyotisa jyotisa, IKundali kundali) {
+                // nothing this test reads
+            }
+
+            @Override
+            public ISweEnumIterator<IGrahaEnum> confMetaGrahas() {
+                return EGraha.iterator(EGraha.SURYA, EGraha.CHANDRA);
+            }
+        };
+
+        final List<String> placed = new java.util.ArrayList<>();
+        for (MetaChalitaBhava bhava : narrowed.buildMetaJyotisa(fixedChennaiKundali())
+                .chalita().bhavas()) placed.addAll(bhava.grahas());
+
+        assertEquals(2, placed.size(), "only the two configured grahas should be placed: " + placed);
+        assertTrue(placed.contains("SY") && placed.contains("CH"), "expected SY and CH: " + placed);
     }
 
     @Test
