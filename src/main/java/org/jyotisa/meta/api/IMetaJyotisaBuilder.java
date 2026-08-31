@@ -308,7 +308,7 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         limb.fid(entry.fid());
         limb.code(entry.code());
         limb.name(String.valueOf(entry.fid()));
-        limb.text(capitalizeFully(leaf.all()[1].name()));
+        limb.text(capitalizeFully(leaf.label()));
         // the underscore matters: a bhava is TANU, but a vaara is SURYA_VAARA and a tithi
         // KRISHNA_PANCHAMI, and capitalizeFully alone leaves those as "Surya_vaara"
         limb.desc(capitalizeFully(entry.name().replace('_', ' ')));
@@ -540,6 +540,10 @@ public interface IMetaJyotisaBuilder extends IMetaJyotisaConfig, IMetaJyotisaThe
         final MetaVimsottari meta = jyotisa.vimsottari();
         final IVimsottariDasas dasas = kundali.vimsottari(levels);
         final List<IVimsottariPeriod> mahadashas = dasas.periods();
+
+        // a chart whose Moon could not be placed has no dasha at all, and then the block is left
+        // out exactly as it is when the depth is 0 - rather than written with a `to` and no periods
+        if (mahadashas.isEmpty()) return;
 
         meta.levels(levels);
         meta.year(dasas.year().name());

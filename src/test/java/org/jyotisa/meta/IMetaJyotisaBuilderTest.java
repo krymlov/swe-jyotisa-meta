@@ -129,6 +129,28 @@ class IMetaJyotisaBuilderTest extends AbstractTest implements IMetaJyotisaBuilde
         assertTrue(placed.contains("SY") && placed.contains("CH"), "expected SY and CH: " + placed);
     }
 
+    /**
+     * A chart whose Moon could not be placed carries no dasha, and the feed leaves the block out
+     * rather than writing a closing moment with nothing inside it.
+     * <p>
+     * The NaN is how a caller says "indeterminable" - an event with a date but no time has to,
+     * since the Moon crosses half a sign in a day - and it reached this builder as an
+     * {@code IndexOutOfBoundsException} on the last mahadasha of an empty list.
+     */
+    @Test
+    void buildMetaJyotisa_omitsTheDashaWhenTheMoonCannotBePlaced() {
+        final IKundali kundali = fixedChennaiKundali();
+        kundali.sweObjects().longitudes()[org.swisseph.api.ISweObjects.CH] = Double.NaN;
+
+        final IMetaJyotisa jyotisa = assertDoesNotThrow(() -> buildMetaJyotisa(kundali),
+                "an indeterminable Moon is a state to report, not one to throw on");
+
+        assertTrue(jyotisa.vimsottari().periods().isEmpty(),
+                "there is no dasha to compute without the Moon's naksatra");
+        assertNull(jyotisa.vimsottari().to(),
+                "and no closing moment either - the block is left out, not half written");
+    }
+
     @Test
     void buildMetaJyotisa_populatesEveryTopLevelSection() {
         IMetaJyotisa jyotisa = buildMetaJyotisa(fixedChennaiKundali());
